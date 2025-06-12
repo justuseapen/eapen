@@ -1,52 +1,377 @@
-<!--
-  Eapen Technology – ultra‑minimal landing page
-  Drop this single file into a Git repo and deploy as a Static Website on Coolify.
--->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Eapen Technology</title>
-    <!-- Social / Open Graph -->
-    <meta property="og:title" content="Eapen Technology" />
-    <meta property="og:description" content="Apps & AI automations, built right." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eapentechnology.com" />
-
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚙️</text></svg>" />
-
-    <!-- Fonts – system stack keeps things light -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eapen Technology - Technology Solutions for Small Business</title>
     <style>
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-      :root{--bg:#fafafa;--fg:#111;--accent:#2563eb;--font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif}
-      html,body{height:100%}
-      body{display:grid;place-items:center;background:var(--bg);color:var(--fg);font-family:var(--font-sans);line-height:1.4;text-rendering:optimizeLegibility}
-      .card{text-align:center;padding:2rem 3rem}
-      .logo{font-size:clamp(2.5rem,8vw,4rem);font-weight:700;letter-spacing:-.02em}
-      .tagline{margin-top:.75rem;font-size:clamp(1rem,2.5vw,1.25rem);color:var(--accent);font-weight:500}
-      .links{margin-top:2rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
-      .links a{text-decoration:none;color:var(--fg);font-weight:500;transition:color .2s ease}
-      .links a:hover{color:var(--accent)}
-      footer{margin-top:3rem;font-size:.8rem;color:#666}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --accent-blue: #0071e3;
+            --surface-light: rgba(255, 255, 255, 0.72);
+            --border-light: rgba(0, 0, 0, 0.04);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: #fbfbfd;
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Liquid glass orbs - lighter, more refined */
+        .liquid-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+            animation: float 30s infinite ease-in-out;
+            mix-blend-mode: normal;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle at 30% 30%, rgba(0, 113, 227, 0.3), rgba(0, 113, 227, 0) 50%);
+            top: -200px;
+            left: -200px;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 50% 50%, rgba(52, 199, 89, 0.2), rgba(52, 199, 89, 0) 50%);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -15s;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 50% 50%, rgba(175, 82, 222, 0.15), rgba(175, 82, 222, 0) 50%);
+            top: 50%;
+            right: 10%;
+            animation-delay: -7s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -30px) scale(1.05);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.95);
+            }
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo/Name with subtle gradient */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(180deg, var(--text-primary) 0%, #424245 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        /* Glass card for contact */
+        .contact-card {
+            background: var(--surface-light);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 
+                0 4px 24px rgba(0, 0, 0, 0.04),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Shimmer effect on card */
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 70%
+            );
+            transform: translateX(-100%) translateY(-100%);
+            transition: transform 0.6s;
+        }
+
+        .contact-card:hover::before {
+            transform: translateX(100%) translateY(100%);
+            transition: transform 1.2s;
+        }
+
+        /* Contact button - Apple style */
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            background: var(--accent-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            font-weight: 400;
+            border-radius: 980px;
+            transition: all 0.2s ease;
+            position: relative;
+            letter-spacing: -0.01em;
+        }
+
+        .contact-btn:hover {
+            background: #0077ed;
+            transform: scale(1.04);
+        }
+
+        .contact-btn:active {
+            transform: scale(0.98);
+        }
+
+        .contact-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Floating light particles */
+        .light-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particle-float 25s infinite linear;
+        }
+
+        @keyframes particle-float {
+            from {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) translateX(10px) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) translateX(-10px) scale(1);
+            }
+            to {
+                transform: translateY(-10px) translateX(0) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Dynamic mesh gradient background */
+        .mesh-gradient {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(at 27% 37%, rgba(52, 199, 89, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, rgba(0, 113, 227, 0.1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, rgba(175, 82, 222, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, rgba(255, 59, 48, 0.05) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, rgba(255, 204, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, rgba(50, 173, 230, 0.1) 0px, transparent 50%);
+            z-index: -2;
+            animation: mesh-animation 25s ease infinite;
+        }
+
+        @keyframes mesh-animation {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            33% {
+                transform: translate(-5%, -5%) rotate(1deg) scale(1.02);
+            }
+            66% {
+                transform: translate(5%, -5%) rotate(-1deg) scale(0.98);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.25rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Subtle noise texture overlay */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.02;
+            z-index: 1000;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,.01) 35px, rgba(0,0,0,.01) 70px);
+        }
     </style>
-  </head>
-  <body>
-    <main class="card">
-      <h1 class="logo">Eapen&nbsp;Technology</h1>
-      <p class="tagline">Apps & AI automations</p>
-
-      <nav class="links">
-        <a href="mailto:justus@eapentechnology.com">Email us</a>
-        <a href="https://www.linkedin.com/company/eapen-technology" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
-
-      <footer>&copy; <span id="year"></span> Eapen Technology. All rights reserved.</footer>
-    </main>
-
-    <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
-  </body>
+</head>
+<body>
+    <!-- Mesh gradient background -->
+    <div class="mesh-gradient"></div>
+    
+    <!-- Liquid glass orbs -->
+    <div class="liquid-orb orb-1"></div>
+    <div class="liquid-orb orb-2"></div>
+    <div class="liquid-orb orb-3"></div>
+    
+    <!-- Light particles -->
+    <div id="particles"></div>
+    
+    <!-- Main content -->
+    <div class="container">
+        <h1>Eapen Technology</h1>
+        <p class="tagline">Technology Solutions</p>
+        <p class="subtitle">Helping small businesses navigate their technology needs with clarity and purpose.</p>
+        
+        <div class="contact-card">
+            <a href="mailto:justus@eapentechnology.com" class="contact-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Start a Conversation
+            </a>
+        </div>
+    </div>
+    
+    <!-- Noise texture -->
+    <div class="noise"></div>
+    
+    <script>
+        // Create floating light particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'light-particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 25 + 's';
+            particle.style.animationDuration = (20 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+        
+        // Subtle parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+            
+            const orbs = document.querySelectorAll('.liquid-orb');
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+        
+        // Smooth hover effect for contact card
+        const contactCard = document.querySelector('.contact-card');
+        
+        contactCard.addEventListener('mousemove', (e) => {
+            const rect = contactCard.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) - 0.5;
+            const y = ((e.clientY - rect.top) / rect.height) - 0.5;
+            
+            contactCard.style.transform = `
+                perspective(1000px)
+                rotateY(${x * 5}deg)
+                rotateX(${-y * 5}deg)
+                translateZ(10px)
+            `;
+        });
+        
+        contactCard.addEventListener('mouseleave', () => {
+            contactCard.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) translateZ(0)';
+        });
+    </script>
+</body>
 </html>
