@@ -89,7 +89,7 @@
         .container {
             position: relative;
             z-index: 1;
-            max-width: 720px;
+            max-width: 960px;
             width: 90%;
             margin: 0 auto;
             padding: 80px 40px;
@@ -285,7 +285,7 @@
 
         /* Section spacing */
         .section {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
 
         .section-label {
@@ -300,8 +300,8 @@
         /* Hero section */
         .hero {
             text-align: center;
-            padding: 0 0 80px;
-            margin-bottom: 100px;
+            padding: 0 0 40px;
+            margin-bottom: 60px;
         }
 
         .hero .tagline {
@@ -325,7 +325,7 @@
 
         .hero .supporting {
             font-size: 0.9375rem;
-            color: var(--text-tertiary);
+            color: var(--text-secondary);
             margin-bottom: 2.5rem;
             line-height: 1.5;
         }
@@ -333,8 +333,8 @@
         /* Services grid */
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.25rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
@@ -384,8 +384,8 @@
         /* Bottom CTA */
         .bottom-cta {
             text-align: center;
-            padding: 60px 0 40px;
-            margin-bottom: 60px;
+            padding: 40px 0 40px;
+            margin-bottom: 40px;
         }
 
         .bottom-cta .qualifier {
@@ -394,7 +394,20 @@
             margin-top: 1.25rem;
         }
 
-        /* Responsive */
+        /* About max-width for readability */
+        .about {
+            max-width: 640px;
+        }
+
+        /* Responsive - tablet */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+        }
+
+        /* Responsive - mobile */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
@@ -470,14 +483,12 @@
             <p class="subtitle">We evaluate your business processes and design AI implementations that cut costs, eliminate bottlenecks, and compound over time.</p>
             <p class="supporting">Led by Justus Eapen — senior engineer, AI specialist, and engineering leader with 12+ years shipping software at scale. Limited availability.</p>
 
-            <div class="contact-card">
-                <a href="https://calendly.com/eapentechnology/get-acquainted" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    Apply for a Consultation
-                </a>
-            </div>
+            <a href="https://calendly.com/eapentechnology/get-acquainted" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                Apply for a Consultation
+            </a>
         </section>
 
         <!-- Services Section -->
