@@ -21,7 +21,8 @@
         :root {
             --text-primary: #1d1d1f;
             --text-secondary: #6e6e73;
-            --accent-blue: #0071e3;
+            --accent-gold: #c49a5c;
+            --accent-gold-light: #d4af73;
             --text-tertiary: #86868b;
             --surface-light: rgba(255, 255, 255, 0.72);
             --border-light: rgba(0, 0, 0, 0.04);
@@ -50,7 +51,7 @@
         .orb-1 {
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle at 30% 30%, rgba(0, 113, 227, 0.3), rgba(0, 113, 227, 0) 50%);
+            background: radial-gradient(circle at 30% 30%, rgba(196, 154, 92, 0.3), rgba(196, 154, 92, 0) 50%);
             top: -200px;
             left: -200px;
         }
@@ -58,7 +59,7 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle at 50% 50%, rgba(52, 199, 89, 0.2), rgba(52, 199, 89, 0) 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 115, 0.2), rgba(212, 175, 115, 0) 50%);
             bottom: -100px;
             right: -100px;
             animation-delay: -15s;
@@ -67,7 +68,7 @@
         .orb-3 {
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle at 50% 50%, rgba(175, 82, 222, 0.15), rgba(175, 82, 222, 0) 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(160, 125, 69, 0.2), rgba(160, 125, 69, 0) 50%);
             top: 50%;
             right: 10%;
             animation-delay: -7s;
@@ -113,7 +114,7 @@
             font-weight: 700;
             letter-spacing: -0.04em;
             margin-bottom: 0.5rem;
-            background: linear-gradient(180deg, #ffffff 0%, #a0a0a8 100%);
+            background: linear-gradient(180deg, #ffffff 0%, #d4af73 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -181,26 +182,26 @@
             justify-content: center;
             gap: 0.5rem;
             padding: 1.125rem 2.5rem;
-            background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
-            color: white;
+            background: linear-gradient(135deg, #c49a5c 0%, #a07d45 100%);
+            color: #0a0a0f;
             text-decoration: none;
             font-size: 1.125rem;
-            font-weight: 500;
+            font-weight: 600;
             border-radius: 980px;
             transition: all 0.2s ease;
             position: relative;
             letter-spacing: -0.01em;
             box-shadow:
-                0 4px 16px rgba(0, 113, 227, 0.4),
+                0 4px 16px rgba(196, 154, 92, 0.4),
                 0 2px 4px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .contact-btn:hover {
-            background: linear-gradient(135deg, #0077ed 0%, #006dd1 100%);
+            background: linear-gradient(135deg, #d4af73 0%, #b8924f 100%);
             transform: scale(1.05) translateY(-2px);
             box-shadow:
-                0 6px 24px rgba(0, 113, 227, 0.5),
+                0 6px 24px rgba(196, 154, 92, 0.5),
                 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
@@ -251,12 +252,12 @@
             width: 200%;
             height: 200%;
             background:
-                radial-gradient(at 27% 37%, rgba(52, 199, 89, 0.15) 0px, transparent 50%),
-                radial-gradient(at 97% 21%, rgba(0, 113, 227, 0.2) 0px, transparent 50%),
-                radial-gradient(at 52% 99%, rgba(175, 82, 222, 0.15) 0px, transparent 50%),
-                radial-gradient(at 10% 29%, rgba(255, 59, 48, 0.08) 0px, transparent 50%),
-                radial-gradient(at 97% 96%, rgba(255, 204, 0, 0.08) 0px, transparent 50%),
-                radial-gradient(at 33% 50%, rgba(50, 173, 230, 0.15) 0px, transparent 50%);
+                radial-gradient(at 27% 37%, rgba(196, 154, 92, 0.15) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, rgba(212, 175, 115, 0.12) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, rgba(160, 125, 69, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, rgba(196, 154, 92, 0.08) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, rgba(212, 175, 115, 0.08) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, rgba(180, 140, 80, 0.1) 0px, transparent 50%);
             z-index: -2;
             animation: mesh-animation 25s ease infinite;
         }
@@ -309,7 +310,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: var(--accent-blue);
+            color: var(--accent-gold);
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
@@ -321,8 +322,18 @@
             font-size: 5rem;
             font-weight: 800;
             color: transparent;
-            -webkit-text-stroke: 2px rgba(0, 113, 227, 0.15);
+            -webkit-text-stroke: 2px rgba(196, 154, 92, 0.15);
             line-height: 1;
+        }
+
+        /* Brand tagline */
+        .brand-tagline {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
         }
 
         /* Hero section - dark */
@@ -392,15 +403,15 @@
         }
 
         .service-card:nth-child(1) {
-            border-left-color: #0071e3;
+            border-left-color: #c49a5c;
         }
 
         .service-card:nth-child(2) {
-            border-left-color: #34c759;
+            border-left-color: #d4af73;
         }
 
         .service-card:nth-child(3) {
-            border-left-color: #af52de;
+            border-left-color: #a07d45;
         }
 
         .service-card h3 {
@@ -418,15 +429,15 @@
         }
 
         .service-card:nth-child(1) h3::before {
-            background: #0071e3;
+            background: #c49a5c;
         }
 
         .service-card:nth-child(2) h3::before {
-            background: #34c759;
+            background: #d4af73;
         }
 
         .service-card:nth-child(3) h3::before {
-            background: #af52de;
+            background: #a07d45;
         }
 
         .service-card p {
@@ -553,6 +564,7 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
+            <p class="brand-tagline">Mission-aligned AI</p>
             <h1>Eapen Technology</h1>
             <p class="tagline">AI Solutions That Actually Save You Money</p>
             <p class="subtitle">We evaluate your business processes and design AI implementations that cut costs, eliminate bottlenecks, and compound over time.</p>
