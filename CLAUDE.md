@@ -33,4 +33,10 @@ The site is a single self-contained `index.html` (~377 lines) with embedded CSS 
 
 ## Deployment
 
-Intended for static hosting via Coolify. No Dockerfile exists yet; deploy by serving `index.html` as a static file.
+Deployed via Coolify on Hetzner VPS (`172.252.211.242`). Pushes to `master` auto-deploy via GitHub webhook.
+
+- **Dockerfile**: `nginx:alpine` serving `index.html`
+- **SSL**: Traefik with Let's Encrypt (managed by Coolify)
+- **Domain**: `eapentechnology.com`
+
+To deploy: just `git push origin master`.
