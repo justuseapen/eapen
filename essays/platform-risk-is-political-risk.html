@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What the deplatforming of Parler actually taught us — Eapen Technology</title>
+<meta name="description" content="Four cases — Parler, Gab, Rumble, Telegram — and the working model of platform risk that the survivors have already internalized.">
+<meta property="og:title" content="What the deplatforming of Parler actually taught us">
+<meta property="og:description" content="Four cases — Parler, Gab, Rumble, Telegram — and the working model of platform risk that the survivors have already internalized.">
+<meta property="og:type" content="article">
+<style>
+:root {
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --bg: #ffffff;
+  --rule: #e5e5e7;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+header { margin-bottom: 64px; }
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.byline {
+  color: var(--muted);
+  font-size: 15px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 48px 0 16px;
+}
+p { margin: 0 0 20px; }
+ul { margin: 0 0 20px; padding-left: 24px; }
+li { margin: 0 0 8px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 64px 0 40px;
+}
+.cta {
+  background: var(--text);
+  color: white;
+  padding: 32px;
+  border-radius: 12px;
+}
+.cta a.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.cta a.btn:hover { text-decoration: none; opacity: 0.9; }
+.home-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<a href="/" class="home-link">← Eapen Technology</a>
+<header>
+  <div class="eyebrow">Essay · Platform Risk</div>
+  <h1>What the deplatforming of Parler actually taught us</h1>
+  <p class="byline">Justus Eapen</p>
+</header>
+
+<p>The dominant press narrative about Parler is that it enabled January 6 and got what was coming to it. That diagnosis is wrong on the facts.</p>
+
+<p>Parler had a tiny user base relative to Facebook, Twitter, and Telegram. The bulk of January 6 organizing happened on the majors. I was at January 6. I was not on Parler. Almost no one I knew was on Parler. The deplatforming had a pretext. It did not have a cause.</p>
+
+<p>The real story is simpler and more useful to a founder building today. Parler was destroyed because its infrastructure providers — AWS principally, Apple and Google secondarily — made a political call that they could make it disappear and absorb no meaningful consequences. They were right. They did. The lesson is not "moderate harder." The lesson is "do not depend on infrastructure run by people who hate you."</p>
+
+<p>This essay walks through four cases — Parler, Gab, Rumble, Telegram — and pulls one operating lesson out of each. The point is not to relitigate the press coverage. The point is to give a founder the working model for platform risk that the survivors have already internalized.</p>
+
+<h2>Parler: the cost of trusting AWS</h2>
+
+<p>The chronology is short. On January 8, 2021, Apple gave Parler a notice to improve its moderation or face removal. On January 9, Google removed Parler from the Play Store. On January 10, AWS notified Parler that it would suspend hosting at midnight. By Monday morning the platform was gone. The total elapsed time from "fully operational" to "off the internet" was approximately seventy-two hours.</p>
+
+<p>The official reasons given centered on Parler's moderation of content related to January 6 — incitement, threats, planning material. The factual basis for the charge was weak. Facebook hosted vastly more of the actual planning, by orders of magnitude. Twitter hosted more. Telegram hosted more. None of the majors faced any infrastructure-level consequence. The disparity was visible to anyone willing to look at the numbers, and the press was not willing.</p>
+
+<p>The narrative existed because it was useful. It gave AWS, Apple, and Google a story that justified an action they had already decided to take. AWS is run by woke leftists who will destroy businesses if they disagree with them politically. They made a political call that they could remove a conservative-coded platform during a national news cycle and the consequences would all flow downhill. They were right. AWS's stock did not move. No major customer left. Amazon did not lose a contract. The math on the decision was that the cost of removing Parler was zero and the benefit was reputational alignment with the people AWS executives cared about being aligned with.</p>
+
+<p>This is the load-bearing fact for any heterodox founder building today. The leftwing platforms like Reddit and Substack are allowed far more leniency than the conservative-coded ones, because the people running the infrastructure layer are sincerely aligned with the leftwing platforms' values. A heterodox platform has to be substantially more strict than its competitors in some ways, because it is under more scrutiny — particularly any platform associated with President Trump, who is intensely hated by the people who staff the gatekeepers.</p>
+
+<p><strong>The lesson.</strong> Roll your own infrastructure or partner with operators whose politics are aligned with yours. The cloud is not neutral. AWS is not neutral. The CDN is not neutral. The DNS provider is not neutral. The payment processor is not neutral. Every dependency on a major-platform provider is a vector for political destruction. The platforms that survive in this category own as much of their stack as they can afford and partner — never lease — with the rest.</p>
+
+<h2>Gab: the cost of staying pure</h2>
+
+<p>Gab never really stood a chance, because Andrew Torba is so outspoken. He chose to remain small but radical, and it seems to be working for him. The bet has worked in the sense that Gab still exists. The bet has failed in the sense that Gab will never have meaningful reach.</p>
+
+<p>The price of total refusal is permanent obscurity. Gab has been rejected from the App Store repeatedly across years. It has lost payment processors, hosting providers, and domain registrars. It survives on a combination of self-hosting, alternative payment rails, and the personal will of its founder. The platform's user base is in the low hundreds of thousands. It is real. It is also small enough that the gatekeepers do not consider it worth the effort to finish off.</p>
+
+<p>I agree with Torba more than I agree with almost anyone in this space. That does not mean his strategy is replicable for the next platform. He chose a position. He is paying its price. The price is real. A founder considering the Gab path should be honest about what they are signing up for: a few hundred thousand users at most, payment-processor problems, no app-store distribution, no advertising market, and a business that survives on the founder's personal stamina.</p>
+
+<p><strong>The lesson.</strong> The price of total speech freedom is total obscurity. Some founders should pay that price. Most cannot. Decide which one you are before you build, because the choice cascades into every other decision — hosting, payments, identity, monetization, partner ecosystem.</p>
+
+<h2>Rumble: the cost of competing anyway</h2>
+
+<p>Rumble is the most encouraging case in the set. Chris Pavlovski built a YouTube competitor that has weathered ad-pull campaigns, journalist pile-ons, partial app-store restrictions, and pressure from multiple governments, and is still in business at meaningful scale. Tens of millions of monthly active users. A public listing. A growing creator base. A working ad market.</p>
+
+<p>Rumble took the bet that infrastructure could be partly owned, partly diversified, and partly conceded. They built their own video pipeline rather than depending on a third party for the most expensive piece of the stack. They diversified their commodity dependencies — multiple payment providers, multiple CDNs, multiple legal jurisdictions. They accepted a limited degree of app-store accommodation as the cost of distribution. The combination has survived what neither Parler's full dependency nor Gab's full refusal could.</p>
+
+<p>The Rumble path is harder than either the Parler path or the Gab path. It requires a founder who is willing to take political heat, do real engineering work on the core, and negotiate with gatekeepers on the margins without surrendering the platform's identity. Most founders are not capable of all three at once. Pavlovski has been.</p>
+
+<p>The serious heterodox platforms operate on the same model. Reduce platform risk to the smallest possible surface area while staying mainstream. That means dealing with the app stores, because the app stores are the price of mainstream reach. It also means rolling every other piece of infrastructure internally or partnering with mission-aligned operators like Rumble. The companies that try to be heterodox while remaining on the default cloud-and-payment stack do not survive their first political incident.</p>
+
+<p><strong>The lesson.</strong> A platform can survive at scale if it owns its core infrastructure, diversifies its commodity dependencies, and accepts the minimum app-store accommodation needed for distribution. The middle path exists. It is the only path that produces a platform with a real user base and a real business.</p>
+
+<h2>Telegram: the cost of opacity</h2>
+
+<p>Telegram is the odd case. Global. Large. Hosts content that would get any American platform destroyed within a week. Remains in the App Store with restrictions. The Durov arrest in France in 2024 was the most visible moment of regulatory pressure Telegram has faced, and even after the arrest the platform did not get pulled. The asymmetry is not an accident.</p>
+
+<p>My read, marked as speculation: Telegram probably has backdoors for the intelligence community that allow them to stay in the app store. Telegram has been notably compromised by the Chinese and perhaps even the Israelis. We don't know for sure. None of this can be confirmed from outside. What can be observed is that Telegram operates by rules the smaller heterodox platforms are not allowed to operate by, and the rule differential is not explained by anything visible in either side's published policy.</p>
+
+<p>The working model is that opacity buys latitude. A platform whose backchannels are dense enough and useful enough to multiple state actors will be left alone in ways that a platform with no backchannels will not.</p>
+
+<p><strong>The lesson.</strong> If you are willing to make accommodations behind the scenes, you can look like a free-speech advocate in public. Whether that is a model an American founder can or should adopt is a separate question. It is not, in my view, available to most heterodox American platforms. The cost is too high in a different direction.</p>
+
+<h2>The working model</h2>
+
+<p>Pull the four lessons together:</p>
+
+<ul>
+<li><strong>Parler.</strong> Do not depend on AWS or any infrastructure layer run by people who would gladly destroy you.</li>
+<li><strong>Gab.</strong> Total refusal is a coherent choice. Its price is permanent smallness.</li>
+<li><strong>Rumble.</strong> The middle path works if you own the core, diversify the commodity, and accept the minimum app-store accommodation.</li>
+<li><strong>Telegram.</strong> Opacity buys latitude. It is not a strategy a Western founder can pursue openly.</li>
+</ul>
+
+<p>The operating model that emerges is simple to state and hard to execute. Minimize the surface area of political dependency. Own what you can own. Partner only with operators whose politics make destroying you a cost rather than a benefit. Treat AWS, Cloudflare, the App Store, Stripe, and every other major infrastructure provider as a known vulnerability to be mitigated, not as a neutral utility. Build the contingency for being cut off from each one before you launch, not after.</p>
+
+<p>This is not paranoia. It is the lesson the survivors have already internalized and the casualties learned too late. The infrastructure was never neutral. It will not become neutral in your lifetime. Build for that.</p>
+
+<h2>Close</h2>
+
+<p>The founders who survived this category survived because they understood platform risk as political risk before their competitors did. The ones who lost lost because they trusted that the cloud was a utility. It was not. It was a coalition. The coalition decides who is allowed inside its borders and who is not, and the decisions are made by people who have specific politics and specific enemies and a specific theory of which platforms ought to exist.</p>
+
+<p>If you are building one of the platforms the coalition would prefer did not exist, you need a working model of platform risk that the major-platform playbooks will not give you. I work on this problem with platforms that are taking it seriously.</p>
+
+<hr>
+<div class="cta">
+  <p><strong>I'm taking on 2 Eapen Technology clients this quarter.</strong> If this is your problem, apply for a consultation.</p>
+  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Apply for a Consultation</a>
+</div>
+</body>
+</html>
