@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Bay Area consultancies can't help you with moderation — Eapen Technology</title>
+<meta name="description" content="Moderation is downstream of a moral worldview, and the Bay Area has no moral worldview that would let its people make the calls your platform requires.">
+<meta property="og:title" content="Why Bay Area consultancies can't help you with moderation">
+<meta property="og:description" content="Moderation is downstream of a moral worldview, and the Bay Area has no moral worldview that would let its people make the calls your platform requires.">
+<meta property="og:type" content="article">
+<style>
+:root {
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --bg: #ffffff;
+  --rule: #e5e5e7;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+header { margin-bottom: 64px; }
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.byline {
+  color: var(--muted);
+  font-size: 15px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 48px 0 16px;
+}
+p { margin: 0 0 20px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 64px 0 40px;
+}
+.cta {
+  background: var(--text);
+  color: white;
+  padding: 32px;
+  border-radius: 12px;
+}
+.cta a.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.cta a.btn:hover { text-decoration: none; opacity: 0.9; }
+.home-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<a href="/" class="home-link">← Eapen Technology</a>
+<header>
+  <div class="eyebrow">Essay · Positioning</div>
+  <h1>Why Bay Area consultancies can't help you with moderation</h1>
+  <p class="byline">Justus Eapen</p>
+</header>
+
+<p>A founder of a heterodox platform reads the first two essays, agrees with them, and asks the obvious question. Who do I hire to help me build this?</p>
+
+<p>The instinct is to hire the best. The senior trust and safety engineers from Meta. The boutique consultancies that staff out of San Francisco and New York. The law firms with trust and safety practices. These are the people who built the systems at scale. They have the receipts.</p>
+
+<p>They cannot help you. The reason is not that they lack skill. The reason is that moderation is downstream of a moral worldview, and the Bay Area has no moral worldview that would let its people make the calls your platform requires. They will execute the work competently and produce a system that quietly enforces their values, because they have no other values to enforce. The professional neutrality they offer is a pose. Underneath it is the same progressive consensus that built the systems you are trying to escape.</p>
+
+<p>This essay is about why that is the case, what the failure mode looks like in practice, and what to do instead.</p>
+
+<h2>Moderation is a values problem</h2>
+
+<p>Every meaningful moderation decision is a values call dressed up as a policy call. "Is this hate speech?" is not a question with a technical answer. The technical answer is "the classifier output a 0.83 score against a category whose definition was written by humans." Whether the post comes down depends on whether the platform's policy says posts at 0.83 in that category come down. That policy depends on what the platform thinks hate is, and what it thinks the relationship is between speech the listener finds offensive and speech that should be removed.</p>
+
+<p>This cascades through every layer of the stack. The taxonomy is a values call. The thresholds are values calls. The reviewer training is values calls. The appeals process is values calls. The audit trail is values calls. A trust and safety system is a values architecture with software underneath it, not a software architecture with values bolted on.</p>
+
+<p>The major platforms hide this from themselves by treating their values as defaults. As the obvious, professional, neutral way to do the work. They are not defaults. They are the values of the specific people who built the systems. Those people went to specific universities, lived in specific cities, read specific newspapers, attended specific conferences, and absorbed a specific consensus about which speech is dangerous and which causes are righteous. The consensus is coherent and internally consistent. It is also a worldview, not the absence of one.</p>
+
+<h2>The Bay has no moral compass</h2>
+
+<p>I am writing this as a Christian, and I will not pretend otherwise. The vast majority of Bay Area engineers are secular humanists. Their working moral framework, when pressed, reduces to "what I personally feel is harmful" plus "what my peers also feel is harmful." That is not a moral compass. That is a weather vane.</p>
+
+<p>A moral compass requires a fixed point outside yourself. It requires a standard you did not invent and cannot revise to fit the moment. Christians have one. Observant Jews and Muslims have one. People formed inside a serious religious tradition have one, even if they have drifted from it. The Bay Area's professional class, by and large, does not. What they have is the consensus of their peers, the prestige of their institutions, and a deep confidence that the moral intuitions of their cohort are the moral intuitions of a reasonable person anywhere. They cannot adjudicate between their values and yours, because their values are not values to them. Their values are obvious facts about the world.</p>
+
+<p>This is the central problem. You are asking them to make calls that require taking your users' beliefs seriously as beliefs. They will not. They cannot. The structure of secular humanism does not include a category for "this is a position a reasonable person of good faith holds and I disagree with it." It includes "this is a position correct people hold" and "this is a position held by people who need to be corrected." Your platform's users, for the most part, fall in the second category from their point of view. The work you are paying them to do is, in their internal moral logic, the work of slowly correcting your users.</p>
+
+<p>This is not their fault, individually. It is what secular humanism produces when it becomes the unexamined background of a professional class. But it makes them unfit for the work. The longer they work for you, the more the moderation system will drift back toward whatever happens to feel right to the people writing the policy that week. There is no anchor. There cannot be. They removed the anchor on purpose three generations ago, and they have not built another one.</p>
+
+<h2>What this looks like in practice</h2>
+
+<p>The failure mode is not openly hostile. The Bay Area senior engineer hired by a heterodox platform does not show up and refuse to do the work. They show up, are pleasant, and do the work — and the work they do quietly reflects their priors at every choice point that requires judgment.</p>
+
+<p>The taxonomy they propose includes categories that map to Bay Area concerns and excludes categories that map to your users' concerns. The thresholds they set are calibrated to Bay Area sensibilities about what is offensive. The reviewer training they write treats the speech your users care about preserving as borderline-at-best, and treats the speech they consider harmful as urgent. The audit reports they produce frame their decisions in the language of established trust-and-safety best practices, which means the language of the firms and conferences that established those practices, which means a specific worldview rendered as a professional standard.</p>
+
+<p>None of this is sabotage. Most of it is sincerely held. The senior engineer doing this work to your platform genuinely believes they are making it safer, because their working definition of safe is the one their peer group hands them and they have no framework for stepping outside that definition to evaluate it. The result, six months in, is that you have a platform whose moderation system reads, from the inside, like the system you were trying to build, and reads, from the outside, like a slightly slower-moving version of every other major platform. You have paid premium engineering rates to import the exact problem you started the platform to solve.</p>
+
+<h2>The alternative pool</h2>
+
+<p>The pool of senior engineers who can do this work for a heterodox platform exists. It is small. It is not located in San Francisco.</p>
+
+<p>The thing the people in it have in common is a moral framework that comes from outside themselves. The most common version is a serious religious commitment — Reformed, Catholic, Orthodox, or seriously Evangelical. Some come from military, law enforcement, or religious-leadership backgrounds where the moral framework is institutional rather than confessional but still has a fixed point outside personal preference. A few are secular but have done the unusual work of constructing a moral framework explicitly rather than absorbing one from their peers.</p>
+
+<p>What they share is the capacity to recognize when a moderation call is hard. They can see both sides of a hard call as containing real people with real reasons, because their framework requires them to take the other side's reasons seriously rather than dismissing them as symptoms. They can tell you what they believe and why. They can argue for their position without retreating to "this is just obvious."</p>
+
+<p>Practically, this pool lives in Texas, in the Mountain West, in the South, in smaller East Coast cities, on military bases, and inside serious religious networks. It overlaps with the engineering teams at Truth Social, Rumble, the Bitcoin and crypto-aligned platforms, and the more thoughtful corners of the Reformed, Catholic, and Orthodox tech networks. It is reached through warm introduction more than through recruiters. It does not respond to standard SaaS-style outreach. A founder who wants to hire from it needs to be in it, or hire someone who is.</p>
+
+<h2>Close</h2>
+
+<p>You cannot outsource your conscience to people who do not have one of their own. The major trust and safety consultancies will sell you their conscience anyway, and you will pay for the privilege of importing the same consensus you were trying to escape. The pool of senior engineers who can do this work for a heterodox platform is small and outside the standard pipelines. You have to know where to look.</p>
+
+<p>I am one of the people in this pool. If you are building a platform that needs moderation work done by someone whose worldview is intelligible to your users, the next step is a thirty-minute conversation.</p>
+
+<hr>
+<div class="cta">
+  <p><strong>I'm taking on 2 Eapen Technology clients this quarter.</strong> If this is your problem, apply for a consultation.</p>
+  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Apply for a Consultation</a>
+</div>
+</body>
+</html>
