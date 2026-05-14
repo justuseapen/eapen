@@ -22,6 +22,16 @@ Per-row research before any send:
 | 8 | Damus | Bitcoin / Nostr social | damus.io | <10 (small indie team, Nostr protocol) | William Casarin | Founder | linkedin.com/in/william-casarin-baab44143 | — | Jan 2025: Apple issued a 14-day removal warning to Damus over Bitcoin Zaps (Lightning tipping), citing App Store guideline 3.1.1. Casarin publicly stated he expects eventual deplatforming; removed the Zap button to stay in store but called it "forcing me to remove a core feature." (finance.yahoo.com/news/damus-founder-now-expects-deplatforming-230057088.html) | researched | 2026-05-14 | draft email |
 | 9 | Primal | Bitcoin / Nostr social | primal.net | <20 (Ontario, Canada; $1M seed from Ten31 & Hivemind) | Miljan Braticevic | CEO & Founder | linkedin.com/in/miljan | — | Feb 2025: Primal released v2.1 with NWC (Nostr Wallet Connect) support, allowing the Primal Lightning wallet to connect to any Nostr app — expanding the zap ecosystem Casarin (Damus) had to strip down for Apple. Also appeared on TFTC podcast discussing censorship-resistant social media (tftc.io/tftc-nostr-2025-guide-decentralized-internet-revolution/). | researched | 2026-05-14 | draft email |
 | 10 | PublicSquare | values-based marketplace + UGC | publicsq.com | ~100 (NASDAQ: PSQH, parallel-economy marketplace) | Michael Seifert | CEO & Founder | linkedin.com/in/michael-seifert-b70b6017b | — | Dec 4, 2025: Launched PSQ Impact, a conservative political fundraising platform with its own payment stack (PSQ Payments) — explicitly to avoid deplatforming by Big Tech payment processors. Q1 2026 revenue up 167% YoY. (businesswire.com/news/home/20251204645415/) | researched | 2026-05-14 | draft email |
+| 11 | Neynar | Web3 social (post-Farcaster) | neynar.com | ~15 (Haun Ventures + USV backed; $14M Series A) | Rishav Mukherji | CEO & Co-founder | linkedin.com/in/rishavmukherji/ | — | Jan 21, 2026: Neynar acquired the Farcaster protocol, Warpcast app, and Clanker AI token launchpad from Merkle Manufactory, inheriting T&S responsibility for the largest decentralized social protocol. Neynar's existing Automod product moderates 500+ Farcaster channels. Founders Dan Romero and Varun Srinivasan stepped back; Mukherji now stewards the full protocol stack. (coindesk.com/business/2026/01/21/farcaster-founders-step-back-as-neynar-acquires-struggling-crypto-social-app) | researched | 2026-05-14 | draft email |
+| 12 | Mask Network / Lens Protocol | Web3 social (Lens-adjacent) | lens.xyz | ~50 (Mask Network; Lens has 50K+ MAUs via Orb app) | Suji Yan | Founder & CEO, Mask Network | linkedin.com/in/suji-yan-6741a614 | — | Feb 4, 2026: Aave Labs formally discontinued the Avara brand and confirmed Mask Network as sole steward of Lens Protocol. MaskDAO had previously acquired Orb (largest Lens social app, 50K+ MAUs). Mask now owns the product roadmap for the only major Ethereum-native social graph — inheriting its moderation surface. (cryptovee.com/2026/02/04/aave-labs-discontinues-avara-brand-amid-dao-tensions/) | researched | 2026-05-14 | draft email |
+| 13 | MeWe | alt-tech / Web3-adjacent social | mewe.com | ~100 (21M registered users; Avalanche blockchain) | Carlos Betancourt | CEO | linkedin.com/company/sgrouples | — | Mar 11, 2026: MeWe launched embedded digital wallets and creator tipping on Avalanche blockchain for all 21M users, replacing the Like button with micro-payments — positioning as the world's largest decentralized social platform. Moderation approach: known no-censorship stance attracted conservatives; Betancourt took over July 2025 with Web3 mandate. (einpresswire.com/article/898704825/mewe-kills-the-like-button-launches-digital-wallets-to-replace-vanity-metrics-with-value-metrics-for-over-21m-users) | researched | 2026-05-14 | draft email |
+| 14 | Glorify | faith-tech (Christian devotional + community) | glorify-app.com | ~100 (20M+ downloads; $84.6M raised from a16z, SoftBank) | Henry Costa | Co-CEO & Co-founder | linkedin.com/in/henry-costa/ | — | Apr 2026: Glorify announced a multi-project content partnership with Great American Media on a faith-focused content slate — the first companion devotional series tied to a Great American Pure Flix film. Glorify also has 20M+ users who share prayer requests and community annotations (UGC). (variety.com/2026/tv/news/glorify-great-american-media-1236706061/) | researched | 2026-05-14 | draft email |
+| 15 | Pray.com | faith-tech (prayer + community social) | pray.com | ~50 (142M+ prayers shared; 2.5B minutes in prayer; App Store + Google Play) | Steve Gatena | CEO & Co-founder | linkedin.com/in/stevegatena | — | May 2026: White House officially listed Pray.com as a partner app for the "America Prays" campaign — Trump's initiative to get 1M Americans praying weekly through July 4, 2026. White House called Pray.com personally; Gatena publicly confirmed the partnership. Pray.com's community groups (congregations, prayer circles) are a live UGC moderation surface. (whitehouse.gov/freedom250/america-prays/) | researched | 2026-05-14 | draft email |
+| 16 | Ark Dating | values-based dating (Christian) | arkdating.app | <20 (bootstrapped; 170K downloads, active in 18 countries) | Bob Carroll | CEO & Co-founder | linkedin.com/company/ark-dating | — | Apr 14, 2026: Ark released v2.3.0 on App Store and Google Play, continuing its Speed Dating feature launch (10x more likely to lead to real conversations than profile likes). App is explicitly built around faith-based identity verification and community safety. User profiles, messages, and community events are all UGC requiring moderation. (apps.apple.com/us/app/ark-christian-dating-app/id1671028117) | researched | 2026-05-14 | draft email |
+| 17 | RallyPoint | defense-adjacent UGC (military social network) | rallypoint.com | ~80 (3M+ military/veteran members; $24M raised) | David Gowel | CEO | linkedin.com/in/davidgowel/ | — | Nov 19, 2025: RallyPoint Serves received $250K Bezos Courage & Civility Award from Admiral Bill McRaven to expand AI-driven moderation research into veteran TBI and behavioral health interventions — explicitly linking AI moderation to veteran safety outcomes. Platform moderation uses technology plus member-administrators to oversee military-specific UGC. [HOOK DATE: Nov 2025 — outside 90-day window. Best available defense-adjacent UGC platform; flagged in batch notes.] (einpresswire.com/article/870181643/rallypoint-serves-receives-250-000-bezos-courage-and-civility-award-from-admiral-bill-mcraven) | researched | 2026-05-14 | draft email |
+| 18 | Blaze Media | conservative media w/ community features | theblaze.com / blazetv.com | ~400 (165M monthly reach across all properties; BlazeTV streaming) | Tyler Cardon | CEO | linkedin.com/in/tylercardon/ | — | BlazeTV+ subscriber community includes invite-only live chats with hosts (Glenn Beck, Mark Levin, Steve Deace, Allie Beth Stuckey) — a live UGC moderation surface under a conservative free-speech editorial posture. Glenn Beck announced The Torch AI platform (Jan 5, 2026) and stepped back from day-to-day Blaze operations, leaving Cardon to manage the tech roadmap. [HOOK: ongoing community feature; no sharp product launch in Feb–May 2026 found. Flagged in batch notes.] (blazetv.com) | researched | 2026-05-14 | draft email |
+| 19 | SALT | values-based dating (Christian/conservative) | be-salt.com | <30 (1M+ users in 50 countries; backed by Cubit Capital) | Rachael Kearney | Co-founder | linkedin.com/company/salt-christian-dating | — | Mar 2026: SALT app updated (Google Play, Mar 17, 2026) — ongoing development of faith-filtering, community events, and voice note features. Platform explicitly positions as "made by Christians for Christians" and competes with Match-owned Upward on values grounds. Community event features (scheduled meetups, group chats) create UGC moderation surface. [Contact: Co-founder Rachael Kearney identified; full LinkedIn URL and email need further research.] (play.google.com/store/apps/details?id=com.besalt.app) | researched | 2026-05-14 | draft email |
+| 20 | Salem Media / SalemNOW | conservative media w/ community streaming | salemnow.com | ~1,200 (NASDAQ: SALM; 90+ radio stations, SalemNOW streaming, Salem News Channel) | David Santrella | CEO, Salem Media Group | linkedin.com/company/salem-media | — | May 12, 2026: Salem Media announced acquisition by WaterStone (The Christian Community Foundation) in a $1/share deal to take the company private and "strengthen its long-term Christian mission." SalemNOW expanded to Amazon Prime Video (Mar 3, 2026) and Roku (Mar 26, 2026). New private ownership under a Christian foundation means immediate T&S posture questions for streaming UGC (comments, live events). (globenewswire.com/news-release/2026/05/12/3293512/0/en/salem-media-to-be-acquired-by-waterstone-in-major-growth-deal.html) | researched | 2026-05-14 | draft email |
 
 ## Batch 1 notes (May 2026)
 
@@ -40,14 +50,43 @@ Per-row research before any send:
 - [ ] Defense-adjacent UGC (batch 2)
 - [ ] Web3 social beyond Nostr (batch 2)
 
+## Batch 2 notes (May 2026)
+
+**Substitutions and drops:**
+- **The Right Stuff / Date Right** dropped: App shut down November 21, 2025. Confirmed defunct. Replaced with **Ark Dating** (Christian, App Store active, Apr 14 2026 update) and **SALT** (1M+ users globally, ongoing development).
+- **Farcaster** (the protocol/Warpcast app) not added separately: Neynar now owns the protocol — row 11 covers the full post-Farcaster Web3-social picture.
+- **Lens/Avara** resolved: Avara dissolved Feb 4, 2026; Mask Network stewards Lens. Row 12 covers this as "Mask Network / Lens Protocol."
+- **Tempo** (Romero + Srinivasan's stablecoin startup): No UGC surface. Correctly skipped.
+- **The League**: Match Group–owned, mainstream. Does not meet values-mismatch criterion. Skipped.
+- **Anduril / TigerSwan**: No public UGC community surface identified. Skipped.
+- **Daily Wire**: Undergoing significant layoffs (May 2026, 13% staff cut, ~34% YouTube drop). Revenue declining. Do not prioritize. No tech decision-maker identifiable with T&S purview.
+- **Blaze Media (Glenn Beck)**: Beck announced Jan 5, 2026 he is stepping back to focus on The Torch AI library project. Tyler Cardon (CEO) retained; no sharp Feb–May 2026 product launch found. Included as row 18 with caveat — verify hook before sending.
+- **RallyPoint**: Best available defense-adjacent UGC platform (3M+ military members, active moderation). Nov 2025 Bezos/McRaven AI-moderation grant is the most recent findable hook but is outside the 90-day recency window. Included as row 17 with flag — do a fresh search before outreach to find any Feb-May 2026 news, or hold until a hook emerges.
+- **Glorify Christian app**: Confirmed two names — "Glorify" the Christian devotional app (a16z-backed, 20M downloads) is distinct from "Glorify" the e-commerce design tool. Row 14 is the faith-tech Christian app.
+- **Higher Bond**: Conservative/Christian dating app. No identified CEO name (only "Jason, founder"). No 2026-specific news hook. Skipped.
+
+**Hook recency audit — batch 2:**
+- Row 11 (Neynar): Jan 21, 2026 — brief explicitly mandates this company; hook is 113 days old as of May 14. Acceptable per brief instructions.
+- Row 12 (Mask/Lens): Feb 4, 2026 — 99 days. At edge of window; use "Aave Labs formally dissolves Avara brand" as the peg.
+- Row 13 (MeWe): Mar 11, 2026 — 64 days. Clean.
+- Row 14 (Glorify): Apr 2026 — ~30–45 days. Clean.
+- Row 15 (Pray.com): May 2026 — current. Clean.
+- Row 16 (Ark Dating): Apr 14, 2026 — 30 days. Clean.
+- Row 17 (RallyPoint): Nov 19, 2025 — 176 days. OUTSIDE WINDOW. Flag before sending; find 2026 hook or hold.
+- Row 18 (Blaze Media): No sharp 2026 product launch. Ongoing community feature only. Flag before sending.
+- Row 19 (SALT dating): Mar 17, 2026 app update — 58 days. Marginal hook (app update, not press-worthy event). Verify and find a stronger angle before sending.
+- Row 20 (Salem Media): May 12, 2026 WaterStone acquisition — 2 days old. Excellent.
+
 ## Categories to fill
 
 - [x] Alt-tech (Rumble, Locals, Gab, Minds) — batch 1
-- [ ] Conservative media w/ community features — batch 2
+- [x] Alt-tech / Web3-adjacent (MeWe) — batch 2
+- [x] Conservative media w/ community features (Blaze Media, Salem Media) — batch 2
 - [x] Religious / faith platforms (Hallow, Gloo) — batch 1
+- [x] Faith-tech devotional / community (Glorify, Pray.com) — batch 2
 - [x] Bitcoin / crypto social (Damus, Primal) — batch 1
-- [ ] Values-based dating apps — batch 2
+- [x] Values-based dating apps (Ark Dating, SALT) — batch 2
 - [x] Heterodox publishing platforms (Substack) — batch 1
-- [ ] Web3 social (Lens-adjacent, post-Farcaster) — batch 2
-- [ ] Defense-adjacent platforms w/ UGC — batch 2
+- [x] Web3 social (Neynar post-Farcaster, Mask/Lens) — batch 2
+- [x] Defense-adjacent platforms w/ UGC (RallyPoint) — batch 2
 - [x] Values-based marketplace (PublicSquare) — batch 1
