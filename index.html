@@ -1,684 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eapen Technology — AI Solutions for Business</title>
-    <meta name="description" content="Justus Eapen evaluates your business processes and designs AI implementations that cut costs and eliminate bottlenecks. Limited availability.">
-    <meta property="og:title" content="Eapen Technology — AI Solutions for Business">
-    <meta property="og:description" content="Justus Eapen evaluates your business processes and designs AI implementations that cut costs and eliminate bottlenecks. Limited availability.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Eapen Technology — AI Solutions for Business">
-    <meta name="twitter:description" content="Justus Eapen evaluates your business processes and designs AI implementations that cut costs and eliminate bottlenecks. Limited availability.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --text-primary: #1d1d1f;
-            --text-secondary: #6e6e73;
-            --accent-gold: #c49a5c;
-            --accent-gold-light: #d4af73;
-            --text-tertiary: #86868b;
-            --surface-light: rgba(255, 255, 255, 0.72);
-            --border-light: rgba(0, 0, 0, 0.04);
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-            background: #0a0a0f;
-            color: var(--text-primary);
-            min-height: 100vh;
-            position: relative;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Liquid glass orbs - lighter, more refined */
-        .liquid-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.6;
-            animation: float 30s infinite ease-in-out;
-            mix-blend-mode: screen;
-        }
-
-        .orb-1 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle at 30% 30%, rgba(196, 154, 92, 0.3), rgba(196, 154, 92, 0) 50%);
-            top: -200px;
-            left: -200px;
-        }
-
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 115, 0.2), rgba(212, 175, 115, 0) 50%);
-            bottom: -100px;
-            right: -100px;
-            animation-delay: -15s;
-        }
-
-        .orb-3 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle at 50% 50%, rgba(160, 125, 69, 0.2), rgba(160, 125, 69, 0) 50%);
-            top: 50%;
-            right: 10%;
-            animation-delay: -7s;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(30px, -30px) scale(1.05);
-            }
-            66% {
-                transform: translate(-20px, 20px) scale(0.95);
-            }
-        }
-
-        /* Main container */
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 960px;
-            width: 90%;
-            margin: 0 auto;
-            padding: 80px 40px;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Logo/Name with gradient */
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            letter-spacing: -0.04em;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(180deg, #ffffff 0%, #d4af73 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Tagline */
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .subtitle {
-            font-size: 1.125rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
-        }
-
-        /* Glass card for contact */
-        .contact-card {
-            background: var(--surface-light);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid var(--border-light);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 
-                0 4px 24px rgba(0, 0, 0, 0.04),
-                0 1px 2px rgba(0, 0, 0, 0.06);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Shimmer effect on card */
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent 30%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 70%
-            );
-            transform: translateX(-100%) translateY(-100%);
-            transition: transform 0.6s;
-        }
-
-        .contact-card:hover::before {
-            transform: translateX(100%) translateY(100%);
-            transition: transform 1.2s;
-        }
-
-        /* Contact button - glowing */
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1.125rem 2.5rem;
-            background: linear-gradient(135deg, #c49a5c 0%, #a07d45 100%);
-            color: #0a0a0f;
-            text-decoration: none;
-            font-size: 1.125rem;
-            font-weight: 600;
-            border-radius: 980px;
-            transition: all 0.2s ease;
-            position: relative;
-            letter-spacing: -0.01em;
-            box-shadow:
-                0 4px 16px rgba(196, 154, 92, 0.4),
-                0 2px 4px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-btn:hover {
-            background: linear-gradient(135deg, #d4af73 0%, #b8924f 100%);
-            transform: scale(1.05) translateY(-2px);
-            box-shadow:
-                0 6px 24px rgba(196, 154, 92, 0.5),
-                0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-btn:active {
-            transform: scale(0.98);
-        }
-
-        .contact-btn svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        /* Floating light particles */
-        .light-particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: particle-float 25s infinite linear;
-        }
-
-        @keyframes particle-float {
-            from {
-                transform: translateY(100vh) translateX(0) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-                transform: translateY(90vh) translateX(10px) scale(1);
-            }
-            90% {
-                opacity: 1;
-                transform: translateY(10vh) translateX(-10px) scale(1);
-            }
-            to {
-                transform: translateY(-10px) translateX(0) scale(0);
-                opacity: 0;
-            }
-        }
-
-        /* Dynamic mesh gradient background */
-        .mesh-gradient {
-            position: fixed;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background:
-                radial-gradient(at 27% 37%, rgba(196, 154, 92, 0.15) 0px, transparent 50%),
-                radial-gradient(at 97% 21%, rgba(212, 175, 115, 0.12) 0px, transparent 50%),
-                radial-gradient(at 52% 99%, rgba(160, 125, 69, 0.1) 0px, transparent 50%),
-                radial-gradient(at 10% 29%, rgba(196, 154, 92, 0.08) 0px, transparent 50%),
-                radial-gradient(at 97% 96%, rgba(212, 175, 115, 0.08) 0px, transparent 50%),
-                radial-gradient(at 33% 50%, rgba(180, 140, 80, 0.1) 0px, transparent 50%);
-            z-index: -2;
-            animation: mesh-animation 25s ease infinite;
-        }
-
-        @keyframes mesh-animation {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-            }
-            33% {
-                transform: translate(-5%, -5%) rotate(1deg) scale(1.02);
-            }
-            66% {
-                transform: translate(5%, -5%) rotate(-1deg) scale(0.98);
-            }
-        }
-
-        /* Typography scale */
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        /* Light content area */
-        .light-content {
-            background: #fbfbfd;
-            border-radius: 32px 32px 0 0;
-            padding: 80px 40px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Section spacing */
-        .section {
-            margin-bottom: 80px;
-        }
-
-        .section-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .section-label::before {
-            content: attr(data-number);
-            font-size: 5rem;
-            font-weight: 800;
-            color: transparent;
-            -webkit-text-stroke: 2px rgba(196, 154, 92, 0.15);
-            line-height: 1;
-        }
-
-        /* Brand tagline */
-        .brand-tagline {
-            font-size: 0.8125rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Hero section - dark */
-        .hero {
-            text-align: center;
-            padding: 0 0 40px;
-            margin-bottom: 60px;
-        }
-
-        .hero .tagline {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
-        }
-
-        .hero .subtitle {
-            font-size: 1.125rem;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero .supporting {
-            font-size: 0.9375rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-        }
-
-        /* Services grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background: var(--surface-light);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid var(--border-light);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: left;
-            box-shadow:
-                0 4px 24px rgba(0, 0, 0, 0.04),
-                0 1px 2px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 8px 32px rgba(0, 0, 0, 0.06),
-                0 2px 4px rgba(0, 0, 0, 0.08);
-        }
-
-        .service-card {
-            border-left: 4px solid transparent;
-        }
-
-        .service-card:nth-child(1) {
-            border-left-color: #c49a5c;
-        }
-
-        .service-card:nth-child(2) {
-            border-left-color: #d4af73;
-        }
-
-        .service-card:nth-child(3) {
-            border-left-color: #a07d45;
-        }
-
-        .service-card h3 {
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card h3::before {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 40px;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            opacity: 0.15;
-        }
-
-        .service-card:nth-child(1) h3::before {
-            background: #c49a5c;
-        }
-
-        .service-card:nth-child(2) h3::before {
-            background: #d4af73;
-        }
-
-        .service-card:nth-child(3) h3::before {
-            background: #a07d45;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-secondary);
-        }
-
-        /* About section */
-        .about p {
-            font-size: 1.0625rem;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .about p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Bottom CTA */
-        .bottom-cta {
-            text-align: center;
-            padding: 40px 0 40px;
-            margin-bottom: 40px;
-        }
-
-        .bottom-cta .qualifier {
-            font-size: 0.9375rem;
-            color: var(--text-tertiary);
-            margin-top: 1.25rem;
-        }
-
-        /* About max-width for readability */
-        .about {
-            max-width: 640px;
-        }
-
-        /* Responsive - tablet */
-        @media (max-width: 900px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-        }
-
-        /* Responsive - mobile */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.75rem;
-            }
-
-            .light-content {
-                border-radius: 24px 24px 0 0;
-                padding: 60px 0 0;
-            }
-
-            .section-label::before {
-                font-size: 3.5rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-
-            .hero {
-                padding: 40px 0 60px;
-                margin-bottom: 60px;
-            }
-
-            .hero .tagline {
-                font-size: 1.25rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1rem;
-            }
-
-            .section {
-                margin-bottom: 60px;
-            }
-
-            .container {
-                padding: 40px 20px;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
-            .contact-card {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Subtle noise texture overlay */
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0.02;
-            z-index: 1000;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,.01) 35px, rgba(0,0,0,.01) 70px);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eapen Technology — AI Moderation Systems for Politically Sensitive Platforms</title>
+<meta name="description" content="Justus Eapen builds AI moderation systems for platforms where every decision becomes a press incident. Five years at Truth Social. Taking on 2 clients this quarter.">
+<meta property="og:title" content="Eapen Technology — AI Moderation Systems for Politically Sensitive Platforms">
+<meta property="og:description" content="Justus Eapen builds AI moderation systems for platforms where every decision becomes a press incident. Five years at Truth Social. Taking on 2 clients this quarter.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eapen Technology — AI Moderation Systems for Politically Sensitive Platforms">
+<meta name="twitter:description" content="Justus Eapen builds AI moderation systems for platforms where every decision becomes a press incident. Five years at Truth Social.">
+<style>
+:root {
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --bg: #ffffff;
+  --rule: #e5e5e7;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 24px 120px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+}
+h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 20px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.lead {
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+.credential {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 32px 0 24px;
+}
+.scarcity {
+  font-weight: 600;
+  margin: 32px 0 24px;
+}
+.btn {
+  display: inline-block;
+  background: var(--text);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.btn:hover { text-decoration: none; background: var(--accent); }
+section { margin: 96px 0 0; }
+section.hero { margin-top: 0; }
+.price {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 12px;
+  font-variant-numeric: tabular-nums;
+}
+.offer { margin-bottom: 48px; }
+.offer:last-child { margin-bottom: 0; }
+.essay-link {
+  display: block;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+}
+.essay-link:hover { text-decoration: none; }
+.essay-link h3 { color: var(--text); margin-bottom: 4px; }
+.essay-link:hover h3 { color: var(--accent); }
+.essay-link p { color: var(--muted); margin: 0; font-size: 16px; }
+.essay-link:first-of-type { border-top: 1px solid var(--rule); }
+footer {
+  margin-top: 120px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 14px;
+}
+</style>
 </head>
 <body>
-    <!-- Mesh gradient background -->
-    <div class="mesh-gradient"></div>
-    
-    <!-- Liquid glass orbs -->
-    <div class="liquid-orb orb-1"></div>
-    <div class="liquid-orb orb-2"></div>
-    <div class="liquid-orb orb-3"></div>
-    
-    <!-- Light particles -->
-    <div id="particles"></div>
-    
-    <!-- Main content -->
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <p class="brand-tagline">Mission-aligned AI</p>
-            <h1>Eapen Technology</h1>
-            <p class="tagline">AI Solutions That Actually Save You Money</p>
-            <p class="subtitle">We evaluate your business processes and design AI implementations that cut costs, eliminate bottlenecks, and compound over time.</p>
-            <p class="supporting">Led by Justus Eapen — senior engineer, AI specialist, and engineering leader with 12+ years shipping software at scale. Limited availability.</p>
 
-            <a href="https://calendly.com/eapentechnology/get-acquainted" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                Apply for a Consultation
-            </a>
-        </section>
+<section class="hero">
+  <h1>Eapen Technology</h1>
+  <p class="lead">AI moderation systems for politically sensitive platforms.</p>
+  <p>If you run a platform where every moderation decision becomes a press incident, a Congressional letter, or a user revolt, generic T&amp;S vendors will not save you. I build the systems that do.</p>
+  <p class="credential">Senior Software Engineer at TMTG (NASDAQ: DJT), Truth Social. Five years on internal trust and safety infrastructure at scale. Founder, Eapen Technology.</p>
+  <p class="scarcity">Taking on 2 clients this quarter.</p>
+  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Apply for a Consultation</a>
+</section>
 
-        <!-- Light content area -->
-        <div class="light-content">
+<section>
+  <p class="eyebrow">01 · Services</p>
+  <h2>What I Build</h2>
 
-        <!-- Services Section -->
-        <section class="section">
-            <p class="section-label" data-number="01">Services</p>
-            <h2>What I Do</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>AI Process Audit</h3>
-                    <p>I examine your operations end-to-end and identify where AI can eliminate manual work, reduce errors, and cut costs. You get a prioritized roadmap — not a vague slide deck.</p>
-                </div>
-                <div class="service-card">
-                    <h3>AI Solution Design &amp; Implementation</h3>
-                    <p>From architecture to production. I design and build AI systems tailored to your workflows — content moderation, automation, internal tooling, whatever moves the needle.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Engineering Leadership</h3>
-                    <p>Need someone to lead the technical side? I embed with your team to hire engineers, set standards, and ship. Fractional CTO, hands-on.</p>
-                </div>
-            </div>
-        </section>
+  <div class="offer">
+    <h3>Moderation Stack Assessment</h3>
+    <p class="price">$25,000 · 4 weeks · fixed price</p>
+    <p>Production review of your current moderation pipeline. I look at ingest, classification, queueing, reviewer tooling, appeals, and audit. You get a written architecture document, a 90-day implementation plan, and named vendor and model recommendations. Not a slide deck.</p>
+  </div>
 
-        <!-- About Section -->
-        <section class="section about">
-            <p class="section-label" data-number="02">About</p>
-            <h2>Who You're Working With</h2>
-            <p>Justus Eapen is a senior software engineer and engineering leader with 12+ years building production systems at scale. He currently leads internal tools and AI automoderation at a major social media platform, designing systems that process millions of pieces of content daily.</p>
-            <p>Previously, Justus built full-stack applications at SmartLogic, led product and engineering at multiple startups, and founded Baltimore's first AI meetup — growing it to 400+ members. He's spoken at national engineering conferences, hosted two technology podcasts, and contributed to open-source AI and chatbot frameworks.</p>
-            <p>He started Eapen Technology to bring that same level of engineering rigor to businesses ready to capture real value from AI.</p>
-        </section>
+  <div class="offer">
+    <h3>T&amp;S Architecture Engagement</h3>
+    <p class="price">from $60,000 · 8 to 12 weeks · fixed scope</p>
+    <p>For platforms past the assessment that need the system actually built. Production-ready architecture, model evaluation harness, reviewer workflow, on-call runbook. Roadmap to first-pass automation on the categories you choose. I do the work; your team owns the result.</p>
+  </div>
 
-        <!-- Bottom CTA -->
-        <section class="bottom-cta">
-            <div class="contact-card">
-                <a href="https://calendly.com/eapentechnology/get-acquainted" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    Apply for a Consultation
-                </a>
-            </div>
-            <p class="qualifier">Limited availability — I take on a small number of clients at a time.</p>
-        </section>
+  <div class="offer">
+    <h3>Senior Advisor Retainer</h3>
+    <p class="price">$15,000/month · 3-month minimum</p>
+    <p>Embedded availability for CTOs and Heads of Trust and Safety. 30 hours per month. Weekly architecture review, escalation availability, model and vendor decisions, incident post-mortems. For platforms running their own T&amp;S build and want a senior voice in the room.</p>
+  </div>
+</section>
 
-        </div><!-- end light-content -->
-    </div>
-    
-    <!-- Noise texture -->
-    <div class="noise"></div>
-    
-    <script>
-        // Create floating light particles
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 20;
+<section>
+  <p class="eyebrow">02 · About</p>
+  <h2>Who You're Working With</h2>
+  <p>Justus Eapen has spent the last five years as a Senior Software Engineer at Trump Media and Technology Group (NASDAQ: DJT), working on Truth Social's internal trust and safety infrastructure. He has built and operated moderation systems at scale under regulatory scrutiny, press attention, and political pressure that most platforms will never face.</p>
+  <p>Before TMTG: developer at SmartLogic, leading production systems and hosting Elixir Wizards for six seasons. Speaker at ElixirConf USA. Head of Software at Pavlok, where he scaled the engineering team to 30+. SVP of Innovation at NorthOut, running product and engineering across 4 to 6 startup teams simultaneously.</p>
+  <p>Founder of Baltimore AI/ML. Grew the community to 400+ members. Booked speakers from Johns Hopkins, NASA Goddard, and Legg Mason.</p>
+  <p>He lives in Aberdeen, Maryland with his wife and two children.</p>
+</section>
 
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'light-particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 25 + 's';
-            particle.style.animationDuration = (20 + Math.random() * 10) + 's';
-            particlesContainer.appendChild(particle);
-        }
+<section>
+  <p class="eyebrow">03 · Writing</p>
+  <h2>Selected Essays</h2>
+  <p>Three essays I wrote for the kind of operator who would hire me. If these arguments resonate, we will probably get along.</p>
 
-        // Subtle parallax effect on mouse move (with requestAnimationFrame)
-        let rafId = null;
-        document.addEventListener('mousemove', (e) => {
-            if (rafId) return;
-            rafId = requestAnimationFrame(() => {
-                const x = (e.clientX / window.innerWidth) - 0.5;
-                const y = (e.clientY / window.innerHeight) - 0.5;
+  <a href="/essays/moderation-without-the-lean.html" class="essay-link">
+    <h3>How to build moderation that doesn't lean left</h3>
+    <p>The biggest moderation risk at a heterodox platform is not a user posting something dangerous. It is Apple or Google pulling your app. How the lean enters the policy layer, and what to do instead.</p>
+  </a>
 
-                const orbs = document.querySelectorAll('.liquid-orb');
-                orbs.forEach((orb, index) => {
-                    const speed = (index + 1) * 20;
-                    orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-                });
-                rafId = null;
-            });
-        });
+  <a href="/essays/platform-risk-is-political-risk.html" class="essay-link">
+    <h3>What the deplatforming of Parler actually taught us</h3>
+    <p>Four cases — Parler, Gab, Rumble, Telegram — and the working model of platform risk that the survivors have already internalized.</p>
+  </a>
 
-        // Smooth hover effect for all contact cards
-        document.querySelectorAll('.contact-card').forEach((card) => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) - 0.5;
-                const y = ((e.clientY - rect.top) / rect.height) - 0.5;
+  <a href="/essays/why-the-bay-cant-help.html" class="essay-link">
+    <h3>Why Bay Area consultancies can't help you with moderation</h3>
+    <p>Moderation is downstream of a moral worldview. The Bay Area's worldview is incompatible with the work your platform needs done.</p>
+  </a>
+</section>
 
-                card.style.transform = `
-                    perspective(1000px)
-                    rotateY(${x * 5}deg)
-                    rotateX(${-y * 5}deg)
-                    translateZ(10px)
-                `;
-            });
+<section>
+  <p class="eyebrow">04 · Contact</p>
+  <h2>Apply</h2>
+  <p>I take on a small number of clients at a time. If you've read this far, the next step is a 30-minute call.</p>
+  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Apply for a Consultation</a>
+</section>
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) translateZ(0)';
-            });
-        });
-    </script>
+<footer>
+  <p>Eapen Technology · Aberdeen, Maryland · justus@eapentechnology.com</p>
+</footer>
+
 </body>
 </html>
