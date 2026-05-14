@@ -32,6 +32,16 @@ Per-row research before any send:
 | 18 | Blaze Media | conservative media w/ community features | theblaze.com / blazetv.com | ~400 (165M monthly reach across all properties; BlazeTV streaming) | Tyler Cardon | CEO | linkedin.com/in/tylercardon/ | — | BlazeTV+ subscriber community includes invite-only live chats with hosts (Glenn Beck, Mark Levin, Steve Deace, Allie Beth Stuckey) — a live UGC moderation surface under a conservative free-speech editorial posture. Glenn Beck announced The Torch AI platform (Jan 5, 2026) and stepped back from day-to-day Blaze operations, leaving Cardon to manage the tech roadmap. [HOOK: ongoing community feature; no sharp product launch in Feb–May 2026 found. Flagged in batch notes.] (blazetv.com) | researched | 2026-05-14 | draft email |
 | 19 | SALT | values-based dating (Christian/conservative) | be-salt.com | <30 (1M+ users in 50 countries; backed by Cubit Capital) | Rachael Kearney | Co-founder | linkedin.com/company/salt-christian-dating | — | Mar 2026: SALT app updated (Google Play, Mar 17, 2026) — ongoing development of faith-filtering, community events, and voice note features. Platform explicitly positions as "made by Christians for Christians" and competes with Match-owned Upward on values grounds. Community event features (scheduled meetups, group chats) create UGC moderation surface. [Contact: Co-founder Rachael Kearney identified; full LinkedIn URL and email need further research.] (play.google.com/store/apps/details?id=com.besalt.app) | researched | 2026-05-14 | draft email |
 | 20 | Salem Media / SalemNOW | conservative media w/ community streaming | salemnow.com | ~1,200 (NASDAQ: SALM; 90+ radio stations, SalemNOW streaming, Salem News Channel) | David Santrella | CEO, Salem Media Group | linkedin.com/company/salem-media | — | May 12, 2026: Salem Media announced acquisition by WaterStone (The Christian Community Foundation) in a $1/share deal to take the company private and "strengthen its long-term Christian mission." SalemNOW expanded to Amazon Prime Video (Mar 3, 2026) and Roku (Mar 26, 2026). New private ownership under a Christian foundation means immediate T&S posture questions for streaming UGC (comments, live events). (globenewswire.com/news-release/2026/05/12/3293512/0/en/salem-media-to-be-acquired-by-waterstone-in-major-growth-deal.html) | researched | 2026-05-14 | draft email |
+| 21 | Stacker News | Bitcoin / Lightning social forum | stacker.news | <20 (bootstrapped; no outside funding; Lightning-native Hacker News clone) | Keyan Kousha | Founder | linkedin.com/in/keyank/ | — | Apr 2026: Stacker News ran "Million Sat Madness v2," rewarding top 100 contributors monthly with Bitcoin. April saw all-time highs in posts and comments (+29% MoM). The platform's core T&S mechanism is economic — users pay sats to post, which filters spam — but territory-level moderation (each community sub) still requires human policy. First place earned 1M sats for April. Platform is entirely dependent on App Store distribution for Lightning wallet integration. (stacker.news/items/489094) | researched | 2026-05-14 | draft email |
+| 22 | Beehiiv | heterodox publishing / creator platform | beehiiv.com | ~200 (LA-based; $49.7M raised from NEA, Lightspeed; $28M+ ARR; 50K+ active publishers) | Tyler Denk | CEO & Co-founder | linkedin.com/in/tyler-denk/ | — | Apr 23, 2026: Beehiiv launched webinars (live events for up to 1,000 people with chat moderation), metered paywalls, AI podcast analytics, and paid trials — all new UGC-adjacent surfaces. TechCrunch covered the launch. Company reported best quarter ever: 400M unique readers, 50K+ active publishers, $28M ARR. No Big Tech T&S DNA in leadership; Tyler Denk came from Morning Brew/ConvertKit lineage. (techcrunch.com/2026/04/23/beehiiv-rolls-out-new-creator-tools-including-webinars-and-customizable-paywalls/) | researched | 2026-05-14 | draft email |
+| 23 | Odysee | alt-tech video (Web3 / decentralized) | odysee.com | ~30 (acquired by Forward Research Jun 2024; CEO Julian Chandra) | Julian Chandra | CEO & Founder | linkedin.com/in/julian-chandra-54a37613/ | — | Feb 19, 2026: Odysee announced a forthcoming feature to let users watch any YouTube video inside Odysee without opening YouTube — a strategic move to convert YouTube audience while competing on creator freedom. UGC moderation burden expands with scale. Platform explicitly markets itself to creators deplatformed or shadow-banned elsewhere, meaning high-risk content moderation edge cases are the core product. (piunikaweb.com/2026/02/20/odysee-youtube-video-playback-feature/) | researched | 2026-05-14 | draft email |
+| 24 | Muslim Pro (Bitsmedia) | faith-tech (Muslim lifestyle + community) | muslimpro.com | ~100 (Singapore-based; 170M+ downloads; PE-backed) | Nafees Khundker | Group MD & CEO, Bitsmedia | linkedin.com/in/nafeeskhundker/ | — | Feb–Mar 2026: Muslim Pro relaunched its community section as "Ummah Pro" just in time for Ramadan 2026 (starting Feb 18). Ummah Pro is a global community feed for sharing reflections and duas with dedicated moderation team — explicitly described as "wholesome, positive, and free from hate." 170M download base means moderation scale rivals major Western platforms. Khundker came from Deutsche Bank / Standard Chartered; no T&S background. (muslimpro.com/ummah-pro/) | researched | 2026-05-14 | draft email |
+| 25 | Newsmax | conservative media w/ subscriber UGC | newsmax.com | ~500 (NYSE: NMAX; $189M 2025 revenue; 25M+ social followers; 13M app downloads) | Steve Smith | Chief Information Officer | linkedin.com/in/steve-smith-a9a7a4206 | — | May 6, 2026: Newsmax surpassed 25 million social followers and 13M app downloads — milestones announced in an investor press release. Q1 2026 Facebook reach hit 104M users (+119% YoY). Newsmax.com has a live article-comment community (with published community guidelines) that users report is inconsistently moderated. Q1 2026 earnings releasing today (May 14). CIO Steve Smith owns the tech stack including the comment infrastructure. (ir.newsmax.com/news/news-details/2026/Newsmax-Surpasses-25-Million-Social-Media-Followers/) | researched | 2026-05-14 | draft email |
+| 26 | Real America's Voice | conservative media w/ community features | americasvoice.news | ~100 (privately held; 24/7 broadcast network; Steve Bannon War Room flagship program) | Michael Norton | President & CTO | — | — | Feb 3, 2026: Real America's Voice launched on Amazon Prime Video, expanding reach nationwide with 20 hours/day of live programming. Platform has a members-only community tier with live meet-and-greets, group chats, and direct interaction with hosts — a live UGC moderation surface attached to shows like Bannon's War Room and Charlie Kirk. Norton holds both President and CTO titles, making him the operational and technical decision-maker for community infrastructure. (morningstar.com/news/pr-newswire/20260203ph76808/real-americas-voice-is-coming-to-prime-video) | researched | 2026-05-14 | draft email |
+| 27 | GETTR | alt-tech social (free-speech Twitter alternative) | gettr.com | ~50 (6M+ users in 192 countries; China-backed via G-Fashion; Newsmax has 1.5M GETTR followers) | Ken Huang | CEO (former CTO; took over from Jason Miller Feb 2023) | linkedin.com/in/ken-huang-59245a24b/ | — | May 2, 2026: GETTR app updated to v1.80.0, continuing active platform development. GETTR has a live UGC surface (posts, Vision short video, GTok, live streams, groups) with 6M+ users across 192 countries. Huang's stated goal is an "everything app" — expanding from social to financial transactions — adding moderation complexity. Platform is explicitly App Store-dependent and has never publicly described a T&S function. (gettr.com/trending — latest update confirmed May 2, 2026 per Play Store) | researched | 2026-05-14 | draft email |
+| 28 | The Epoch Times | conservative media w/ subscriber community | theepochtimes.com | ~1,500 (1M+ paid subscribers; Falun Gong-affiliated nonprofit; global operation) | Samuel Zhou, Ph.D. | CEO (former Bell Labs researcher, Penn CIS faculty) | — | — | May 13, 2026: MediaPost reported Epoch Times is pursuing "in-depth content" repositioning led by CEO Samuel Zhou and Editor-in-Chief Jasper Fakkert — explicitly signaling a move toward paid community and in-depth subscriber journalism. 1M+ paid subscribers generate article comments (a live UGC surface). Zhou has a CS/Bell Labs background, not a T&S background. Epoch Times has faced regulatory pressure in EU and UK over disinformation — exactly the regulatory asymmetry Justus has navigated at TMTG. (mediapost.com/publications/article/415040/epoch-buzz-the-epoch-times-pursues-in-depth-con.html) | researched | 2026-05-14 | draft email |
+| 29 | GiveSendGo | Christian crowdfunding w/ community moderation surface | givesendgo.com | ~20 (bootstrapped; privately held; largest Christian crowdfunding platform) | Jacob Wells | Co-Founder & CFO | linkedin.com/in/jacobwells-gsg | — | May 2026: GiveSendGo faced national scrutiny for hosting the Karmelo Anthony defense fundraiser (teen accused of murder at a track meet). Founders publicly defended the campaign under press pressure from Rolling Stone, Vice, and Christian Post — invoking free speech and presumption of innocence. Platform has a "Pray" button and prayer team features (UGC surface). Hands-off moderation stance under increasing regulatory and reputational pressure mirrors early TMTG posture. Wells / Wilson are the decision-makers; no tech lead identified separately. (christianpost.com/news/christian-crowdfunder-givesendgo-defends-karmelo-anthony-page.html) | researched | 2026-05-14 | draft email |
+| 30 | Brighteon | alt-tech video (free-speech video platform) | brighteon.com | ~20 (bootstrapped; Health Ranger / Natural News ecosystem; Mike Adams founder) | Mike Adams | Founder | — | — | Jan 9, 2026: Mike Adams broadcast "We Are Building the Infrastructure of HUMAN FREEDOM," announcing BrighteLearn.ai and integration of AI coding into Brighteon's platform expansion. Platform hosts UGC video plus Brighteon.Social (Mastodon instance). Mike Adams is the primary content anchor AND the tech decision-maker — pitch must frame Brighteon's liability exposure under OSA categorisation register (Ofcom July 2026 deadline). [HOOK DATE: Jan 9, 2026 — 125 days from May 14. OUTSIDE 90-day window. Flag before sending; find a Feb-May 2026 operational news hook.] (brighteon.com/0d5e3955-0827-4739-bdd5-4a00a42bff92) | researched | 2026-05-14 | draft email |
 
 ## Batch 1 notes (May 2026)
 
@@ -77,16 +87,65 @@ Per-row research before any send:
 - Row 19 (SALT dating): Mar 17, 2026 app update — 58 days. Marginal hook (app update, not press-worthy event). Verify and find a stronger angle before sending.
 - Row 20 (Salem Media): May 12, 2026 WaterStone acquisition — 2 days old. Excellent.
 
+## Batch 3 notes (May 2026)
+
+**Substitutions and drops:**
+- **Geyser Fund** dropped: Launchpad announcement was April 25, 2025 — outside the 90-day window. No 2026 news found. Skipped.
+- **BitChute (Ray Vahey)** dropped: UK exit was April 2025 — outside the 90-day window. The July 2026 Ofcom categorisation register deadline would be a future hook; revisit in batch 4 or 5.
+- **Kiwi Farms** dropped: Platform is on the darkweb, no identifiable outreach path, owner Joshua Moon not a viable buyer.
+- **UpScrolled** evaluated and skipped: Strong T&S crisis (Feb 11, 2026 TechCrunch) but pro-Palestine positioning means Bay Area T&S firms are NOT a mismatch — this is the opposite of the brief's buyer profile. Wrong buyer.
+- **Mash.com** dropped: Company ceased operations May 2024. Confirmed defunct.
+- **Zapped.it** dropped: Does not appear to exist as a standalone platform (confused with Jack Mallers' Zap/Strike).
+- **FrankSpeech/VOCL** dropped: Jan 8, 2026 announcement = 126 days from May 14, outside window. CEO is Mike Lindell (personal brand, vanity platform). Skip.
+- **Aleph Beta** dropped: No UGC surface. Educational Torah video platform only.
+- **Patriots.win / The Donald** dropped: No identifiable decision-maker. Undisclosed ownership.
+- **Fountain.fm** dropped: No 2026 news hook found despite multiple searches. Revisit.
+- **Pilled.net** evaluated: Matthew Webster is co-founder; platform shows March 2026 traffic growth (+23%) but no product news hook. Revisit in batch 4.
+- **OAN** dropped: No 2026 news hook and no identifiable tech decision-maker.
+- **CloutHub** dropped: Only 5 employees — below threshold.
+- **Townhall Media** evaluated: Jan 20, 2026 editorial hire (Larry O'Connor) is a hook but no tech/T&S decision-maker identifiable. Salem Media acquisition (row 20) is the better Salem angle.
+
+**New category added — Batch 3:**
+- **Faith-tech (Muslim)**: Muslim Pro / Bitsmedia — first Muslim-faith platform in the pipeline.
+- **Christian crowdfunding**: GiveSendGo — unusual UGC-adjacent surface (campaign descriptions, prayer wall, comment threads on active fundraisers).
+
+**Hook recency audit — batch 3:**
+- Row 21 (Stacker News): Apr 2026 Million Sat Madness v2 — 14 days. Excellent.
+- Row 22 (Beehiiv): Apr 23, 2026 TechCrunch launch — 21 days. Excellent.
+- Row 23 (Odysee): Feb 19, 2026 YouTube-in-Odysee announcement — 84 days. Clean (within 90).
+- Row 24 (Muslim Pro): Feb/Mar 2026 Ummah Pro relaunch for Ramadan — ~60–75 days. Clean.
+- Row 25 (Newsmax): May 6, 2026 milestones + May 14 Q1 earnings — current. Excellent.
+- Row 26 (Real America's Voice): Feb 3, 2026 Prime Video launch — 100 days. At edge; hook still publishable.
+- Row 27 (GETTR): May 2, 2026 app v1.80.0 update — 12 days. Excellent.
+- Row 28 (Epoch Times): May 13, 2026 MediaPost in-depth pivot — 1 day. Excellent.
+- Row 29 (GiveSendGo): May 2026 Karmelo Anthony controversy — current. Excellent.
+- Row 30 (Brighteon): Jan 9, 2026 — 125 days. OUTSIDE 90-day window. Flag before sending; find a Feb–May 2026 operational hook (check Brighteon.Social or NaturalNews for recent product news) or hold until a Ofcom/July 2026 regulatory hook materializes.
+
+**Contact quality notes:**
+- Row 23 (Odysee): Julian Chandra confirmed CEO via LinkedIn; Forward Research acquired the platform in Jun 2024 — Sam Williams is parent company CEO but Chandra runs Odysee product.
+- Row 25 (Newsmax): Steve Smith is CIO (not CTO); John Krehley is VP Engineering. CIO is the more strategic role for T&S conversation. Verify title on LinkedIn before sending.
+- Row 26 (Real America's Voice): Michael Norton holds dual President + CTO title — confirm via americasvoice.news/about before sending.
+- Row 27 (GETTR): Ken Huang took CEO from Jason Miller in Feb 2023. Miller is now Trump Senior Advisor — confirm Huang is still current CEO before sending.
+- Row 28 (Epoch Times): Samuel Zhou is CEO but has CFO/Editor-in-Chief peers — the T&S conversation may route through Zhou's office or a future product hire. No separate CTO identified.
+- Row 29 (GiveSendGo): Jacob Wells is Co-Founder & CFO; Heather Wilson is Co-Founder & CMO. No CTO identified. Both founders are public-facing — either works as a first outreach target.
+- Row 30 (Brighteon): Mike Adams wears all hats. No separate tech decision-maker. Hard pitch. Flag.
+
 ## Categories to fill
 
 - [x] Alt-tech (Rumble, Locals, Gab, Minds) — batch 1
-- [x] Alt-tech / Web3-adjacent (MeWe) — batch 2
-- [x] Conservative media w/ community features (Blaze Media, Salem Media) — batch 2
+- [x] Alt-tech / Web3-adjacent (MeWe, GETTR) — batches 2 & 3
+- [x] Alt-tech video (Odysee, Brighteon) — batch 3
+- [x] Conservative media w/ community features (Blaze Media, Salem Media, Newsmax, RAV, Epoch Times) — batches 2 & 3
 - [x] Religious / faith platforms (Hallow, Gloo) — batch 1
 - [x] Faith-tech devotional / community (Glorify, Pray.com) — batch 2
-- [x] Bitcoin / crypto social (Damus, Primal) — batch 1
+- [x] Faith-tech Muslim (Muslim Pro) — batch 3
+- [x] Faith-adjacent crowdfunding (GiveSendGo) — batch 3
+- [x] Bitcoin / crypto social (Damus, Primal, Stacker News) — batches 1 & 3
 - [x] Values-based dating apps (Ark Dating, SALT) — batch 2
-- [x] Heterodox publishing platforms (Substack) — batch 1
+- [x] Heterodox publishing platforms (Substack, Beehiiv) — batches 1 & 3
 - [x] Web3 social (Neynar post-Farcaster, Mask/Lens) — batch 2
 - [x] Defense-adjacent platforms w/ UGC (RallyPoint) — batch 2
 - [x] Values-based marketplace (PublicSquare) — batch 1
+- [ ] Bitcoin podcast / Lightning creator (Fountain.fm) — revisit batch 4
+- [ ] Israeli/Jewish faith platforms — no viable target found; revisit batch 4
+- [ ] LDS/Mormon platforms — no viable target found; revisit batch 4
