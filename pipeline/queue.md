@@ -21,13 +21,13 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 | 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook refreshed 2026-06-11 (Jun 9 verdict, Jun 10 takedown + replacement); decays fast, send first |
 | 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | Hook live (America Prays peaks Jul 4); product terms fixed 2026-06-11 |
 | 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | Hook refreshed 2026-06-11 (SCA launch Jun 9; deal closes ~Aug); window framing dropped |
-| 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Earnings-timing hook (May 14 Q1 print) stale; needs freshness pass |
-| 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Brand trial hook (Oct 2026 trial) likely still live |
-| 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Apr 23 webinars launch hook aging |
-| 7 | Rishav Mukherji | Neynar | email | pipeline/emails/06-neynar-rishav-mukherji.md | queued | Keep or soften "policy capture" (in email body) per the file's notes section |
-| 8 | Nafees Khundker | Muslim Pro | email | pipeline/emails/07-muslim-pro-nafees-khundker.md | queued | Ummah Pro / Ramadan hook stale post-Ramadan; needs freshness pass |
-| 9 | Michael Norton | Real America's Voice | linkedin-dm | pipeline/emails/09-real-americas-voice-michael-norton.md | queued | No verified email (two guesses in file); DM route per operator review |
-| 10 | Samuel Zhou | Epoch Times | email | pipeline/emails/10-epoch-times-samuel-zhou.md | queued | Long email; trim on freshness pass if hook moved |
+| 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Hook refreshed 2026-06-11 (Jun 2 international expansion); subject now "Re: international expansion" |
+| 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Hook live; Brand pre-trial hearings Jun 16-17 make this week ideal; trial Oct 12 |
+| 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Hook refreshed 2026-06-11 (Jul 16 Summer Release + newer Substack beats); send before Jul 16 |
+| 7 | Rishav Mukherji | Neynar | email | pipeline/emails/06-neynar-rishav-mukherji.md | queued | Hook refreshed 2026-06-11 (5-months-in framing, AI-agent spam); "policy capture" call still open per file notes |
+| 8 | Nafees Khundker | Muslim Pro | email | pipeline/emails/07-muslim-pro-nafees-khundker.md | queued | Hook refreshed 2026-06-11 (May 6 Amanah Pro launch); subject now "Re: Amanah Pro" |
+| 9 | Michael Norton | Real America's Voice | linkedin-dm | pipeline/emails/09-real-americas-voice-michael-norton.md | queued | Hook refreshed 2026-06-11 (Mar 25 Espanol OTA, 12M households); subject now "Re: RAV Espanol"; DM route, no verified email |
+| 10 | Samuel Zhou | Epoch Times | email | pipeline/emails/10-epoch-times-samuel-zhou.md | queued | Hook refreshed 2026-06-11 (execution evidence: Wisdom live, Mar student program) |
 
 ## Backlog (researched in cold-outbound.md, no email drafted yet)
 

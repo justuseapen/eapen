@@ -8,7 +8,7 @@
 
 Rishav,
 
-Congrats on the protocol handoff. Inheriting Farcaster, Warpcast, and Clanker from Merkle gives Neynar the full social-graph surface on Ethereum — and the full moderation responsibility that came with it. Automod was already operating at 500+ channels. The post-acquisition surface area is larger by an order of magnitude.
+Five months into running the full Farcaster stack, Neynar is now the one company responsible for trust and safety on the only decentralized social protocol with real developer revenue. Automod was built for 500+ channels of human spam. The AI-agent traffic on the network now is a different adversary, and Clanker fee revenue means content quality has direct dollar consequences, not just community ones.
 
 Decentralized social platforms have a different App Store conversation than centralized ones, because Apple cannot tell you what to remove from the chain — but they can pull the client app that lets users see it. The serious projects in this category have to design moderation that satisfies the app stores without violating the protocol-level commitments to users. Most don't.
 
@@ -24,6 +24,7 @@ Justus
 
 ## Notes
 
+- 2026-06-11 freshness pass: the January 21 acquisition is ~5 months old and was wall-to-wall in crypto media; demoted from hook to context. New hook: five-months-in operational reality (sole T&S owner, DAUs still well below the 2024 peak, AI-agent spam as a new adversary Automod was not built for, Clanker's cumulative protocol fees making quality a revenue question). Subject "Re: inheriting Farcaster" still reads correctly against this framing.
 - Word count: ~170.
 - Names Automod (Neynar's existing product), Clanker (the AI token launchpad they inherited), Warpcast (the Farcaster client) — three specific products that show real research depth. Wrong on any one of these, the email reads researched-by-an-intern.
 - "Apple cannot tell you what to remove from the chain — but they can pull the client app that lets users see it." This is the most technically operational line in the entire email batch. If Rishav reads it, he'll know whether the rest of the email is serious within the first thirty seconds.

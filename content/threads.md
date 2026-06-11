@@ -1,5 +1,11 @@
 # Content Distribution — Threads
 
+> **Ratification decisions (operator, 2026-06-11):** all four flagged calibration calls KEPT
+> VERBATIM on Truth Social and X — (a) "AWS is run by woke leftists" (Essay 2), (b) the
+> Telegram intelligence-community speculation (Essay 2), (c) "I was at January 6" (Essay 2),
+> (d) "I am writing this as a Christian" (Essay 3). LinkedIn versions keep their softened or
+> omitted forms. Gate 2 is closed; do not re-ask.
+
 Each essay gets adapted into three thread formats:
 - Truth Social (250-char chunks, no embedded links until final post)
 - X (280-char chunks)
