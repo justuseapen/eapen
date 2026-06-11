@@ -125,21 +125,23 @@ git commit -m "feat: follow-up templates (unapproved; auto-send locked until ope
 
 - [ ] **Step 1: Write the file with exactly this content**
 
-The 10 drafted emails in the operator-decided send order, then the 20 researched-but-undrafted companies from `pipeline/cold-outbound.md` as backlog. Queue item statuses: `queued → awaiting-send → sent` (terminal) or `skipped` (with reason).
+The 10 drafted emails in the operator-decided send order, then the 20 researched-but-undrafted companies from `pipeline/cold-outbound.md` as backlog. Queue item statuses: `queued → awaiting-send [or awaiting-send (DM)] → sent` (terminal) or `skipped` (with reason).
 
 ````markdown
 # Send Queue — Cold Outbound
 
 Pre-send lifecycle lives here; crm.md rows are created only after something actually sends.
 Statuses: queued (no current Gmail draft) · awaiting-send (Gmail draft created, operator has
-not sent) · sent (detected in Sent folder; crm row exists) · skipped (reason in notes).
+not sent) · awaiting-send (DM) (DM text written into the draft file; operator must paste it —
+no Gmail draft exists) · sent (detected in Sent folder; crm row exists) · skipped (reason in
+notes). Skill note: match `awaiting-send` as a prefix so the DM variant is always included.
 Routes: email · linkedin-dm (address guessed or none; agent writes DM text instead).
 
 ## Config
 
 - daily-first-touch-cap: 3
 - weekly-first-touch-cap: 15
-- replenish-threshold: 10   # research 5 new companies when undrafted backlog drops below this
+- replenish-threshold: 10   # trigger replenish when undrafted backlog drops below this; quantity = replenish-batch
 - replenish-batch: 5        # at most once per 7 days
 
 ## Queue (drafted emails, operator-approved order)
@@ -149,12 +151,12 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 | 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook decayed (Karmelo Anthony cycle, May); needs freshness pass |
 | 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | July 4 America Prays hook still live |
 | 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | 30-day acquisition window likely closed; needs new hook angle |
-| 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | "Q1 print this week" now stale; needs freshness pass |
+| 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Earnings-timing hook (May 14 Q1 print) stale; needs freshness pass |
 | 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Brand trial hook (Oct 2026 trial) likely still live |
 | 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Apr 23 webinars launch hook aging |
-| 7 | Rishav Mukherji | Neynar | email | pipeline/emails/06-neynar-rishav-mukherji.md | queued | Keep or soften "policy capture" per notes in file |
+| 7 | Rishav Mukherji | Neynar | email | pipeline/emails/06-neynar-rishav-mukherji.md | queued | Keep or soften "policy capture" (in email body) per the file's notes section |
 | 8 | Nafees Khundker | Muslim Pro | email | pipeline/emails/07-muslim-pro-nafees-khundker.md | queued | Ummah Pro / Ramadan hook stale post-Ramadan; needs freshness pass |
-| 9 | Michael Norton | Real America's Voice | linkedin-dm | pipeline/emails/09-real-americas-voice-michael-norton.md | queued | Email guessed; DM route per operator review |
+| 9 | Michael Norton | Real America's Voice | linkedin-dm | pipeline/emails/09-real-americas-voice-michael-norton.md | queued | No verified email (two guesses in file); DM route per operator review |
 | 10 | Samuel Zhou | Epoch Times | email | pipeline/emails/10-epoch-times-samuel-zhou.md | queued | Long email; trim on freshness pass if hook moved |
 
 ## Backlog (researched in cold-outbound.md, no email drafted yet)
@@ -276,8 +278,8 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
 
 Skip in degraded mode.
 
-1. Build the watchlist: every email address in `crm.md` rows plus every `awaiting-send` or
-   `sent` queue item.
+1. Build the watchlist: every email address in `crm.md` rows plus every queue item whose
+   status begins with `awaiting-send`, plus every `sent` queue item.
 2. Search Gmail for messages from each address (and its domain) since the last run date.
 3. For each hit, classify:
    - **Reply from contact** → crm status `replied`, weighted $3,750, draft a response for the
@@ -290,10 +292,13 @@ Skip in degraded mode.
    - **"Not interested"** → `closed-lost`, suppress permanently.
    - **Ambiguous** (wrong person, forward, unclear) → no status change; surface with a
      suggested classification.
-4. Reconcile sends: for each `awaiting-send` queue item, search the Sent folder for a message
-   to that address. If found: queue status `sent`; create the crm row (`contacted`,
-   channel `cold-email`, weighted $1,250, last contact = send date, next action
-   `follow-up in 7d if no reply`).
+4. Reconcile sends: for each `awaiting-send` (email-route) queue item, search the Sent folder
+   for a message to that address. If found: queue status `sent`; create the crm row
+   (`contacted`, channel `cold-email`, weighted $1,250, last contact = send date, next action
+   `follow-up in 7d if no reply`). For `awaiting-send (DM)` items there is no Sent-folder
+   evidence: ask the operator in-session whether the DM went out; on yes, queue status `sent`
+   and crm row with channel `cold-dm`, same stage math. DM contacts with no email address are
+   excluded from Stage 2 auto follow-ups; nudges are drafted for the operator instead.
 
 ## Stage 2 — Follow-up sends
 
@@ -318,7 +323,7 @@ Skip in degraded mode.
 
 1. Read caps and statuses from `pipeline/queue.md`. Compute this week's first-touch sends
    (crm rows created in the last 7 days, channel cold-email). Respect both caps.
-2. Goal: up to `daily-first-touch-cap` items at `awaiting-send` by end of stage. Process the
+2. Goal: up to `daily-first-touch-cap` items at a status beginning with `awaiting-send` by end of stage. Process the
    Queue table in position order:
    - **Freshness check** (every item, every time): WebSearch the hook's named event. A hook is
      stale if the event is no longer current, superseded, or factually changed. Rewrite the
@@ -507,7 +512,8 @@ Schedule: daily at 17:00 America/New_York. Repo: `justuseapen/eapen`, branch `ma
 > entry headed with today's date exists (any mode: live, dry-run, or degraded), do nothing and
 > end without notifying. Otherwise read `pipeline/queue.md` and `crm.md`, then notify Justus
 > with the title "Pipeline idle — run /marketing-loop" and a body of at most two sentences
-> containing: how many queue items sit at awaiting-send (unsent Gmail drafts), how many crm
+> containing: how many queue items sit at a status beginning with awaiting-send (drafts or
+> DMs waiting on the operator), how many crm
 > contacts at `contacted` have a last-contact date 5 or more days old (follow-ups coming due),
 > and days remaining until the 2026-07-13 Day-60 checkpoint with current total sends versus
 > the 100-send target. State, not sentiment. Never include contact email addresses in the
