@@ -8,7 +8,7 @@
 
 Jacob,
 
-I've been watching the coverage on the Karmelo Anthony campaign — Rolling Stone, Vice, Christian Post. The position you and Heather are taking on hands-off moderation under press pressure is exactly the position TMTG had to think through five years ago. The press cycle is the easy part. The harder part is the next time it happens, and the time after that, when the categories Apple and Google care about start moving.
+I watched GiveSendGo's call this week: the original Anthony campaign came down Wednesday under the violent-crimes policy, and the family had a new campaign up the same day, inside the TOS. Walking both sides of that line in one news cycle, in public, is exactly the position TMTG had to think through five years ago. The first one you and Heather can handle by hand. The tenth one needs infrastructure, because the categories Apple and Google care about keep moving.
 
 I spent five years on Truth Social's internal trust and safety infrastructure. Most of the work was figuring out which speech to protect aggressively and which categories to be more strict on than our competitors, because the App Store double standard is real and you cannot fix it from the inside. The Christian crowdfunding posture is different from a social platform's posture, but the underlying math is the same.
 
@@ -22,7 +22,8 @@ Justus
 
 ## Notes
 
-- Word count: ~155 (slightly long, defensible because the hook needs setup).
+- 2026-06-11 freshness pass: hook rewritten for the June 9 verdict (convicted, 35 years) and June 10 campaign takedown plus same-day replacement campaign. Sources: NBC/CNN (Jun 9), TMZ/TheGrio/Dallas Express (Jun 10). Wells restated the "access to lawful fundraising" doctrine publicly on Jun 10. This hook decays fast; send first.
+- Word count: ~160 (slightly long, defensible because the hook needs setup).
 - Subject reads as a colleague reaching out about ongoing news, not a pitch.
 - "Heather" reference: Heather Wilson is GiveSendGo's other co-founder. Including her shows research depth without name-dropping awkwardly.
 - "The press cycle is the easy part" is the most-Zipwire sentence in the email. Stays.

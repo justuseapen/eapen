@@ -29,3 +29,14 @@ Weighted $ formula: deal size × stage probability
 - Weighted pipeline $: 0
 - Closed-won this week: 0
 - Blockers / notes:
+
+### Week of 2026-06-08
+- Sends out: 0
+- Replies in: 0
+- Calls booked: 0
+- Calls completed: 0
+- Proposals out: 0
+- Weighted pipeline $: 0
+- Closed-won this week: 0
+- Day-60 (2026-07-13): 0/100 sends, 0/10-15 calls
+- Blockers / notes: pipeline not yet live; marketing-loop system merged this week, first live run pending (3 gates: Gmail auth + template approval, thread ratification, warm names)

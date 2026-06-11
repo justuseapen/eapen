@@ -9,3 +9,13 @@ The first `live` entry's date is the **content anchor** — the essay posting sc
 weeks from it.
 
 <!-- entries below -->
+
+## 2026-06-11 — dry-run
+- inbox: skipped (Gmail MCP not authenticated; dry-run wins over degraded)
+- followups: gate closed (Approved: no); 0 eligible anyway (crm empty)
+- first-touch: 0 drafted (dry-run writes no Gmail drafts); freshness pass done on top 3: GiveSendGo hook rewritten (Jun 9 verdict + Jun 10 takedown/replacement, decays fast), Pray.com product terms fixed (congregations/prayer communities, hook live to Jul 4), Salem hook rewritten (SCA launch Jun 9, window framing dropped, deal closes ~Aug)
+- content: no content anchor yet (no live run); cold start pending
+- warm: 0/30 names; not asked (dry-run)
+- rollup: written (Week of 2026-06-08, all zeros; placeholder counted as never-written)
+- replenish: not due (20 needs-draft in backlog, threshold 10)
+- action-needed: authenticate Gmail (/mcp), approve follow-up templates, then first live run (ratification questions + 5 warm names + first 3 Gmail drafts)

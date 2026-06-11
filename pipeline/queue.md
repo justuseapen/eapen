@@ -18,9 +18,9 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 
 | Pos | Contact | Company | Route | Draft file | Status | Notes |
 |-----|---------|---------|-------|------------|--------|-------|
-| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook decayed (Karmelo Anthony cycle, May); needs freshness pass |
-| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | July 4 America Prays hook still live |
-| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | 30-day acquisition window likely closed; needs new hook angle |
+| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook refreshed 2026-06-11 (Jun 9 verdict, Jun 10 takedown + replacement); decays fast, send first |
+| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | Hook live (America Prays peaks Jul 4); product terms fixed 2026-06-11 |
+| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | Hook refreshed 2026-06-11 (SCA launch Jun 9; deal closes ~Aug); window framing dropped |
 | 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Earnings-timing hook (May 14 Q1 print) stale; needs freshness pass |
 | 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Brand trial hook (Oct 2026 trial) likely still live |
 | 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Apr 23 webinars launch hook aging |
