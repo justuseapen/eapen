@@ -1,6 +1,7 @@
 # Cold Outbound Follow-up Templates
 
-Approved: no
+Approved: yes
+Approved by operator: 2026-06-11
 <!-- The marketing-loop skill auto-sends follow-ups ONLY when the operator flips the line
      above from no to yes. Until then it creates Gmail drafts and asks the operator to send.
      Skill implementers: check the gate with an anchored match on the line above (grep -x);
