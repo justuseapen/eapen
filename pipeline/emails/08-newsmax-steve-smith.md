@@ -8,7 +8,7 @@
 
 Steve,
 
-Saw the 25M-follower milestone and the Q1 print this morning. Congratulations.
+Saw the 25M-follower milestone and the Q1 print this week. Congratulations.
 
 Newsmax's growth on the social and app sides has outpaced the moderation infrastructure of any conservative news platform I'm aware of. The article-comment community already attracts a level of user activity that most regional papers do not have to think about. The 13M app downloads and 104M Q1 Facebook reach put the moderation surface at a scale where the choice is in-house investment or vendor stack.
 
@@ -26,5 +26,5 @@ Justus
 
 - Word count: ~175.
 - Steve Smith is CIO, not CTO. CIO at a media company usually owns infrastructure and platforms more than product roadmap. The email frames the problem as infrastructure-scale, which is his lane.
-- "Q1 print this morning" — Newsmax's Q1 2026 earnings were scheduled for May 14, 2026 (today). If the earnings call already happened by send time, this reads sharp. If it hasn't happened yet, change to "the Q1 print due this week."
+- "Q1 print this week" avoids stale timing now that the May 14 earnings print is no longer same-morning.
 - Risk: Newsmax is publicly traded (NYSE: NMAX). They have procurement, GC review, vendor selection processes. A CIO at a public company may not be the buyer; they may be the gatekeeper to a vendor-selection committee. Less ideal than a founder-CEO but still worth the send.

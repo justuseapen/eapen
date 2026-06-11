@@ -24,7 +24,7 @@ Cadence: 1 to 2 substantive technical posts per week.
 
 **4/** Apple's published guidelines do not say they apply a different standard to platforms with a perceived political valence. The record speaks anyway.
 
-**5/** So what does a heterodox platform actually do? Moderate more aggressively on the categories Apple cares about. Not because those categories reflect your values. Because they are the conditions of your continued existence.
+**5/** What does a heterodox platform actually do? Moderate more aggressively on the categories Apple cares about. Not because those categories reflect your values. Because they are the conditions of your continued existence.
 
 **6/** The vendor classifier is a commodity. It gives you a score. A 0.83 likelihood of harassment under the vendor's definition. The vendor's definition was written by people in San Francisco. You decide what to do with the number.
 
@@ -154,7 +154,9 @@ Taking on 2 new Eapen Technology clients this quarter. Calendly in bio.
 
 **11/** The infrastructure was never neutral. It will not become neutral in your lifetime. The cloud is a coalition. The coalition decides who is inside its borders. Build for that.
 
-**12/** Full essay: https://eapentechnology.com/essays/platform-risk-is-political-risk.html — Taking on 2 new Eapen Technology clients this quarter. Calendly in bio.
+**12/** Full essay: https://eapentechnology.com/essays/platform-risk-is-political-risk.html
+
+Taking on 2 new Eapen Technology clients this quarter. Calendly in bio.
 
 ---
 
