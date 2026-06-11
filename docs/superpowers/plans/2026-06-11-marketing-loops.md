@@ -251,7 +251,7 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
 | `pipeline/cold-outbound.md` | Buyer universe / research backlog. |
 | `pipeline/emails/*.md` | First-touch drafts. Format: `**To:**/**From:**/**Subject:**` header, body, `## Notes`. |
 | `pipeline/warm-intros.md` | Segments, ask templates (1=strong personal, 2=professional, 3=audience/public), warm tracker. |
-| `content/threads.md` | Thread drafts: 3 essays x (Truth Social, X, LinkedIn). |
+| `content/threads.md` | Thread drafts: 3 essays x (Truth Social, X, LinkedIn), plus `### Standalone posts` from week 4 on. |
 
 ## Hard rules (check before every external action)
 
