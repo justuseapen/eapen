@@ -18,7 +18,8 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
 - `/marketing-loop` — live run.
 - `/marketing-loop dry-run` — run every stage, but create NO Gmail drafts, send NOTHING,
   prompt no posting, and ask no operator questions that imply external action. Repo-file
-  writes proceed normally. Log the entry as `dry-run`.
+  writes proceed normally except where a stage's dry-run clause narrows them. Log the entry
+  as `dry-run`.
 - Degraded — Gmail unavailable (see Setup). Stages 1-2 skip; stage 3 writes draft bodies to
   `pipeline/outbox/` instead of Gmail, leaving queue status `queued` with an
   `outbox: <path>` note (the next live run converts these to real Gmail drafts). Log as
@@ -44,8 +45,10 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
   no triplet adjectives; no stock openers; specific numbers and named platforms.
 - Disclosure: TMTG and Truth Social may be named. NEVER name Janus, Boosted Truths, Spark,
   or describe internal TMTG architecture.
-- Caps: 3 first-touch drafts/day and 15 first-touch sends/week (queue.md Config);
-  10 follow-up sends, or drafts when the gate is closed, per run (followup-templates.md).
+- Caps: 3 NEW first-touch drafts per calendar day across all runs and 15 first-touch
+  sends/week (queue.md Config; when running twice in a day, count drafts already created
+  today via loop-log); 10 follow-up sends, or drafts when the gate is closed, per run
+  (followup-templates.md).
 - Never auto-touch any contact at `replied` or later. "Not interested" → `closed-lost`,
   permanent suppression. Never auto-send a reply to a human.
 - Weighted $: contacted $1,250 · replied $3,750 · call booked $6,250 · call complete $10,000
@@ -71,8 +74,10 @@ Skip in degraded mode.
    whose status begins with `awaiting-send`, plus every `sent` queue item. A crm row without
    an `addr:` note (e.g., warm or inbound) cannot be inbox-watched; surface it once in the
    summary so the operator knows.
-2. Search Gmail for messages from each address (and its domain) since the last run date
-   (no prior entries in loop-log: scan the last 14 days).
+2. Search Gmail for messages from each address (and its domain) since the date of the newest
+   `live` entry in loop-log. Dry-run and degraded entries record nothing and must NOT advance
+   this watermark. No live entries yet: scan the last 14 days. Re-scanning overlap is
+   harmless; classification is idempotent.
 3. For each hit, classify:
    - **Reply from contact** → crm status `replied`, weighted $3,750, draft a response for the
      operator as a Gmail draft in the reply thread (never send it), surface in summary. If the reply contains scheduling language or
@@ -94,7 +99,8 @@ Skip in degraded mode.
    convention. ALL `cold-dm` contacts are excluded from Stage 2 (it filters on `cold-email`);
    when their follow-up would come due, draft DM follow-up text for the operator instead.
 5. Dry-run mode: scan read-only and report what WOULD change; write no crm rows, create no
-   Gmail drafts, ask no DM-confirmation questions.
+   Gmail drafts, ask no DM-confirmation questions. If Gmail is also unavailable, skip the
+   scan and say so.
 
 ## Stage 2 — Follow-up sends
 
@@ -122,8 +128,9 @@ Skip in degraded mode.
 1. Read caps and statuses from `pipeline/queue.md`. Compute this week's first-touch sends:
    crm rows with channel `cold-email` or `cold-dm` whose `first:` Notes date is within the
    last 7 days. Respect both caps.
-2. Goal: create up to `daily-first-touch-cap` NEW drafts this run (a per-run rate; items left
-   at `awaiting-send` from prior runs do not count against it, but surface them as overdue).
+2. Goal: create up to `daily-first-touch-cap` NEW drafts today (drafts created by earlier
+   runs today, per loop-log, count against the cap; items left at `awaiting-send` from prior
+   days do not, but surface them as overdue).
    If 2x the daily cap or more already sit at a status beginning with `awaiting-send`, draft
    nothing and tell the operator the backlog needs clearing first. Process the Queue table in
    position order:
@@ -165,7 +172,9 @@ Skip in degraded mode.
    Notes). If they defer, note it and move on.
 4. Week 4+: if no content row in the last 7 days, draft one short technical post (Truth
    Social + X versions, 150-300 words) adapted from an essay section not yet used standalone,
-   closing with the 2-clients CTA. Operator approves and pastes; record as above.
+   closing with the 2-clients CTA. Write it into `content/threads.md` under a
+   `### Standalone posts` section so the Stage 6 commit covers it. Operator approves and
+   pastes; record as above.
 5. Dry-run mode: report what is due; present nothing for posting.
 
 ## Stage 5 — Warm intros
