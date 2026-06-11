@@ -7,7 +7,7 @@ Central tracker. Updated after every interaction. Friday weekly status report ro
 | Name | Company | Channel | Status | Weighted $ | Last contact | Next action | Notes |
 |------|---------|---------|--------|------------|--------------|-------------|-------|
 
-Status values: researched · contacted · replied · call booked · call complete · proposal out · closed-won · closed-lost · nurture
+Status values: researched · contacted · replied · call booked · call complete · proposal out · closed-won · closed-lost · nurture · published (content-distribution rows only; no weighted $)
 
 Weighted $ formula: deal size × stage probability
 - contacted: 5%
