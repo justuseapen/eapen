@@ -234,7 +234,10 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
   prompt no posting, and ask no operator questions that imply external action. Repo-file
   writes proceed normally. Log the entry as `dry-run`.
 - Degraded — Gmail unavailable (see Setup). Stages 1-2 skip; stage 3 writes draft bodies to
-  `pipeline/outbox/` instead of Gmail. Log as `degraded`.
+  `pipeline/outbox/` instead of Gmail, leaving queue status `queued` with an
+  `outbox: <path>` note (the next live run converts these to real Gmail drafts). Log as
+  `degraded`. If dry-run was requested and Gmail is also unavailable, dry-run wins: log
+  `dry-run`.
 
 ## State files
 
@@ -255,8 +258,8 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
   no triplet adjectives; no stock openers; specific numbers and named platforms.
 - Disclosure: TMTG and Truth Social may be named. NEVER name Janus, Boosted Truths, Spark,
   or describe internal TMTG architecture.
-- Caps (from queue.md Config): 3 first-touch drafts/day, 15 first-touch sends/week,
-  10 follow-up sends/run.
+- Caps: 3 first-touch drafts/day and 15 first-touch sends/week (queue.md Config);
+  10 follow-up sends, or drafts when the gate is closed, per run (followup-templates.md).
 - Never auto-touch any contact at `replied` or later. "Not interested" → `closed-lost`,
   permanent suppression. Never auto-send a reply to a human.
 - Weighted $: contacted $1,250 · replied $3,750 · call booked $6,250 · call complete $10,000
@@ -278,12 +281,15 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
 
 Skip in degraded mode.
 
-1. Build the watchlist: every email address in `crm.md` rows plus every queue item whose
-   status begins with `awaiting-send`, plus every `sent` queue item.
-2. Search Gmail for messages from each address (and its domain) since the last run date.
+1. Build the watchlist: every `addr:` recorded in crm.md row Notes plus every queue item
+   whose status begins with `awaiting-send`, plus every `sent` queue item. A crm row without
+   an `addr:` note (e.g., warm or inbound) cannot be inbox-watched; surface it once in the
+   summary so the operator knows.
+2. Search Gmail for messages from each address (and its domain) since the last run date
+   (no prior entries in loop-log: scan the last 14 days).
 3. For each hit, classify:
    - **Reply from contact** → crm status `replied`, weighted $3,750, draft a response for the
-     operator (do not send), surface in summary. If the reply contains scheduling language or
+     operator as a Gmail draft in the reply thread (never send it), surface in summary. If the reply contains scheduling language or
      a Calendly confirmation → status `call booked` ($6,250) and flag **PHASE 3 TRIGGER**:
      tell the operator the Phase 3 conversion playbook (pre-call brief, follow-up template,
      pilot proposal) should now be drafted per the Phase 2 plan, step 8.
@@ -295,10 +301,14 @@ Skip in degraded mode.
 4. Reconcile sends: for each `awaiting-send` (email-route) queue item, search the Sent folder
    for a message to that address. If found: queue status `sent`; create the crm row
    (`contacted`, channel `cold-email`, weighted $1,250, last contact = send date, next action
-   `follow-up in 7d if no reply`). For `awaiting-send (DM)` items there is no Sent-folder
-   evidence: ask the operator in-session whether the DM went out; on yes, queue status `sent`
-   and crm row with channel `cold-dm`, same stage math. DM contacts with no email address are
-   excluded from Stage 2 auto follow-ups; nudges are drafted for the operator instead.
+   `follow-up in 7d if no reply`), and record in the row's Notes the exact send address and
+   first-touch date (`addr: x@y.com · first: YYYY-MM-DD`). For `awaiting-send (DM)` items
+   there is no Sent-folder evidence: ask the operator in-session whether the DM went out; on
+   yes, queue status `sent` and crm row with channel `cold-dm`, same stage math and Notes
+   convention. ALL `cold-dm` contacts are excluded from Stage 2 (it filters on `cold-email`);
+   when their follow-up would come due, draft DM follow-up text for the operator instead.
+5. Dry-run mode: scan read-only and report what WOULD change; write no crm rows, create no
+   Gmail drafts, ask no DM-confirmation questions.
 
 ## Stage 2 — Follow-up sends
 
@@ -310,29 +320,37 @@ Skip in degraded mode.
 2. Check the gate: open only when the templates file has a line that is exactly
    `Approved: yes` (anchored: `grep -x "Approved: yes" pipeline/followup-templates.md`).
    If closed, create Gmail drafts instead of sending and tell the operator the gate is closed.
-3. Idempotency: before each send, search Sent for any message to that address since the last
-   recorded touch. If one exists, skip and reconcile crm instead.
+3. Idempotency: before each send, search Sent for any message to that address sent strictly
+   AFTER the last recorded touch (the recorded touch is itself a Sent message; exclude it).
+   If one exists, skip and reconcile crm instead.
 4. Compose from FU-1 or FU-2 template, fill the slots per the templates file's rules ([Name],
    [hook-clause] with its freshness check), reply in the original thread. Send. Update crm
    Notes and last-contact date.
 5. After FU-2: status → `nurture`.
-6. Cap 10 sends/run, oldest due first; note any deferred to next run.
+6. Cap 10 per run (sends, or drafts when the gate is closed), oldest due first; note any
+   deferred to next run.
 7. Dry-run mode: report who WOULD receive what; send nothing, draft nothing.
 
 ## Stage 3 — First-touch drafts
 
-1. Read caps and statuses from `pipeline/queue.md`. Compute this week's first-touch sends
-   (crm rows created in the last 7 days, channel cold-email). Respect both caps.
-2. Goal: up to `daily-first-touch-cap` items at a status beginning with `awaiting-send` by end of stage. Process the
-   Queue table in position order:
+1. Read caps and statuses from `pipeline/queue.md`. Compute this week's first-touch sends:
+   crm rows with channel `cold-email` or `cold-dm` whose `first:` Notes date is within the
+   last 7 days. Respect both caps.
+2. Goal: create up to `daily-first-touch-cap` NEW drafts this run (a per-run rate; items left
+   at `awaiting-send` from prior runs do not count against it, but surface them as overdue).
+   If 2x the daily cap or more already sit at a status beginning with `awaiting-send`, draft
+   nothing and tell the operator the backlog needs clearing first. Process the Queue table in
+   position order:
    - **Freshness check** (every item, every time): WebSearch the hook's named event. A hook is
      stale if the event is no longer current, superseded, or factually changed. Rewrite the
      hook line(s) in the draft file — keep the body, swap the hook. If no live hook can be
      found, mark `skipped (stale hook)` in queue notes and move on; never send unverifiable
      claims.
    - Run the Hard-rules checklist over the final text.
-   - Route `email` → create a Gmail draft (To from the file header, From
-     `justus@eapentechnology.com`, Subject from header, the body verbatim). Mark
+   - Route `email` → create a Gmail draft (From `justus@eapentechnology.com`, Subject from
+     the file header, the body verbatim). To: if the header lists one address, use it; if it
+     lists guesses, pick the most probable one, record it in the queue Notes (`addr: ...`),
+     and flag the guess in the summary so the operator can override before sending. Mark
      `awaiting-send` with date.
    - Route `linkedin-dm` → write a ≤120-word DM adaptation into the draft file under
      `## LinkedIn DM version`, mark `awaiting-send (DM)`, surface ready-to-paste in summary.
@@ -349,8 +367,10 @@ Skip in degraded mode.
 
 ## Stage 4 — Content queue
 
-1. Content anchor = date of first `live` loop-log entry. Week 1 = anchor through day 6,
-   week 2 = days 7-13, week 3 = days 14-20.
+1. Content anchor = date of the first `live` loop-log entry; on the cold-start live run
+   itself, the anchor is today (its entry is written at Stage 6). Dry-run or degraded runs
+   never set the anchor; with no anchor yet, report "no content anchor" and skip this stage.
+   Week 1 = anchor through day 6, week 2 = days 7-13, week 3 = days 14-20.
 2. Schedule: Essay 1 threads in week 1, Essay 2 in week 2, Essay 3 in week 3 — all three
    platforms (Truth Social, X, LinkedIn) the same day per essay.
 3. If the current week's essay has no `Essay N distribution` row in crm.md: present that
@@ -366,7 +386,8 @@ Skip in degraded mode.
 
 1. Count named rows across segments in `pipeline/warm-intros.md`. If < 30 (and not dry-run):
    ask the operator for up to 5 names now, format `Name | role/world | relationship |
-   segment`. Zero is an acceptable answer; log and continue.
+   segment` (segment optional; infer it and confirm). Add each name under its segment list
+   AND create its tracker row. Zero names is an acceptable answer; log and continue.
 2. For each name without a tracker row: choose the template by segment (A/F/G → 1,
    C/D → 2, B/E → 3, G with weaker ties → 2; default 2), draft the personalized ask, add a
    tracker row with status `drafted`. The operator sends all warm asks personally.
@@ -375,7 +396,8 @@ Skip in degraded mode.
 
 ## Stage 6 — Friday rollup + close
 
-1. If today is Friday, or the newest weekly block in crm.md is older than 7 days: append a
+1. If today is Friday, or the newest weekly block in crm.md is older than 7 days (the
+   `Week of YYYY-MM-DD` placeholder counts as never-written): append a
    weekly status block (sends out cold+warm, replies in, calls booked, calls completed,
    proposals out, weighted pipeline $, closed-won, blockers) computed from crm.md, plus:
    `Day-60 (2026-07-13): X/100 sends, Y/10-15 calls`.
@@ -393,8 +415,11 @@ Skip in degraded mode.
    - action-needed: <operator items>
    ```
 
-3. Commit and push everything: `git add -A && git commit -m "loop: YYYY-MM-DD run" && git push`.
-   (Markdown-only pushes are safe; the site Dockerfile copies only index.html and essays/.)
+3. Commit ONLY the loop's files: `git add crm.md pipeline/ content/threads.md`, then
+   `git commit -m "loop: YYYY-MM-DD run" && git push`. NEVER `git add -A` or `git add .`:
+   the operator keeps unrelated work in flight, and pushes to master auto-deploy the site.
+   If `git status` shows unexpected changes to `index.html` or `essays/`, leave them
+   unstaged and flag them in the summary.
 4. End with the session summary:
 
    ```
@@ -410,19 +435,39 @@ Skip in degraded mode.
 
 ## Cold start (first run with no prior `live` entry)
 
-Run these BEFORE the six stages:
+Cold start applies to LIVE runs only (a dry-run with no prior live entry just runs the six
+stages in dry-run mode and reports that cold start is still pending). Run these BEFORE the
+six stages:
 
 1. **Gate 1 — emails:** freshness re-research ALL queue items (not just today's three).
    Rewrite stale hooks in the draft files; flag any dead-hook items.
-2. **Gate 2 — threads:** ask the operator the four pending ratification questions, one
-   decision each (keep verbatim on Truth Social + X / soften to the LinkedIn phrasing /
-   remove): (a) "AWS is run by woke leftists" (Essay 2), (b) Telegram intelligence-community
-   speculation (Essay 2), (c) "I was at January 6" (Essay 2), (d) "I am writing this as a
-   Christian" (Essay 3). Apply decisions to `content/threads.md` and note them at the top of
-   the file.
+2. **Gate 2 — threads:** if `content/threads.md` already carries a ratification-decisions
+   note at the top, skip this gate (an earlier cold start handled it). Otherwise ask the
+   operator the four pending ratification questions, one decision each — keep verbatim on
+   Truth Social + X, or remove from those platforms (the LinkedIn versions already soften or
+   omit each line; for (a) and (b) that softened phrasing may also replace the TS+X line if
+   the operator prefers): (a) "AWS is run by woke leftists" (Essay 2), (b) Telegram
+   intelligence-community speculation (Essay 2), (c) "I was at January 6" (Essay 2),
+   (d) "I am writing this as a Christian" (Essay 3). Apply decisions to `content/threads.md`
+   and note them at the top of the file.
 3. **Gate 3 — warm names:** stage 5 asks for 5 names as usual.
 4. Today becomes the content anchor once this run's `live` entry is logged.
 ````
+
+- [ ] **Step 1b: Add the `published` status to crm.md**
+
+In `crm.md`, extend the status line to read:
+
+```
+Status values: researched · contacted · replied · call booked · call complete · proposal out · closed-won · closed-lost · nurture · published (content-distribution rows only; no weighted $)
+```
+
+Commit separately:
+
+```bash
+git add crm.md
+git commit -m "feat: add published status to crm tracker for content-distribution rows"
+```
 
 - [ ] **Step 2: Verify the skill loads**
 
