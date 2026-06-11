@@ -19,3 +19,14 @@ weeks from it.
 - rollup: written (Week of 2026-06-08, all zeros; placeholder counted as never-written)
 - replenish: not due (20 needs-draft in backlog, threshold 10)
 - action-needed: authenticate Gmail (/mcp), approve follow-up templates, then first live run (ratification questions + 5 warm names + first 3 Gmail drafts)
+
+## 2026-06-11 — degraded
+- inbox: skipped (degraded; Gmail not authenticated, operator proceeded anyway)
+- followups: skipped (degraded); gate now open (templates operator-approved today)
+- first-touch: 3 outbox drafts written (givesendgo, pray-com, salem) — status stays queued with outbox: notes; all three To addresses are pattern guesses, flagged; next live run converts outbox to Gmail drafts
+- content: no content anchor (degraded runs never set it); Essay 1 presentation deferred to first live run
+- warm: asked for 5 names; none provided this session; 0/30
+- rollup: not due (written earlier today)
+- replenish: not due
+- action-needed: (1) /mcp to authenticate Gmail, then run /marketing-loop — it will convert the 3 outbox drafts to Gmail drafts, verify send-as justus@eapentechnology.com, set the content anchor, and present Essay 1 threads; OR copy-paste the 3 outbox files and send manually today (GiveSendGo hook decays fastest); (2) 5 warm names still owed
+- note: cold-start Gates 1-2 cleared earlier today (all 10 hooks freshness-passed; 4 thread calibration lines ratified KEEP VERBATIM; see content/threads.md header)

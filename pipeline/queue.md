@@ -18,9 +18,9 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 
 | Pos | Contact | Company | Route | Draft file | Status | Notes |
 |-----|---------|---------|-------|------------|--------|-------|
-| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook refreshed 2026-06-11 (Jun 9 verdict, Jun 10 takedown + replacement); decays fast, send first |
-| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | Hook live (America Prays peaks Jul 4); product terms fixed 2026-06-11 |
-| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | Hook refreshed 2026-06-11 (SCA launch Jun 9; deal closes ~Aug); window framing dropped |
+| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | queued | Hook refreshed 2026-06-11; decays fast, send first; addr: jacob@givesendgo.com (guessed); outbox: pipeline/outbox/2026-06-11-givesendgo-jacob-wells.md |
+| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | queued | Hook live (peaks Jul 4); terms fixed 2026-06-11; addr: steve@pray.com (guessed); outbox: pipeline/outbox/2026-06-11-pray-com-steve-gatena.md |
+| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | queued | Hook refreshed 2026-06-11 (SCA launch); addr: dsantrella@salemmedia.com (guessed); outbox: pipeline/outbox/2026-06-11-salem-david-santrella.md |
 | 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Hook refreshed 2026-06-11 (Jun 2 international expansion); subject now "Re: international expansion" |
 | 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Hook live; Brand pre-trial hearings Jun 16-17 make this week ideal; trial Oct 12 |
 | 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Hook refreshed 2026-06-11 (Jul 16 Summer Release + newer Substack beats); send before Jul 16 |
