@@ -1,5 +1,10 @@
 # Phase 2 Pickup Plan
 
+> **2026-06-11 update:** The execution model below is superseded by the marketing loop
+> system — run `/marketing-loop` daily. See
+> `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`. The milestone dates and the
+> Phase 3 trigger (first booked call) remain in force.
+
 **Last touched:** 2026-05-15
 **Branch:** master (Phase 1 already deployed live to eapentechnology.com)
 **State:** Mid-Phase 2. Cold buyer universe + cold email drafts + thread drafts done. Operator review and posting are the next gates.
