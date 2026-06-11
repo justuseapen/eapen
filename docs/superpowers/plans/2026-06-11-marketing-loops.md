@@ -66,24 +66,28 @@ Note the `Approved: no` header — the skill refuses to auto-send until the oper
 # Cold Outbound Follow-up Templates
 
 Approved: no
-<!-- The marketing-loop skill auto-sends follow-ups ONLY when the line above reads
-     "Approved: yes". Until then it creates Gmail drafts and asks the operator to send. -->
+<!-- The marketing-loop skill auto-sends follow-ups ONLY when the operator flips the line
+     above from no to yes. Until then it creates Gmail drafts and asks the operator to send.
+     Skill implementers: check the gate with an anchored match on the line above (grep -x);
+     this comment deliberately never spells out the open-gate value. -->
 
 Rules:
-- FU-1 sends 7+ days after first touch with no reply. FU-2 sends 7+ days after FU-1.
-- Both send as replies in the original thread (same subject, `Re:` prefixed if a fresh send).
+- FU-1 sends 7+ days after first touch with no reply. FU-2 sends 7+ days after FU-1, still no reply.
+- Both send as replies in the original thread (same subject; `Re:` prefixed on a fresh send
+  unless the subject already starts with `Re:`).
 - After FU-2 with no reply, the contact moves to `nurture` in crm.md and is never auto-touched again.
-- Personalization slots: [Name] = first name; [hook-clause] = one clause restating the original
-  email's hook, freshness-checked; [month] = the month after the current one.
-- Max 10 follow-up sends per run, oldest due first.
+- Personalization slots: [Name] = first name; [hook-clause] = short noun phrase restating the
+  original email's hook (it follows "about", so it must read as a noun phrase). Freshness-check
+  it first: if the hook event has aged, restate it in past tense; if it is no longer accurate,
+  skip the send and flag for the operator.
+- Max 10 follow-up sends (or drafts, when unapproved) per run, oldest due first.
 
 ## FU-1 (day 7)
 
 > [Name],
 >
-> Following up on my note from last week about [hook-clause]. The offer stands: thirty minutes
-> on your moderation surface. No deck and no pitch. If the timing is wrong, a one-line "not now"
-> is a fine answer.
+> My note from last week about [hook-clause] still stands. Thirty minutes on your moderation
+> surface. No deck and no pitch. If the timing is wrong, a one-line "not now" is a fine answer.
 >
 > Justus
 
@@ -92,7 +96,7 @@ Rules:
 > [Name],
 >
 > Last note from me. If moderation infrastructure is on your roadmap this year, the two client
-> slots I mentioned will likely be filled by [month]. If not, no reply needed and I will stay
+> slots I mentioned will likely be filled this quarter. If not, no reply needed and I'll stay
 > out of your inbox.
 >
 > https://eapentechnology.com
@@ -298,12 +302,14 @@ Skip in degraded mode.
 1. Eligible: crm rows with channel `cold-email`, status `contacted`, last contact ≥ 7 days
    ago, and fewer than 2 follow-ups recorded (track as `FU1 sent YYYY-MM-DD` / `FU2 sent
    YYYY-MM-DD` in the row's Notes).
-2. Check the gate: if `pipeline/followup-templates.md` does not contain `Approved: yes`,
-   create Gmail drafts instead of sending and tell the operator the gate is closed.
+2. Check the gate: open only when the templates file has a line that is exactly
+   `Approved: yes` (anchored: `grep -x "Approved: yes" pipeline/followup-templates.md`).
+   If closed, create Gmail drafts instead of sending and tell the operator the gate is closed.
 3. Idempotency: before each send, search Sent for any message to that address since the last
    recorded touch. If one exists, skip and reconcile crm instead.
-4. Compose from FU-1 or FU-2 template, fill slots ([Name], [hook-clause], [month]), reply
-   in the original thread. Send. Update crm Notes and last-contact date.
+4. Compose from FU-1 or FU-2 template, fill the slots per the templates file's rules ([Name],
+   [hook-clause] with its freshness check), reply in the original thread. Send. Update crm
+   Notes and last-contact date.
 5. After FU-2: status → `nurture`.
 6. Cap 10 sends/run, oldest due first; note any deferred to next run.
 7. Dry-run mode: report who WOULD receive what; send nothing, draft nothing.
