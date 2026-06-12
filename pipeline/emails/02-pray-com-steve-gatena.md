@@ -1,30 +1,29 @@
 # Pray.com — Steve Gatena (CEO & Co-founder)
 
-**To:** Steve Gatena (find via LinkedIn DM or email pattern: steve@pray.com)
+**To:** steve.gatena@pray.com (matches Pray.com's documented first.last pattern, ~89.5% of company addresses; steve@pray.com is a weaker scraper guess)
 **From:** justus@eapentechnology.com
-**Subject:** Re: White House partnership
+**Subject:** july 4 in dc
 
 ---
 
-Steve,
+Hey Steve,
 
-Congratulations on the America Prays designation. That partnership is going to expose the congregation and prayer-community features to a different scale of user than Pray.com has historically had to moderate for, and a different scale of scrutiny.
+I'll be in DC with my family July 2-5 and I know America Prays wraps up on the Fourth. Are you coming out for it?
 
-I spent five years on Truth Social's internal trust and safety infrastructure at TMTG. Most of that work was building moderation posture for a platform that operates under continuous regulatory and press attention — App Store risk, Congressional letters, AP and Reuters cycles. Faith platforms have not had to think about this in the same way that political platforms have. The America Prays campaign changes that.
+I've been following the campaign since you guys answered the White House call. I'm coming up on 5 years building trust and safety infrastructure at Truth Social and I'm starting to take on consulting clients, mission-aligned companies first. If you're in town it'd be great to shake hands. If not, would you be open to a call about automated trust and safety protocols? Friday afternoon next week works on my end — or name a day and I'll work around you.
 
-I run Eapen Technology separately from TMTG. Taking on two clients this quarter. If you have thirty minutes in the next two weeks, I'd like to walk through what I'd want to have in place before the campaign peaks in July.
-
-https://eapentechnology.com
-
-Justus
+— Justus
+eapentechnology.com
 
 ---
 
 ## Notes
 
-- 2026-06-11 freshness pass: "prayer circles" is not a Pray.com product term (it is an unaffiliated competing app); verified terms are "congregations" and "prayer communities" (Wikipedia, TechCrunch seed coverage). Phrase fixed. Hook confirmed live: America Prays runs through July 4; AG News (May 2026) reports 720 host churches enrolled toward a 1,000 goal. This resolves the operator's product-name flag on this email.
-- Word count: ~145.
-- "Faith platforms have not had to think about this" is the load-bearing sentence — flatters him by implying he's about to be at the leading edge of a category problem.
-- "Before the campaign peaks in July" creates a specific, datable urgency without inventing a deadline.
-- No Calendly link — same logic as GiveSendGo. Let him reply.
-- Risk: he might read this as alarmist. Mitigated by the praise opener and the "thirty minutes" framing (not "we need to talk now").
+- FINAL, operator-approved 2026-06-11; timing close added 2026-06-12 per operator. Gmail draft id r-2512067069567764677 in joy@eapentechnology.com mailbox — supersedes r4423381822718947767, operator must discard the old draft.
+- Friday-afternoon window (Fri 6/19, clear on operator's visible calendars) chosen because Gatena is Pacific (Santa Monica) — morning ET would be 7am for him.
+- Angle: operator is in DC July 2-5; America Prays culminates July 4 ("Salute to America 250" on the National Mall same day). The are-you-coming question is the CTA; the call is the fallback ask.
+- "Answered the call" mirrors Gatena's own words on Powers Pod #400 (Dec 2025): "The White House called us up... we're going to answer the call."
+- Verified 2026-06-11: White House America Prays page NAMES Pray.com as a recommended online prayer community (next to Hallow); it is not a formal "partner app." Product term for their community surfaces is "Communities" (not congregations/prayer circles). Campaign runs Jan 1 - Jul 4, 2026.
+- Gatena's July 4 DC attendance is plausible but unconfirmed (no speaker slot found; he skipped the May 17 Rededicate 250 lineup). Co-founder Matt Potter (Head of Strategic Relationships) is the official Pray.com face on the White House release and the natural second door if Gatena goes quiet.
+- [hook-clause] for FU-1: "July 4 and America Prays".
+- Time-sensitivity: send this week while July 4 calendars are still forming.

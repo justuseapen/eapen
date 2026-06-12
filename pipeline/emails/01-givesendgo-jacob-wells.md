@@ -1,31 +1,27 @@
 # GiveSendGo — Jacob Wells (Co-founder & CFO)
 
-**To:** Jacob Wells (find via LinkedIn DM or email pattern: jacob@givesendgo.com / jwells@givesendgo.com)
+**To:** jacob@givesendgo.com (pattern-supported: ZoomInfo shows Heather as h***@givesendgo.com; unverified, LinkedIn DM fallback if bounced)
 **From:** justus@eapentechnology.com
-**Subject:** Re: the Karmelo Anthony coverage
+**Subject:** great work this week
 
 ---
 
-Jacob,
+Hey Jacob,
 
-I watched GiveSendGo's call this week: the original Anthony campaign came down Wednesday under the violent-crimes policy, and the family had a new campaign up the same day, inside the TOS. Walking both sides of that line in one news cycle, in public, is exactly the position TMTG had to think through five years ago. The first one you and Heather can handle by hand. The tenth one needs infrastructure, because the categories Apple and Google care about keep moving.
+Congrats on the press this week. The Karmelo campaign put GiveSendGo in front of the whole country and you guys handled it about as well as anyone could have. Great work.
 
-I spent five years on Truth Social's internal trust and safety infrastructure. Most of the work was figuring out which speech to protect aggressively and which categories to be more strict on than our competitors, because the App Store double standard is real and you cannot fix it from the inside. The Christian crowdfunding posture is different from a social platform's posture, but the underlying math is the same.
+I'm coming up on 5 years building trust and safety infrastructure at Truth Social, and I'm starting to take on consulting clients. You're one of the first people I'm reaching out to since I know we're mission-aligned. Would you be open to a call about automated trust and safety protocols? Thursday or Friday morning next week works on my end — or name a time and I'll make it work.
 
-I run Eapen Technology separately from TMTG. Taking on two clients this quarter. If you have thirty minutes in the next two weeks, I'd like to talk about your specific risk surface before the next campaign forces another public defense.
-
-https://eapentechnology.com
-
-Justus
+— Justus
+eapentechnology.com
 
 ---
 
 ## Notes
 
-- 2026-06-11 freshness pass: hook rewritten for the June 9 verdict (convicted, 35 years) and June 10 campaign takedown plus same-day replacement campaign. Sources: NBC/CNN (Jun 9), TMZ/TheGrio/Dallas Express (Jun 10). Wells restated the "access to lawful fundraising" doctrine publicly on Jun 10. This hook decays fast; send first.
-- Word count: ~160 (slightly long, defensible because the hook needs setup).
-- Subject reads as a colleague reaching out about ongoing news, not a pitch.
-- "Heather" reference: Heather Wilson is GiveSendGo's other co-founder. Including her shows research depth without name-dropping awkwardly.
-- "The press cycle is the easy part" is the most-Zipwire sentence in the email. Stays.
-- Sign-off is "Justus" not "Justus Eapen" — first-name suggests peer-to-peer, not vendor-to-customer.
-- Calendly link intentionally omitted from this one. Sending a Christian crowdfunding founder a Calendly cold reads transactional. Let him reply, then send the booking link.
+- FINAL, operator-approved 2026-06-11; timing close added 2026-06-12 per operator (assume the close, offer windows). Gmail draft id r5024590629102227397 in joy@eapentechnology.com mailbox — supersedes r2549293249150224976, operator must discard the old draft.
+- Windows offered: Thu 6/18 or Fri 6/19 morning ET (Tuesday excluded — operator's Tuesday mornings are recurring-booked on a calendar the agent cannot see).
+- Register: operator's real email voice (sourced from his sent mail), not published-copy voice. "You're one of the first people I'm reaching out to since I know we're mission-aligned" is his own line, reused.
+- Hook context (verified 2026-06-11): Karmelo Anthony convicted + sentenced 35 years Tue Jun 9; GiveSendGo unpublished the ~$630K campaign Wed Jun 10 and permitted a family appellate-fund relaunch the same day. Email deliberately references none of the specifics; congratulation register instead.
+- [hook-clause] for FU-1: "the Karmelo press cycle".
+- Earlier drafts (insight-led, then research-optimized) rejected by operator as reading like AI sales copy. Lesson recorded in memory: write in his sent-mail voice.
