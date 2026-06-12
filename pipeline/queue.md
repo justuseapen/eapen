@@ -18,9 +18,9 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 
 | Pos | Contact | Company | Route | Draft file | Status | Notes |
 |-----|---------|---------|-------|------------|--------|-------|
-| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | awaiting-send (2026-06-12) | Gmail draft r6130825168285138709 (v3 HTML sig; discard older r5024590629102227397, r2549293249150224976); addr: jacob@givesendgo.com (guessed, LinkedIn DM fallback); operator-approved final copy |
-| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | awaiting-send (2026-06-12) | Gmail draft r1524447654136257903 (v3 HTML sig; discard older r-2512067069567764677, r4423381822718947767); addr: steve.gatena@pray.com (first.last house pattern); DC July 2-5 meet angle; Matt Potter is the fallback door |
-| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | awaiting-send (2026-06-12) | Gmail draft r1438656116465430453 (v3 HTML sig; discard older r1786079167904553097); addr: david@salemmedia.com (firstname@ pattern); streamlined intro-call ask w/ Thu/Fri windows; operator-approved final copy |
+| 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | sent (2026-06-12) | delivered, no bounce (thread 19ebbfa91f8c4ff6); crm row created |
+| 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | sent (2026-06-12) | delivered, no bounce (thread 19ebbfaa170c0717); crm row created |
+| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | awaiting-send (2026-06-12) | RETRY: david@salemmedia.com BOUNCED (address not found); new Gmail draft r-8831118690142594306 to david.santrella@salemmedia.com (first.last = 85.8% of salemmedia.com addrs per RocketReach; fallback david.santrella@salem.cc legacy domain); no crm row until delivered |
 | 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Hook refreshed 2026-06-11 (Jun 2 international expansion); subject now "Re: international expansion" |
 | 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Hook live; Brand pre-trial hearings Jun 16-17 make this week ideal; trial Oct 12 |
 | 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Hook refreshed 2026-06-11 (Jul 16 Summer Release + newer Substack beats); send before Jul 16 |
