@@ -20,7 +20,7 @@ Routes: email · linkedin-dm (address guessed or none; agent writes DM text inst
 |-----|---------|---------|-------|------------|--------|-------|
 | 1 | Jacob Wells | GiveSendGo | email | pipeline/emails/01-givesendgo-jacob-wells.md | sent (2026-06-12) | delivered, no bounce (thread 19ebbfa91f8c4ff6); crm row created |
 | 2 | Steve Gatena | Pray.com | email | pipeline/emails/02-pray-com-steve-gatena.md | sent (2026-06-12) | delivered, no bounce (thread 19ebbfaa170c0717); crm row created |
-| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | awaiting-send (2026-06-12) | RETRY: david@salemmedia.com BOUNCED (address not found); new Gmail draft r-8831118690142594306 to david.santrella@salemmedia.com (first.last = 85.8% of salemmedia.com addrs per RocketReach; fallback david.santrella@salem.cc legacy domain); no crm row until delivered |
+| 3 | David Santrella | Salem Media | email | pipeline/emails/03-salem-media-david-santrella.md | sent (2026-06-12) | delivered to david.santrella@salemmedia.com on retry (thread 19ebc120c1a6f42b), no bounce; first attempt to david@ bounced same-second; crm row created |
 | 4 | Steve Smith | Newsmax | email | pipeline/emails/08-newsmax-steve-smith.md | queued | Hook refreshed 2026-06-11 (Jun 2 international expansion); subject now "Re: international expansion" |
 | 5 | Erich Kerekes | Hallow | email | pipeline/emails/05-hallow-erich-kerekes.md | queued | Hook live; Brand pre-trial hearings Jun 16-17 make this week ideal; trial Oct 12 |
 | 6 | Tyler Denk | Beehiiv | email | pipeline/emails/04-beehiiv-tyler-denk.md | queued | Hook refreshed 2026-06-11 (Jul 16 Summer Release + newer Substack beats); send before Jul 16 |
