@@ -1,32 +1,29 @@
 # Hallow — Erich Kerekes (CTO & Co-founder)
 
-**To:** Erich Kerekes (try erich@hallow.com or erich.kerekes@hallow.com)
+**To:** erich@hallow.app (first-name-only = 90.9% of Hallow addresses per RocketReach; NOTE the domain is hallow.app, NOT hallow.com — the website domain is not the mail domain. Fallbacks: erich.kerekes@hallow.app, then LinkedIn)
 **From:** justus@eapentechnology.com
-**Subject:** Re: the October trial date
+**Subject:** the brand situation
 
 ---
 
-Erich,
+Hey Erich,
 
-Russell Brand's pre-trial hearings run this week, with the trial itself set for October 12 at Southwark. The Hallow team made a clean call last year cutting ties when the charges were filed; the trial will resurface that call publicly. Press will go back through the timeline, look at every Catholic and Christian platform that touched Brand's content, and ask each of them whether they handled it well.
+Just wanted to reach out and congratulate you guys on how you handled the Russell Brand situation. I saw he's back in court next week and remembered how fast you pulled your ads when the charges came out last year.
 
-You did. Most platforms in faith-tech have not had to make a public call like that yet. The ones that will, are not ready.
+I'm coming up on 5 years building trust and safety infrastructure at Truth Social and I'm starting to take on consulting clients, mission-aligned companies first. Would you be open to a call about automated trust and safety protocols? Thursday or Friday morning next week both work on my end — or name a time and I'll make it work.
 
-I spent five years on Truth Social's internal trust and safety infrastructure at TMTG. The work that mattered most was building posture in advance, for the moments when a public figure on your platform does something the platform did not anticipate, and the response window is forty-eight hours.
-
-I run Eapen Technology separately from TMTG. Taking on two clients this quarter. If you have thirty minutes in the next two weeks, I'd like to compare notes on what an October-trial posture looks like before the press cycle starts.
-
-https://eapentechnology.com
-
+God bless!
 Justus
+eapentechnology.com
 
 ---
 
 ## Notes
 
-- 2026-06-11 freshness pass: trial date confirmed October 12 at Southwark Crown Court (consolidated charges, ~2-month trial); pre-trial hearings June 16-17 put Brand back in the news THIS WEEK, which makes a same-week send unusually well timed. Optional second beat for a follow-up: Hallow held its position on the Tucker Carlson Lent partnership under multi-denomination backlash (Feb 2026), so the pattern is "cut Brand under legal pressure, held Carlson under reputational pressure." Em-dash pivot in paragraph 3 fixed to comma.
-- Word count: ~175.
-- The flattery ("You did. Most platforms in faith-tech have not had to make a public call like that yet") is the load-bearing move — Erich made a hard call, the email recognizes it. That's the kind of recognition a CTO of a faith app rarely gets from outside the faith bubble.
-- "The response window is forty-eight hours" is the operational specificity that signals "I have done this."
-- "Compare notes" is intentional — peer voice, not consultant voice.
-- Risk: the email frames Hallow as having handled Brand correctly, which is reasonable but not 100% verifiable. If Hallow's handling was actually messy from inside, this lands wrong. Justus's call.
+- FINAL, operator-approved 2026-06-12. Gmail draft id r9169419190293101814 (HTML body) in the justus@eapentechnology.com mailbox.
+- Register: operator's real sent-mail voice. Opener is his own construction ("I wanted to reach out and congratulate you on the success of SimpleClaw", Feb 2026 draft); "God bless!" signoff is how he closes with fellow believers (Mike Bianco thread, Oct 2025). Two earlier versions rejected same-day as AI slop (pundit lines about press cycles, clipped staccato fragments) — no analysis, no predictions, just the warm thing and the ask.
+- Facts verified 2026-06-12: Met Police charged Brand Apr 4, 2025; Hallow CEO Alex Jones stated "We are no longer advertising on Russell's show" Apr 7, 2025 (Catholic Herald) — so "pulled your ads ... when the charges came out" is exact; the tie was an advertising partnership on Brand's Rumble podcast, NOT Brand content inside the app. Pre-trial hearings Tue-Wed Jun 16-17; trial Oct 12 at Southwark, seven counts, ~2 months (ITV/Hollywood Reporter). "Back in court next week" is correct for a Fri Jun 12 send only — re-date if sending later.
+- [hook-clause] for FU-1: "the Brand situation".
+- Kerekes is CTO & co-founder (Chicago HQ, Central time — Thu/Fri morning ET windows land mid-morning for him). Alternate door if he goes quiet: CEO Alex Jones (the Hallow one).
+- Spare beat for FU-1 if needed: Feb 2026 Lent campaign hit #1 in the App Store ahead of ChatGPT (Wahlberg/Pratt/Roumie).
+- History: original "Re: the October trial date" version dropped (fake-Re subject + consultant register + wrong domain hallow.com).
