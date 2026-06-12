@@ -1,30 +1,27 @@
 # Newsmax — Steve Smith (CIO)
 
-**To:** Steve Smith (try ssmith@newsmax.com or steve.smith@newsmax.com)
+**To:** steves@newsmax.com (first+last-initial = 60.6% of newsmax.com addresses per LeadIQ/RocketReach; Newsmax uses 8 formats. Bounce ladder: ssmith@newsmax.com, then steve.smith@newsmax.com, then LinkedIn)
 **From:** justus@eapentechnology.com
-**Subject:** Re: international expansion
+**Subject:** six new countries
 
 ---
 
-Steve,
+Hey Steve,
 
-Saw the June 2 announcement: six new country markets, a $25M international run rate, and the Poland launch already on the calendar. Congratulations.
+Just wanted to reach out and congratulate you guys on the international expansion. Six new countries at once and licensing going from $3.6M to $16M in a year is incredible. Great work.
 
-Newsmax's growth on the social and app sides has outpaced the moderation infrastructure of any conservative news platform I'm aware of. The article-comment community already attracts a level of user activity that most regional papers do not have to think about. The 13M app downloads and 104M Q1 Facebook reach put the moderation surface at a scale where the choice is in-house investment or vendor stack. Six new language markets multiply that surface faster than English-only growth did.
+I'm coming up on 5 years building trust and safety infrastructure at Truth Social, and I'm starting to take on consulting clients, mission-aligned companies first. I do AI automation for dev experience and marketing across a lot of domains, and I figured the expansion means a ton of that kind of work. Would you be open to an intro call? Thursday or Friday morning next week both work on my end — or name a time and I'll make it work.
 
-I spent five years on Truth Social's internal trust and safety infrastructure at TMTG. The vendor stack is fine for the first few million users. After that, the lean in the vendor's category definitions starts showing up in your moderation outcomes, and your users notice.
-
-I run Eapen Technology separately from TMTG. Taking on two clients this quarter. If you have thirty minutes in the next two weeks, I'd like to talk about what the moderation roadmap should look like as Newsmax crosses these next milestones.
-
-https://eapentechnology.com
-
-Justus
+— Justus
+eapentechnology.com
 
 ---
 
 ## Notes
 
-- Word count: ~175.
-- Steve Smith is CIO, not CTO. CIO at a media company usually owns infrastructure and platforms more than product roadmap. The email frames the problem as infrastructure-scale, which is his lane.
-- 2026-06-11 freshness pass: dropped the 25M-follower (May 6) and Q1-print (May 14) timing hooks as stale. New hook: June 2 international-expansion release (Germany, Italy, Greece, Ukraine, Bulgaria, Hungary; $25M annualized international revenue vs $3.6M in 2025; Warsaw launch event with Telekom Serbia). Multi-language markets strengthen the moderation-surface argument. Sources: ir.newsmax.com (Jun 2), thedesk.net (Jun 2026). NMAX up ~44% over the prior month as of Jun 9-10.
-- Risk: Newsmax is publicly traded (NYSE: NMAX). They have procurement, GC review, vendor selection processes. A CIO at a public company may not be the buyer; they may be the gatekeeper to a vendor-selection committee. Less ideal than a founder-CEO but still worth the send.
+- FINAL, operator-approved 2026-06-12. Gmail draft id r6460335793631241751 (HTML body) in the justus@eapentechnology.com mailbox.
+- POSITIONING CHANGE (operator, 2026-06-12): the ask is a general intro call, NOT trust and safety. Operator: "i do ai automation for dev experience and for marketing for lots of domains." T&S was a weak fit here — Newsmax's only owned UGC is the newsmax.com comment section (guidelines page dates to 2014) and the June expansion is linear TV licensing with no user content. The offer line in the email is the operator's own sentence nearly verbatim.
+- Facts verified 2026-06-12: Jun 2 IR release — localized channels coming to Germany, Italy, Greece, Ukraine, Bulgaria, Hungary (Poland and Serbia already operating; Warsaw event is the official Poland launch); ~$25M annualized international revenue expected 2026; licensing ~$16M 2026 guidance vs $3.6M 2025 actual (ir.newsmax.com, thedesk.net, stocktitan).
+- [hook-clause] for FU-1: "the international expansion".
+- Smith is CIO (owns tech stack — right door for dev-experience automation). Boca Raton HQ, ET. Public company (NYSE: NMAX) — expect procurement friction; the intro-call framing keeps it light.
+- History: original "Re: international expansion" consultant-register version dropped (fake-Re subject, inflated moderation-surface argument); two same-day voice iterations under operator's /loop before approval.
