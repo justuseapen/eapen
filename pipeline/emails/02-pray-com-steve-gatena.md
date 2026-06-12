@@ -19,7 +19,7 @@ eapentechnology.com
 
 ## Notes
 
-- FINAL, operator-approved 2026-06-11; timing close added 2026-06-12 per operator. Gmail draft id r-2512067069567764677 in joy@eapentechnology.com mailbox — supersedes r4423381822718947767, operator must discard the old draft.
+- FINAL, operator-approved 2026-06-11; timing close added 2026-06-12 per operator. Gmail draft id r1524447654136257903 (v3, HTML body — plain-text sig was getting mangled into Gmail's url-wrapper) in joy@eapentechnology.com mailbox — supersedes r-2512067069567764677 and r4423381822718947767; operator must discard the older drafts.
 - Friday-afternoon window (Fri 6/19, clear on operator's visible calendars) chosen because Gatena is Pacific (Santa Monica) — morning ET would be 7am for him.
 - Angle: operator is in DC July 2-5; America Prays culminates July 4 ("Salute to America 250" on the National Mall same day). The are-you-coming question is the CTA; the call is the fallback ask.
 - "Answered the call" mirrors Gatena's own words on Powers Pod #400 (Dec 2025): "The White House called us up... we're going to answer the call."

@@ -19,7 +19,7 @@ eapentechnology.com
 
 ## Notes
 
-- FINAL, operator-approved 2026-06-12. Gmail draft created (id r1786079167904553097) in joy@eapentechnology.com mailbox.
+- FINAL, operator-approved 2026-06-12. Gmail draft id r1438656116465430453 (v3, HTML body — plain-text sig was getting mangled into Gmail's url-wrapper) in joy@eapentechnology.com mailbox — supersedes r1786079167904553097; operator must discard the older draft.
 - Register: operator's real email voice. Streamlined per operator: the email's single job is landing an intro call; assumptive close with two named windows (Thu 6/18 / Fri 6/19 morning — Santrella is Central time, Irving TX, so morning ET lands mid-morning CT).
 - "A few ideas for Salem" deliberately keeps both call topics open: (1) automated T&S for Townhall Media's six Disqus-commented sites (verified 2026-06-11 still Salem-owned), (2) ZipWire and the future of local media — operator's real interest. ZipWire today is an AI-generated local political intelligence Substack; vision is a decentralized local-intelligence network. Do not overclaim in call prep.
 - Hooks verified 2026-06-11: Salem Creators Agency launch Mon Jun 9 (faith-centric talent representation, first client Jason Jackson Jr., 1M+ followers); WaterStone deal announced May 12, ~$31.7M at $1/share, expected close ~Aug 2026. "This week" framing decays after Fri Jun 12 — send today.
