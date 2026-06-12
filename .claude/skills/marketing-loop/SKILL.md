@@ -141,7 +141,11 @@ Skip in degraded mode.
      claims.
    - Run the Hard-rules checklist over the final text.
    - Route `email` → create a Gmail draft (From `justus@eapentechnology.com`, Subject from
-     the file header, the body verbatim). To: if the header lists one address, use it; if it
+     the file header, the body verbatim). ALWAYS pass an HTML body with the signature as an
+     explicit anchor (`<a href="https://eapentechnology.com">eapentechnology.com</a>`) —
+     plain-text drafts get auto-linkified by Gmail, which pastes its google.com/url redirect
+     wrapper in as the visible signature text (applies to reply drafts in Stage 1 too).
+     To: if the header lists one address, use it; if it
      lists guesses, pick the most probable one, record it in the queue Notes (`addr: ...`),
      and flag the guess in the summary so the operator can override before sending. Mark
      `awaiting-send` with date.
