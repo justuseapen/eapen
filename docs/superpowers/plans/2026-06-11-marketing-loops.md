@@ -275,10 +275,10 @@ Design spec: `docs/superpowers/specs/2026-06-10-marketing-loops-design.md`.
 2. Load Gmail tools via ToolSearch (query: "gmail search read draft send"). If absent or
    unauthenticated, ask the operator to run `/mcp` and authenticate. If declined/failed,
    switch to degraded mode and say so plainly.
-3. First live run only: verify the connected mailbox can send as `justus@eapentechnology.com`
-   (check Gmail send-as settings via a test draft with that From address; delete it after).
-   If send-as is unavailable, STOP and ask the operator whether to proceed from the connected
-   address or fix Workspace settings first.
+3. The connected mailbox is the operator's own `justus@eapentechnology.com` (confirmed
+   2026-06-12: first-touches sent with native From; no send-as setup involved). If the
+   authenticated account ever appears to be a different address, STOP and ask the operator
+   before creating any drafts.
 
 ## Stage 1 — Inbox scan
 
