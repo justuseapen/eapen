@@ -1,0 +1,24 @@
+{
+  "essay": 1,
+  "title": "Moderation Without the Lean",
+  "platform": "x",
+  "scheduled": "2026-06-15",
+  "status": "approved",
+  "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
+  "chunks": [
+    "1/ The biggest moderation risk at a heterodox platform is not a dangerous user. It is Apple or Google pulling your app.",
+    "2/ Parler was operational on Friday. By Monday it was gone. Apple, Google, AWS each made a call. Seventy-two hours total. No patch. No appeal. No moving on.",
+    "3/ Twitter, Reddit, Discord, and 4chan host content that would pull a small platform from the App Store in a week. They haven't been pulled. They are bigger, not cleaner. That is the operating environment.",
+    "4/ The first counterintuitive move: moderate more aggressively on the categories Apple and Google care about. Not because they're your values. Because they are the conditions of your existence.",
+    "5/ The vendor classifier is a commodity. It emits a score. 0.83 likelihood of harassment under the vendor's definition. The vendor's definition was written by people in San Francisco. You decide what to do with 0.83.",
+    "6/ The lean does not live in the classifier. It lives in three things your team owns: the taxonomy, the thresholds, and the human policy document. Those are where the values are actually encoded.",
+    "7/ Most platforms skip the policy document. They hire a head of T&S from a major platform and inherit a worldview. Six months later the system reads like a slightly slower version of the thing they were trying to escape.",
+    "8/ A five-person team forced to encode policy into weights and thresholds is in a better position than a 500-person team that runs on culture. Encoded policy is inspectable. Inspectable is defensible.",
+    "9/ When Apple asks why you handled a piece of content the way you did, the major platform points to outcomes and culture. The small platform points to its config. The small platform wins more often than the press reports.",
+    "10/ The hard part is not the engineering. It is sitting down and writing, in your own words, what your platform is for and what it is not for. Most platforms have not done this. The ones pulled from the App Store are the ones that did not.",
+    "11/ Full essay: https://eapentechnology.com/essays/moderation-without-the-lean.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio."
+  ],
+  "posted_at": null,
+  "tweet_ids": [],
+  "post_urls": []
+}

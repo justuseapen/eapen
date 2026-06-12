@@ -1,0 +1,11 @@
+{
+  "essay": 1,
+  "title": "Moderation Without the Lean",
+  "platform": "linkedin",
+  "scheduled": "2026-06-15",
+  "status": "approved",
+  "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
+  "text": "The biggest moderation risk at a heterodox platform is not what users post. It is Apple or Google pulling your app.\n\nParler was fully operational on a Friday. By Monday morning it was gone. Apple, Google, and AWS each made a call. The total time from operational to offline was seventy-two hours.\n\nThe vendor classifier does not save you. It is a commodity. It gives you a score — 0.83 likelihood of harassment under a definition written by people in San Francisco. You decide what to do with 0.83. The lean does not live in the vendor.\n\nIt lives in three things your team writes.\n\nFirst: the taxonomy. Which categories does your platform care about?\n\nSecond: the weights and thresholds. What does your platform do at 0.83? Auto-remove at 0.95. Ignore at 0.40. Between those, every number is a value judgment.\n\nThird: the policy document your reviewers actually read. Most platforms skip this. They hire a head of trust and safety from a major platform and inherit a worldview with the resume.\n\nA five-person team that has to encode everything into config is in a better position than a 500-person team that runs on culture. Encoded policy is inspectable. Inspectable is defensible.\n\nWhen Apple asks why you handled a piece of content the way you did, the major platform points to outcomes and culture. The small platform points to its config.\n\nThe hard part is not engineering. It is writing down what your platform is for.\n\nFull essay: https://eapentechnology.com/essays/moderation-without-the-lean.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio.",
+  "posted_at": null,
+  "post_urls": []
+}

@@ -1,0 +1,25 @@
+{
+  "essay": 2,
+  "title": "What the deplatforming of Parler actually taught us",
+  "platform": "x",
+  "scheduled": "2026-06-22",
+  "status": "approved",
+  "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
+  "chunks": [
+    "1/ Parler was fully operational on January 8, 2021. AWS notified them on January 10 they'd be suspended at midnight. By Monday the platform was gone. Seventy-two hours from operational to off the internet.",
+    "2/ The official reason was January 6 moderation. Facebook hosted vastly more of the actual planning. Twitter hosted more. Telegram hosted more. None of them faced infrastructure-level consequences. The disparity was visible.",
+    "3/ I was at January 6. I was not on Parler. Almost no one I knew was on Parler. The deplatforming had a pretext. It did not have a cause.",
+    "4/ AWS is run by woke leftists who will destroy your business if they disagree with you politically. They calculated that removing Parler cost them nothing. AWS stock did not move. No major customer left. They were right.",
+    "5/ The lesson is not \"moderate harder.\" It is: do not build on infrastructure run by people who would benefit from your destruction.",
+    "6/ Gab took total refusal. No App Store. No payment processors. Self-hosting. Andrew Torba chose it deliberately. The platform still exists. It has a few hundred thousand users. That is the price.",
+    "7/ Rumble is the most encouraging case in the set. Chris Pavlovski built his own video pipeline. Diversified CDNs and payment providers. Accepted minimum app-store accommodation. Tens of millions of monthly active users. A public listing.",
+    "8/ The middle path: own the core, diversify the commodity, accept the minimum app-store accommodation for distribution. It is the only path that produces a real user base and a real business.",
+    "9/ Telegram is the odd case. Global reach. Hosts content that would get an American platform destroyed in a week. Still in the App Store. Telegram probably has backdoors for the intelligence community. Opacity buys latitude.",
+    "10/ The working model: own what you can own. Partner only with operators whose politics make destroying you a cost rather than a benefit. Treat AWS, Stripe, Cloudflare, and the App Store as known vulnerabilities. Build the contingency before you launch.",
+    "11/ The infrastructure was never neutral. It will not become neutral in your lifetime. The cloud is a coalition. The coalition decides who is inside its borders. Build for that.",
+    "12/ Full essay: https://eapentechnology.com/essays/platform-risk-is-political-risk.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio."
+  ],
+  "posted_at": null,
+  "tweet_ids": [],
+  "post_urls": []
+}

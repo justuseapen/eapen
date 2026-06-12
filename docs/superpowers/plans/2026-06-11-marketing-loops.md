@@ -382,18 +382,27 @@ Skip in degraded mode.
    itself, the anchor is today (its entry is written at Stage 6). Dry-run or degraded runs
    never set the anchor; with no anchor yet, report "no content anchor" and skip this stage.
    Week 1 = anchor through day 6, week 2 = days 7-13, week 3 = days 14-20.
-2. Schedule: Essay 1 threads in week 1, Essay 2 in week 2, Essay 3 in week 3 — all three
-   platforms (Truth Social, X, LinkedIn) the same day per essay.
-3. If the current week's essay has no `Essay N distribution` row in crm.md: present that
-   essay's three platform versions from `content/threads.md` ready-to-paste. When the operator
-   confirms posting, add the crm row (channel `content`, status `published`, post URLs in
-   Notes). If they defer, note it and move on.
-4. Week 4+: if no content row in the last 7 days, draft one short technical post (Truth
+2. Schedule: Essay 1 in week 1, Essay 2 in week 2, Essay 3 in week 3. X and LinkedIn post
+   AUTOMATICALLY via the `content-autopost` GitHub Actions workflow (daily 10:10am ET) from
+   `content/queue/*.json`; Truth Social remains manual. Setup/maintenance doc:
+   `docs/content-autopost-setup.md`.
+3. Each run, read `content/queue/*.json`:
+   - status `posted` with no matching crm row → add the crm row (channel `content`, status
+     `published`, post URLs from the file).
+   - status `partial`, or a unit whose scheduled date passed while still `approved` (secrets
+     missing / workflow failing) → alert the operator in the summary; never re-run a
+     `partial` X thread automatically (duplicate tweets).
+4. On or after each essay's scheduled date, if the crm row's Notes lack a Truth Social URL:
+   present that essay's Truth Social thread from `content/threads.md` ready-to-paste; record
+   the TS URL in the crm row when the operator confirms. If they defer, note it and move on.
+5. Week 4+: if no content row in the last 7 days, draft one short technical post (Truth
    Social + X versions, 150-300 words) adapted from an essay section not yet used standalone,
    closing with the 2-clients CTA. Write it into `content/threads.md` under a
-   `### Standalone posts` section so the Stage 6 commit covers it. Operator approves and
-   pastes; record as above.
-5. Dry-run mode: report what is due; present nothing for posting.
+   `### Standalone posts` section. After the operator approves: create the
+   `content/queue/YYYY-MM-DD-standalone-N-x.json` entry (status `approved` ONLY on explicit
+   operator approval — the agent never sets it unilaterally) and present the TS version for
+   pasting.
+6. Dry-run mode: report queue/posted state; create no queue entries, present nothing.
 
 ## Stage 5 — Warm intros
 

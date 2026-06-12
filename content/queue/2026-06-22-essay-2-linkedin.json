@@ -1,0 +1,11 @@
+{
+  "essay": 2,
+  "title": "What the deplatforming of Parler actually taught us",
+  "platform": "linkedin",
+  "scheduled": "2026-06-22",
+  "status": "approved",
+  "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
+  "text": "Parler was fully operational on January 8, 2021. AWS notified them on January 10 they'd be cut off at midnight. By Monday morning the platform was gone. Seventy-two hours.\n\nThe official reason was January 6 moderation. Facebook hosted vastly more of the actual organizing, by orders of magnitude. None of the majors lost a hosting contract. The deplatforming had a pretext. It did not have a cause.\n\nThe cause was simpler. AWS made a political calculation. They decided the cost of removing a conservative-coded platform during a national news cycle was zero. No contract lost. No stock movement. They were right.\n\nFour cases show the decision tree clearly.\n\nParler: trusted AWS. Gone.\n\nGab: total refusal. Andrew Torba chose no app stores, no payment processors, self-hosting. Gab still exists. Its user base is in the low hundreds of thousands. That is the price of total refusal.\n\nRumble: Chris Pavlovski built his own video pipeline, diversified payment providers and CDNs, and accepted minimum app-store accommodation. Tens of millions of monthly users. A public listing. The middle path works.\n\nTelegram: opacity buys latitude. A platform useful to enough state actors gets treated differently. Not a model most Western founders can replicate.\n\nThe operating principle: own the core. Partner only with operators whose politics make destroying you a cost rather than a benefit. Treat every major infrastructure dependency as a known vulnerability. Build the contingency before you launch.\n\nThe infrastructure was never neutral.\n\nFull essay: https://eapentechnology.com/essays/platform-risk-is-political-risk.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio.",
+  "posted_at": null,
+  "post_urls": []
+}
