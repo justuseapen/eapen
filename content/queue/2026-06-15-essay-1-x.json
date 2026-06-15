@@ -3,7 +3,7 @@
   "title": "Moderation Without the Lean",
   "platform": "x",
   "scheduled": "2026-06-15",
-  "status": "approved",
+  "status": "partial",
   "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
   "chunks": [
     "1/ The biggest moderation risk at a heterodox platform is not a dangerous user. It is Apple or Google pulling your app.",
@@ -18,7 +18,8 @@
     "10/ The hard part is not the engineering. It is sitting down and writing, in your own words, what your platform is for and what it is not for. Most platforms have not done this. The ones pulled from the App Store are the ones that did not.",
     "11/ Full essay: https://eapentechnology.com/essays/moderation-without-the-lean.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio."
   ],
-  "posted_at": null,
+  "posted_at": "2026-06-15T12:06:21-04:00",
   "tweet_ids": [],
-  "post_urls": []
+  "post_urls": [],
+  "error": "tweet 1/11 failed: 401 {\n  \"title\": \"Unauthorized\",\n  \"type\": \"about:blank\",\n  \"status\": 401,\n  \"detail\": \"Unauthorized\"\n}"
 }
