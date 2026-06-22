@@ -3,7 +3,7 @@
   "title": "What the deplatforming of Parler actually taught us",
   "platform": "x",
   "scheduled": "2026-06-22",
-  "status": "approved",
+  "status": "partial",
   "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
   "chunks": [
     "1/ Parler was fully operational on January 8, 2021. AWS notified them on January 10 they'd be suspended at midnight. By Monday the platform was gone. Seventy-two hours from operational to off the internet.",
@@ -19,7 +19,8 @@
     "11/ The infrastructure was never neutral. It will not become neutral in your lifetime. The cloud is a coalition. The coalition decides who is inside its borders. Build for that.",
     "12/ Full essay: https://eapentechnology.com/essays/platform-risk-is-political-risk.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio."
   ],
-  "posted_at": null,
+  "posted_at": "2026-06-22T11:47:08-04:00",
   "tweet_ids": [],
-  "post_urls": []
+  "post_urls": [],
+  "error": "tweet 1/12 failed: 401 {\n  \"title\": \"Unauthorized\",\n  \"type\": \"about:blank\",\n  \"status\": 401,\n  \"detail\": \"Unauthorized\"\n}"
 }
