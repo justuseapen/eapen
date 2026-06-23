@@ -8,7 +8,7 @@
 
 Nafees,
 
-Saw the Amanah Pro launch with Maybank Indonesia last month. Banking-as-a-service on top of the Ummah Pro community feed makes Bitsmedia a platform company now, not an app company. A global community feed across 170M downloads is already a different problem than the prayer-times and Quran-reading product was. The moderation surface you've built for Ummah Pro is larger than what most Western platforms operate at, with users across language, jurisdiction, and sectarian lines that no commercial T&S vendor has training data for.
+Saw the Amanah Pro launch with Maybank Indonesia in May. Banking-as-a-service on top of the Ummah Pro community feed makes Bitsmedia a platform company now, not an app company. A global community feed across 170M downloads is already a different problem than the prayer-times and Quran-reading product was. The moderation surface you've built for Ummah Pro is larger than what most Western platforms operate at, with users across language, jurisdiction, and sectarian lines that no commercial T&S vendor has training data for.
 
 I spent five years on Truth Social's internal trust and safety infrastructure at TMTG. The cross-cultural moderation problem is harder than the technology stack makes it look. The vendors will sell you classifiers trained on English-language hate-speech corpora and tell you they work across all your users. They do not.
 

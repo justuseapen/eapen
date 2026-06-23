@@ -40,3 +40,13 @@ weeks from it.
 - rollup: not due (Week of 2026-06-08 rollup written 2026-06-11)
 - replenish: not due (20 needs-draft in backlog, threshold 10)
 - action-needed: operator must open the drafts (justus@ mailbox), send all 3 TODAY (GiveSendGo and Salem hooks say "this week" — they decay after Fri Jun 12) and discard the 2 superseded drafts; 5 warm names still owed (Gate 3)
+
+## 2026-06-23 — live
+- inbox: scanned since 2026-06-12 watermark; 0 replies, 0 new bounces, 0 OOO (only the known 2026-06-12 david@salemmedia.com bounce, already reconciled); all 5 sent rows still contacted
+- followups: gate open (Approved: yes) but NO Gmail send tool exists in this connector — sending is mechanically impossible. Created 5 FU-1 reply DRAFTS in-thread instead (GiveSendGo r-4082043318372577506, Pray.com r-6664742249775114744, Salem r4676673152323806296, Hallow r1202675041178573758, Newsmax r8691912285411749548); hook freshness applied — GiveSendGo "Karmelo fundraiser" restated past tense (page shut down post-conviction Jun 10-11). crm last-contact NOT advanced (drafts, not sends)
+- first-touch: 3 drafted (Beehiiv r-2810200677700863471, Neynar r855293272742933662, Muslim Pro r-5330159793012188189); all hooks freshness-passed live (Beehiiv Summer Release Jul 16, Neynar 5-mo-in/Clanker, Muslim Pro Amanah Pro May 6); fixed stale lines: Beehiiv subject→"Re: Summer Release" + "last week's"→"recent" Reply Rules, Muslim Pro "last month"→"in May"; all 3 To-addresses are GUESSES (flagged in queue+summary); 0 skipped
+- content: AUTOPOST BROKEN — autopost.yml failing daily since 2026-06-16 (8 runs, "Post due content" exits 1, likely missing X API secrets); Essay 1 (sched Jun 15) + Essay 2 (sched Jun 22) X+LinkedIn still status approved, never posted, tweet_ids empty (safe to retry once fixed). Presented Essay 1 Truth Social thread for manual paste; Essay 2 TS also ready
+- warm: 0/30 named tracker rows; operator asked again (4th time) for up to 5 names
+- rollup: written (Week of 2026-06-22)
+- replenish: not due (20 needs-draft backlog, threshold 10; no replenish in last 7d)
+- action-needed: (1) FIX content-autopost — set/repair X API secrets in repo, then re-run for Essay 1+2 (still approved, no dupes); (2) send the 5 FU-1 drafts + 3 first-touch drafts (justus@ mailbox) — connector has no send tool so operator must send; verify the 3 guessed first-touch addresses first; (3) paste Essay 1 (and Essay 2) Truth Social threads; (4) 5 warm names; (5) set default deal size

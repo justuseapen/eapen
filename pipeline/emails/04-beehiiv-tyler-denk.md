@@ -2,7 +2,7 @@
 
 **To:** Tyler Denk (try tyler@beehiiv.com or tyler.denk@beehiiv.com)
 **From:** justus@eapentechnology.com
-**Subject:** Re: the webinars launch
+**Subject:** Re: Summer Release
 
 ---
 
@@ -10,7 +10,7 @@ Tyler,
 
 Saw the Summer Release announcement for July 16, coming off the April rollout of webinars with live chat and paid trials. Congratulations on the quarter behind both.
 
-Every new surface in that lineup is UGC that Beehiiv didn't have to moderate before. The newsletter-as-product question is settled. The newsletter-platform-with-live-community question is open. The Substack team is figuring this out in public right now: the "Standards and Enforcement" rebrand, the February investigation into paid extremist newsletters, and last week's Reply Rules feature that hands comment moderation to individual writers. That experience is not the one a founder wants.
+Every new surface in that lineup is UGC that Beehiiv didn't have to moderate before. The newsletter-as-product question is settled. The newsletter-platform-with-live-community question is open. The Substack team is figuring this out in public right now: the "Standards and Enforcement" rebrand, the February investigation into paid extremist newsletters, and the recent Reply Rules feature that hands comment moderation to individual writers. That experience is not the one a founder wants.
 
 I spent five years on Truth Social's internal trust and safety infrastructure at TMTG. Most of that work was operating moderation on live surfaces — comments, chat, community posts — under regulatory and press attention. The hardest part is not the technology. It is deciding the posture before you need it.
 
