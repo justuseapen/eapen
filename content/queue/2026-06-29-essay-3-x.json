@@ -3,7 +3,7 @@
   "title": "Why the Bay Can't Help",
   "platform": "x",
   "scheduled": "2026-06-29",
-  "status": "approved",
+  "status": "partial",
   "approved_by": "operator Gate 2 ratification 2026-06-11 (4 calibration lines KEEP VERBATIM) + auto-post decision 2026-06-12",
   "chunks": [
     "1/ Every moderation call is a values call dressed up as a policy call. \"Is this hate speech?\" has no technical answer. The classifier outputs 0.83. What you do with 0.83 depends on what your platform thinks hate is.",
@@ -19,7 +19,8 @@
     "11/ You cannot outsource your conscience to people who do not have one of their own. The consultancies will sell you a conscience anyway. You will pay to import the consensus you started the platform to escape.",
     "12/ Full essay: https://eapentechnology.com/essays/why-the-bay-cant-help.html\n\nTaking on 2 new Eapen Technology clients this quarter. Calendly in bio."
   ],
-  "posted_at": null,
+  "posted_at": "2026-06-29T11:19:22-04:00",
   "tweet_ids": [],
-  "post_urls": []
+  "post_urls": [],
+  "error": "tweet 1/12 failed: 401 {\n  \"title\": \"Unauthorized\",\n  \"type\": \"about:blank\",\n  \"status\": 401,\n  \"detail\": \"Unauthorized\"\n}"
 }
