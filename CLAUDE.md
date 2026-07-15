@@ -18,18 +18,20 @@ There is no build step, no package manager, no linter, and no test suite.
 
 ## Architecture
 
-The site is a single self-contained `index.html` (~377 lines) with embedded CSS and JavaScript:
+The site is a single self-contained `index.html` with embedded CSS and JavaScript. It uses a dark editorial design (imported from a Claude Design project, 2026-07-15):
 
-- **CSS (lines 7-297):** Uses CSS custom properties defined in `:root`. Apple-inspired design system with glass-morphism effects (`backdrop-filter: blur`), animated gradient orbs, mesh gradient background, floating particles, and a shimmer effect on the contact card. Responsive breakpoint at 600px.
-- **HTML (lines 299-328):** Semantic structure with mesh gradient background, three floating orbs, particle container, main content container (heading, tagline, subtitle, contact card with mailto CTA), and noise texture overlay.
-- **JavaScript (lines 330-375):** Dynamically creates 20 floating light particles, adds parallax movement to orbs on mouse move, and applies 3D perspective tilt to the contact card on hover.
+- **CSS (in `<style>`):** CSS custom properties in `:root` define the palette, type stack, and rules. Sections: nav, hero, credential strip (3 stats), services (3 cards), about (with portrait slot), selected work (portfolio), essays, contact, footer. Responsive breakpoints at 900px and 620px collapse the multi-column grids to single column.
+- **HTML (in `<body>`):** One top-level `<div>` wrapping the sections above. Semantic-ish structure using `<section>` for the four mid-page blocks (offers/about/work/essays) and `<div>` for nav/hero/strip/contact/footer. Nav anchors jump to `#offers`, `#about`, `#work`, `#essays`.
+- **JavaScript (one IIFE at the bottom):** An ambient Conway's Game of Life animation painted on the hero `<canvas id="heroCanvas">`. It reacts to mouse movement and is fully gated behind `prefers-reduced-motion: reduce` (returns early, never animates for opted-out users).
+
+The **portrait** in the About section references `portrait.jpg` at the repo root; if that file is absent the `<img onerror>` hides it and a "Portrait" placeholder shows through. Drop a real `portrait.jpg` (4:5 works best) at the repo root to fill it.
 
 ## Design Conventions
 
-- Apple system font stack (`-apple-system, BlinkMacSystemFont, "SF Pro Display"...`)
-- Color palette: text primary `#1d1d1f`, text secondary `#6e6e73`, accent blue `#0071e3`, background `#fbfbfd`
-- Uses `-webkit-` prefixes for Safari compatibility (`-webkit-backdrop-filter`, `-webkit-background-clip`)
-- All styling and scripts are inline (no external files)
+- **Fonts (external, Google Fonts):** Newsreader (serif headings + pull quotes), Archivo (body/buttons), IBM Plex Mono (eyebrows, labels, stats). Loaded via `<link>` in `<head>` — this is the one place the site depends on an external host.
+- **Palette (dark):** bg `#0b0c0e`, alt-bg `#0d0e10`, text `#e9e8e3`, heading `#f2f1eb`, body `#bcbab1`, muted `#a3a199`, faint `#7c7a72`, gold accent `#c6a052` (soft `#d9c99b`, bright `#efe4c4`). Hairline rules use `rgba(255,255,255,.07)`.
+- **Eyebrows** are mono, uppercase, gold, numbered `01 — …` through `05 — …`. Keep numbering contiguous when adding/removing sections.
+- All styling and scripts are inline; the only external dependency is the Google Fonts stylesheet.
 
 ## Deployment
 
