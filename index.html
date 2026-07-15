@@ -107,6 +107,22 @@ section.hero { margin-top: 0; }
 .essay-link:hover h3 { color: var(--accent); }
 .essay-link p { color: var(--muted); margin: 0; font-size: 16px; }
 .essay-link:first-of-type { border-top: 1px solid var(--rule); }
+.work-link {
+  display: block;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+}
+.work-link:first-of-type { border-top: 1px solid var(--rule); }
+.work-link:hover { text-decoration: none; }
+.work-link h3 { color: var(--text); margin-bottom: 2px; }
+.work-link:hover h3 { color: var(--accent); }
+.work-link .role {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.work-link .desc { color: var(--muted); margin: 0; font-size: 16px; }
 footer {
   margin-top: 120px;
   padding-top: 32px;
@@ -161,7 +177,37 @@ footer {
 </section>
 
 <section>
-  <p class="eyebrow">03 · Writing</p>
+  <p class="eyebrow">03 · Selected Work</p>
+  <h2>Things I've Built</h2>
+  <p>Products and systems I've founded, built, or run engineering for.</p>
+
+  <a href="https://1thome.com" class="work-link" target="_blank" rel="noopener noreferrer">
+    <h3>1T Home</h3>
+    <p class="role">Founder</p>
+    <p class="desc">Trillion-parameter AI at home. A burn-in-tested inference box that rents out its GPUs when you're not using them — it can pay its own way.</p>
+  </a>
+
+  <a href="https://tradecrafttechnology.com" class="work-link" target="_blank" rel="noopener noreferrer">
+    <h3>TradeCraft</h3>
+    <p class="role">Founder</p>
+    <p class="desc">Pragmatic AI for the trades. RooferRate and RoofGuide take the friction out of rating contractors and scoping roof projects.</p>
+  </a>
+
+  <a href="https://truthsocial.com" class="work-link" target="_blank" rel="noopener noreferrer">
+    <h3>Truth Social</h3>
+    <p class="role">Senior Software Engineer, trust &amp; safety infrastructure · 5 years</p>
+    <p class="desc">Built and operated the internal moderation systems behind a platform under regulatory and press scrutiny most platforms never face.</p>
+  </a>
+
+  <a href="https://pavlok.com" class="work-link" target="_blank" rel="noopener noreferrer">
+    <h3>Pavlok</h3>
+    <p class="role">Head of Software · designed the self-shock protocol</p>
+    <p class="desc">The habit-breaking wearable that zaps bad habits away. Scaled the engineering team to 30+; the device is still on the market today.</p>
+  </a>
+</section>
+
+<section>
+  <p class="eyebrow">04 · Writing</p>
   <h2>Selected Essays</h2>
   <p>Three essays on the hardest version of the work — moderation at a platform under political and press scrutiny. The discipline is the same one I bring to any automation problem: encode the judgment, make it inspectable, defend it. If these arguments resonate, we will probably get along.</p>
 
@@ -182,7 +228,7 @@ footer {
 </section>
 
 <section>
-  <p class="eyebrow">04 · Contact</p>
+  <p class="eyebrow">05 · Contact</p>
   <h2>Start a conversation</h2>
   <p>I take on a small number of clients at a time. If you've read this far, the next step is a 30-minute call — no deck, no pitch. We'll figure out whether there's a workflow worth automating.</p>
   <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Book a 30-minute call</a>
