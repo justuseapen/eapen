@@ -11,232 +11,511 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eapen Technology — AI Automation for Small Teams">
 <meta name="twitter:description" content="Justus Eapen builds the AI automation a small team can't build itself. Five years encoding human judgment into systems at Truth Social.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --text: #1d1d1f;
-  --muted: #6e6e73;
-  --accent: #0071e3;
-  --bg: #ffffff;
-  --rule: #e5e5e7;
-}
-* { box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 96px 24px 120px;
-  line-height: 1.6;
-  font-size: 18px;
-}
-.eyebrow {
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 16px;
-}
-h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 24px;
-}
-h2 {
-  font-size: 28px;
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 0 0 24px;
-}
-h3 {
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 600;
-  margin: 0 0 8px;
-}
-p { margin: 0 0 20px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.lead {
-  font-size: 24px;
-  line-height: 1.35;
-  font-weight: 500;
-  margin: 0 0 24px;
-}
-.credential {
-  color: var(--muted);
-  font-size: 16px;
-  margin: 32px 0 24px;
-}
-.scarcity {
-  font-weight: 600;
-  margin: 32px 0 24px;
-}
-.btn {
-  display: inline-block;
-  background: var(--text);
-  color: white;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  margin-top: 8px;
-}
-.btn:hover { text-decoration: none; background: var(--accent); }
-section { margin: 96px 0 0; }
-section.hero { margin-top: 0; }
-.price {
-  color: var(--muted);
-  font-size: 15px;
-  margin: 0 0 12px;
-  font-variant-numeric: tabular-nums;
-}
-.offer { margin-bottom: 48px; }
-.offer:last-child { margin-bottom: 0; }
-.essay-link {
-  display: block;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--rule);
-  color: var(--text);
-}
-.essay-link:hover { text-decoration: none; }
-.essay-link h3 { color: var(--text); margin-bottom: 4px; }
-.essay-link:hover h3 { color: var(--accent); }
-.essay-link p { color: var(--muted); margin: 0; font-size: 16px; }
-.essay-link:first-of-type { border-top: 1px solid var(--rule); }
-.work-link {
-  display: block;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--rule);
-  color: var(--text);
-}
-.work-link:first-of-type { border-top: 1px solid var(--rule); }
-.work-link:hover { text-decoration: none; }
-.work-link h3 { color: var(--text); margin-bottom: 2px; }
-.work-link:hover h3 { color: var(--accent); }
-.work-link .role {
-  color: var(--muted);
-  font-size: 15px;
-  margin: 0 0 8px;
-}
-.work-link .desc { color: var(--muted); margin: 0; font-size: 16px; }
-footer {
-  margin-top: 120px;
-  padding-top: 32px;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 14px;
-}
+  :root {
+    --bg: #0b0c0e;
+    --bg-alt: #0d0e10;
+    --card: #0b0c0e;
+    --card-hover: #101114;
+    --text: #e9e8e3;
+    --heading: #f2f1eb;
+    --heading-soft: #f0efe9;
+    --body: #bcbab1;
+    --muted: #a3a199;
+    --faint: #7c7a72;
+    --gold: #c6a052;
+    --gold-soft: #d9c99b;
+    --gold-bright: #efe4c4;
+    --rule: rgba(255,255,255,.07);
+    --rule-strong: rgba(255,255,255,.1);
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'Archivo', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  body { overflow-x: hidden; color: var(--text); font-family: var(--sans); }
+  ::selection { background: var(--gold); color: var(--bg); }
+  a { color: var(--gold-soft); text-decoration: none; }
+  a:hover { color: var(--gold-bright); }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  h1, h2, h3 { margin: 0; }
+  p { margin: 0; }
+  img { max-width: 100%; display: block; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    [style*="animation"] { animation: none !important; }
+  }
+
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  /* NAV */
+  .nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 56px; border-bottom: 1px solid var(--rule);
+    position: relative; z-index: 5;
+  }
+  .nav-brand { display: flex; align-items: baseline; gap: 12px; }
+  .nav-brand .name { font-family: var(--serif); font-weight: 500; font-size: 22px; letter-spacing: .01em; color: var(--heading-soft); }
+  .nav-brand .sub { font-family: var(--mono); font-size: 10px; letter-spacing: .28em; color: var(--faint); text-transform: uppercase; }
+  .nav-links { display: flex; gap: 38px; align-items: center; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; color: #9a988f; }
+  .nav-links a:hover { color: var(--gold-bright); }
+  .nav-cta {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .04em;
+    color: var(--gold-bright) !important; border: 1px solid rgba(198,160,82,.5); padding: 10px 20px;
+  }
+  .nav-cta:hover { border-color: var(--gold); background: rgba(198,160,82,.08); }
+
+  /* HERO */
+  .hero { position: relative; padding: 130px 56px 100px; overflow: hidden; }
+  .hero canvas {
+    position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; pointer-events: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 55%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, black 55%, black 100%);
+  }
+  .hero-inner { position: relative; max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 32px; }
+  .eyebrow-line { display: flex; align-items: center; gap: 14px; animation: riseIn .7s ease both; }
+  .eyebrow-line .tick { width: 26px; height: 1px; background: var(--gold); }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; color: var(--gold); text-transform: uppercase; }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 400; font-size: clamp(46px, 6.4vw, 90px);
+    line-height: 1.04; letter-spacing: -.01em; color: var(--heading);
+    animation: riseIn .8s .05s ease both; text-wrap: balance; max-width: 14ch;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-soft); }
+  .hero-lead { max-width: 600px; font-size: 20px; line-height: 1.6; color: #b7b5ac; animation: riseIn .8s .2s ease both; }
+  .hero-actions { display: flex; align-items: center; gap: 24px; animation: riseIn .8s .35s ease both; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 15px; letter-spacing: .01em;
+    color: var(--bg) !important; background: var(--text); padding: 16px 34px;
+  }
+  .btn:hover { background: var(--gold); }
+  .hero-note { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--faint); }
+
+  /* CREDENTIAL STRIP */
+  .strip { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); position: relative; z-index: 5; }
+  .strip-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .stat { padding: 40px 32px; display: flex; flex-direction: column; gap: 10px; border-left: 1px solid var(--rule); }
+  .stat .figure { font-family: var(--serif); font-weight: 400; font-size: 38px; line-height: 1; color: var(--heading-soft); }
+  .stat .label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: #8c8a81; line-height: 1.5; text-transform: uppercase; }
+
+  /* SECTION SCAFFOLD */
+  section { position: relative; z-index: 5; }
+  .section-pad { padding: 120px 56px; }
+  .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; margin-bottom: 64px; flex-wrap: wrap; }
+  .section-head-l { display: flex; flex-direction: column; gap: 16px; max-width: 640px; }
+  .section-head-r { max-width: 320px; font-size: 17px; line-height: 1.6; color: var(--muted); }
+  .h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.06; letter-spacing: -.01em; color: var(--heading); }
+  .h2-sm { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.08; letter-spacing: -.01em; color: var(--heading); text-wrap: balance; }
+
+  /* SERVICES */
+  .offers-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.08); }
+  .offer { background: var(--card); padding: 40px 34px; display: flex; flex-direction: column; gap: 22px; min-height: 340px; transition: background .2s ease; }
+  .offer:hover { background: var(--card-hover); }
+  .offer .numeral { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; color: var(--gold); }
+  .offer-title-wrap { display: flex; flex-direction: column; gap: 8px; }
+  .offer h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.2; color: var(--heading-soft); }
+  .offer .price { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--muted); }
+  .offer .body { font-size: 16px; line-height: 1.6; color: var(--muted); flex: 1; }
+  .offer .tag { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; color: var(--faint); border-top: 1px solid rgba(255,255,255,.08); padding-top: 16px; text-transform: uppercase; }
+
+  /* ABOUT */
+  .about { border-top: 1px solid var(--rule); background: var(--bg-alt); }
+  .about-grid { display: grid; grid-template-columns: 400px 1fr; gap: 80px; align-items: start; }
+  .about-col-l { display: flex; flex-direction: column; gap: 14px; }
+  .portrait { position: relative; width: 100%; aspect-ratio: 4/5; border: 1px solid var(--rule-strong); overflow: hidden; background: #101114; }
+  .portrait .placeholder {
+    position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: #6f6d64; text-transform: uppercase;
+  }
+  .portrait img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+  .about-caption { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--faint); text-transform: uppercase; }
+  .about-col-r { display: flex; flex-direction: column; gap: 28px; }
+  .about-col-r p { font-size: 19px; line-height: 1.68; color: var(--body); }
+  .about-pull { font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--gold-soft) !important; }
+
+  /* WORK / PORTFOLIO */
+  .work { border-top: 1px solid var(--rule); }
+  .work-list { display: flex; flex-direction: column; border-top: 1px solid var(--rule-strong); }
+  .work-item {
+    display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: baseline;
+    padding: 32px 8px; border-bottom: 1px solid var(--rule-strong); color: inherit;
+  }
+  .work-item:hover { background: rgba(255,255,255,.03); }
+  .work-item:hover .work-title { color: var(--gold-bright); }
+  .work-main { display: flex; flex-direction: column; gap: 8px; }
+  .work-title { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.25; color: var(--heading-soft); transition: color .2s ease; }
+  .work-role { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--gold); }
+  .work-blurb { font-size: 16px; line-height: 1.55; color: var(--muted); max-width: 72ch; }
+  .work-arrow { font-family: var(--mono); font-size: 18px; color: var(--gold); align-self: center; }
+
+  /* ESSAYS */
+  .essays { border-top: 1px solid var(--rule); }
+  .essays-head { display: flex; flex-direction: column; gap: 16px; margin-bottom: 56px; max-width: 680px; }
+  .essays-head p { font-size: 17px; line-height: 1.6; color: var(--muted); }
+  .essay-list { display: flex; flex-direction: column; border-top: 1px solid var(--rule-strong); }
+  .essay-item {
+    display: grid; grid-template-columns: 72px 1fr 32px; gap: 32px; align-items: baseline;
+    padding: 32px 8px; border-bottom: 1px solid var(--rule-strong); color: inherit;
+  }
+  .essay-item:hover { background: rgba(255,255,255,.03); }
+  .essay-item:hover .essay-title { color: var(--gold-bright); }
+  .essay-index { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--faint); }
+  .essay-main { display: flex; flex-direction: column; gap: 8px; }
+  .essay-title { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.25; color: var(--heading-soft); transition: color .2s ease; }
+  .essay-blurb { font-size: 16px; line-height: 1.55; color: var(--muted); max-width: 70ch; }
+  .essay-arrow { font-family: var(--mono); font-size: 18px; color: var(--gold); }
+
+  /* CONTACT */
+  .contact { border-top: 1px solid var(--rule); background: var(--bg-alt); padding: 140px 56px; text-align: center; }
+  .contact-inner { display: flex; flex-direction: column; align-items: center; gap: 28px; max-width: 760px; margin: 0 auto; }
+  .contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 72px); line-height: 1.05; letter-spacing: -.01em; color: var(--heading); text-wrap: balance; }
+  .contact p { max-width: 520px; font-size: 19px; line-height: 1.6; color: var(--body); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule); padding: 28px 56px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  footer .meta { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--faint); text-transform: uppercase; }
+  footer a { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: #9a988f; }
+  footer a:hover { color: var(--gold-bright); }
+  footer .copy { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: #6f6d64; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav { padding: 20px 28px; }
+    .nav-links { gap: 22px; }
+    .hero { padding: 90px 28px 72px; }
+    .section-pad { padding: 88px 28px; }
+    .strip-grid { grid-template-columns: 1fr; }
+    .stat { border-left: none; border-top: 1px solid var(--rule); }
+    .stat:first-child { border-top: none; }
+    .offers-grid { grid-template-columns: 1fr; }
+    .offer { min-height: 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; padding-left: 28px; padding-right: 28px; }
+    .about-col-l { max-width: 320px; }
+    .contact { padding: 96px 28px; }
+    footer { padding: 24px 28px; }
+  }
+  @media (max-width: 620px) {
+    .nav { flex-direction: column; gap: 18px; align-items: flex-start; }
+    .nav-links { flex-wrap: wrap; gap: 16px 22px; }
+    .hero { padding: 64px 20px 56px; }
+    .section-pad { padding: 72px 20px; }
+    .section-head { margin-bottom: 44px; }
+    .essay-item { grid-template-columns: 1fr; gap: 10px; }
+    .essay-index { color: var(--gold); }
+    .essay-arrow { display: none; }
+    .work-item { grid-template-columns: 1fr; gap: 10px; }
+    .work-arrow { display: none; }
+    .about-grid { padding-left: 20px; padding-right: 20px; }
+    .contact { padding: 72px 20px; }
+    footer { padding: 20px; }
+  }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1>Eapen Technology</h1>
-  <p class="lead">I build the AI automation a small team can't build itself.</p>
-  <p>Most business processes still run on people doing repetitive judgment work by hand — sorting, classifying, routing, reviewing. The same work that used to need ten people can now run as a system three people maintain. I build those systems, and I teach your team to build them too.</p>
-  <p class="credential">Five years at TMTG (NASDAQ: DJT), Truth Social, encoding human judgment into automated systems under regulatory and press scrutiny. If a workflow can survive that, yours is not harder. Founder, Eapen Technology.</p>
-  <p class="scarcity">Taking on 2 clients this quarter.</p>
-  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Book a 30-minute call</a>
-</section>
+<div>
 
-<section>
-  <p class="eyebrow">01 · How we work together</p>
-  <h2>Three ways in</h2>
-  <p>Most people start in the middle. Train your team first, build the hard pieces with me when you hit them.</p>
-
-  <div class="offer">
-    <h3>Build-With-AI Training</h3>
-    <p class="price">$2,500 per seat · 1–2 days · on-site or remote</p>
-    <p>I teach your team to build their own AI automations using the frameworks I built at scale. We pick real workflows from your business and ship working automations during the training, not toy examples. Your people leave able to do this without me. This is where most clients start.</p>
+  <!-- ═══ NAV ═══ -->
+  <div class="nav">
+    <div class="nav-brand">
+      <span class="name">Eapen</span>
+      <span class="sub">Technology</span>
+    </div>
+    <div class="nav-links">
+      <a href="#offers">Services</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#essays">Essays</a>
+      <a href="https://calendly.com/eapentechnology/get-acquainted" class="nav-cta" target="_blank" rel="noopener noreferrer">Book a call</a>
+    </div>
   </div>
 
-  <div class="offer">
-    <h3>AI Automation Build-out</h3>
-    <p class="price">from $25,000 · fixed scope</p>
-    <p>For the workflow too important or too gnarly to hand to a freshly-trained team. I audit your processes, find the highest-leverage one, and build the automation end to end — ingest, classification, routing, review, audit trail. You get a working system and the documentation to run it, not a slide deck. Includes trust-and-safety and content-moderation builds for platforms that need them.</p>
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="eyebrow-line">
+        <span class="tick"></span>
+        <span class="eyebrow">Human judgment · machine scale</span>
+      </div>
+      <h1>The AI your team can't build itself. <em>I build it.</em></h1>
+      <p class="hero-lead">Work that took ten people now runs as a system three people maintain. I build those systems — and I train your team to build the next ones without me.</p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Book the 30-minute call</a>
+        <span class="hero-note">No deck. No pitch. Taking 2 clients this quarter.</span>
+      </div>
+    </div>
   </div>
 
-  <div class="offer">
-    <h3>The Automation Playbook</h3>
-    <p class="price">$750 · self-serve course + template library</p>
-    <p>The training, recorded, plus the framework templates to work from. For teams that want to start on their own before bringing me in. Self-paced, lifetime access, updated as the tools change.</p>
+  <!-- ═══ CREDENTIAL STRIP ═══ -->
+  <div class="strip">
+    <div class="strip-grid wrap">
+      <div class="stat">
+        <span class="figure">5 years</span>
+        <span class="label">TMTG · Truth Social · NASDAQ: DJT</span>
+      </div>
+      <div class="stat">
+        <span class="figure">30+ engineers</span>
+        <span class="label">Scaled &amp; led · Head of Software, Pavlok</span>
+      </div>
+      <div class="stat">
+        <span class="figure">400+ members</span>
+        <span class="label">Founder · Baltimore AI/ML</span>
+      </div>
+    </div>
   </div>
-</section>
 
-<section>
-  <p class="eyebrow">02 · About</p>
-  <h2>Who You're Working With</h2>
-  <p>Justus Eapen has spent the last five years as a Senior Software Engineer at Trump Media and Technology Group (NASDAQ: DJT), working on Truth Social's internal trust and safety infrastructure. He has built and operated moderation systems at scale under regulatory scrutiny, press attention, and political pressure that most platforms will never face.</p>
-  <p>Before TMTG: developer at SmartLogic, leading production systems and hosting Elixir Wizards for six seasons. Speaker at ElixirConf USA. Head of Software at Pavlok, where he scaled the engineering team to 30+. SVP of Innovation at NorthOut, running product and engineering across 4 to 6 startup teams simultaneously.</p>
-  <p>Founder of Baltimore AI/ML. Grew the community to 400+ members. Booked speakers from Johns Hopkins, NASA Goddard, and Legg Mason.</p>
-  <p>He lives in Aberdeen, Maryland with his wife and two children.</p>
-</section>
+  <!-- ═══ SERVICES ═══ -->
+  <section id="offers" class="section-pad wrap">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="eyebrow">01 — How we work together</span>
+        <h2 class="h2">Three ways in</h2>
+      </div>
+      <p class="section-head-r">Most people start in the middle. Train your team first — build the hard pieces with me when you hit them.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer">
+        <span class="numeral">I</span>
+        <div class="offer-title-wrap">
+          <h3>Build-With-AI Training</h3>
+          <span class="price">$2,500 / seat · 1–2 days</span>
+        </div>
+        <p class="body">Your team learns to build their own AI automations using the frameworks I built at scale. We ship working automations from your real workflows during the training — not toy examples. Your people leave able to do this without me.</p>
+        <span class="tag">Where most clients start</span>
+      </div>
+      <div class="offer">
+        <span class="numeral">II</span>
+        <div class="offer-title-wrap">
+          <h3>AI Automation Build-Out</h3>
+          <span class="price">From $25,000 · fixed scope</span>
+        </div>
+        <p class="body">For the workflow too important or too gnarly to hand to a freshly-trained team. I audit, find the highest-leverage process, and build it end to end — ingest, classification, routing, review, audit trail. A working system, not a slide deck.</p>
+        <span class="tag">Includes trust &amp; safety builds</span>
+      </div>
+      <div class="offer">
+        <span class="numeral">III</span>
+        <div class="offer-title-wrap">
+          <h3>The Automation Playbook</h3>
+          <span class="price">$750 · self-serve</span>
+        </div>
+        <p class="body">The training, recorded, plus the framework templates to work from. For teams that want to start on their own before bringing me in. Self-paced, lifetime access, updated as the tools change.</p>
+        <span class="tag">Start tonight</span>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <p class="eyebrow">03 · Selected Work</p>
-  <h2>Things I've Built</h2>
-  <p>Products and systems I've founded, built, or run engineering for.</p>
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="about">
+    <div class="about-grid wrap section-pad">
+      <div class="about-col-l">
+        <div class="portrait">
+          <!-- portrait.jpg is 1200x1500 (4:5). If it ever goes missing, onerror reveals the placeholder behind it. -->
+          <img src="portrait.jpg" width="1200" height="1500" alt="Justus Eapen, seated, in a white dinner jacket" onerror="this.style.display='none'">
+          <span class="placeholder">Portrait</span>
+        </div>
+        <span class="about-caption">Justus Eapen · Aberdeen, MD</span>
+      </div>
+      <div class="about-col-r">
+        <span class="eyebrow">02 — Who you're working with</span>
+        <h2 class="h2-sm">Forged where the scrutiny was worst</h2>
+        <p>Five years as a Senior Software Engineer at Trump Media &amp; Technology Group (NASDAQ: DJT), building Truth Social's internal trust-and-safety infrastructure — moderation systems operating at scale under regulatory scrutiny, press attention, and political pressure most platforms will never face.</p>
+        <p>Before that: production systems at SmartLogic and six seasons hosting Elixir Wizards. Speaker at ElixirConf USA. Head of Software at Pavlok, scaling engineering to 30+. SVP of Innovation at NorthOut, running product across six startup teams at once. Founder of Baltimore AI/ML — 400+ members, with speakers from Johns Hopkins, NASA Goddard, and Legg Mason.</p>
+        <p class="about-pull">If a workflow can survive that, yours is not harder.</p>
+      </div>
+    </div>
+  </section>
 
-  <a href="https://1thome.com" class="work-link" target="_blank" rel="noopener noreferrer">
-    <h3>1T Home</h3>
-    <p class="role">Founder</p>
-    <p class="desc">Trillion-parameter AI at home. A burn-in-tested inference box that rents out its GPUs when you're not using them — it can pay its own way.</p>
-  </a>
+  <!-- ═══ SELECTED WORK ═══ -->
+  <section id="work" class="work section-pad wrap">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="eyebrow">03 — Selected Work</span>
+        <h2 class="h2-sm">Things I've built</h2>
+      </div>
+      <p class="section-head-r">Products and systems I've founded, built, or run engineering for.</p>
+    </div>
+    <div class="work-list">
+      <a href="https://1thome.com" class="work-item" target="_blank" rel="noopener noreferrer">
+        <span class="work-main">
+          <span class="work-title">1T Home</span>
+          <span class="work-role">Founder</span>
+          <span class="work-blurb">Trillion-parameter AI at home. A burn-in-tested inference box that rents out its GPUs when you're not using them — it can pay its own way.</span>
+        </span>
+        <span class="work-arrow">↗</span>
+      </a>
+      <a href="https://tradecrafttechnology.com" class="work-item" target="_blank" rel="noopener noreferrer">
+        <span class="work-main">
+          <span class="work-title">TradeCraft</span>
+          <span class="work-role">Founder</span>
+          <span class="work-blurb">Pragmatic AI for the trades. RooferRate and RoofGuide take the friction out of rating contractors and scoping roof projects.</span>
+        </span>
+        <span class="work-arrow">↗</span>
+      </a>
+      <a href="https://truthsocial.com" class="work-item" target="_blank" rel="noopener noreferrer">
+        <span class="work-main">
+          <span class="work-title">Truth Social</span>
+          <span class="work-role">Senior Software Engineer, trust &amp; safety infrastructure · 5 years</span>
+          <span class="work-blurb">Built and operated the internal moderation systems behind a platform under regulatory and press scrutiny most platforms never face.</span>
+        </span>
+        <span class="work-arrow">↗</span>
+      </a>
+      <a href="https://pavlok.com" class="work-item" target="_blank" rel="noopener noreferrer">
+        <span class="work-main">
+          <span class="work-title">Pavlok</span>
+          <span class="work-role">Head of Software · designed the self-shock protocol</span>
+          <span class="work-blurb">The habit-breaking wearable that zaps bad habits away. Scaled the engineering team to 30+; the device is still on the market today.</span>
+        </span>
+        <span class="work-arrow">↗</span>
+      </a>
+    </div>
+  </section>
 
-  <a href="https://tradecrafttechnology.com" class="work-link" target="_blank" rel="noopener noreferrer">
-    <h3>TradeCraft</h3>
-    <p class="role">Founder</p>
-    <p class="desc">Pragmatic AI for the trades. RooferRate and RoofGuide take the friction out of rating contractors and scoping roof projects.</p>
-  </a>
+  <!-- ═══ ESSAYS ═══ -->
+  <section id="essays" class="essays section-pad wrap">
+    <div class="essays-head">
+      <span class="eyebrow">04 — Writing</span>
+      <h2 class="h2-sm">Selected essays</h2>
+      <p>The hardest version of the work: encode the judgment, make it inspectable, defend it. If these arguments resonate, we will probably get along.</p>
+    </div>
+    <div class="essay-list">
+      <a href="/essays/moderation-without-the-lean.html" class="essay-item">
+        <span class="essay-index">01</span>
+        <span class="essay-main">
+          <span class="essay-title">How to build moderation that doesn't lean left</span>
+          <span class="essay-blurb">The biggest risk at a heterodox platform is not a dangerous post — it is Apple or Google pulling your app. How the lean enters the policy layer, and what to do instead.</span>
+        </span>
+        <span class="essay-arrow">↗</span>
+      </a>
+      <a href="/essays/platform-risk-is-political-risk.html" class="essay-item">
+        <span class="essay-index">02</span>
+        <span class="essay-main">
+          <span class="essay-title">What the deplatforming of Parler actually taught us</span>
+          <span class="essay-blurb">Four cases — Parler, Gab, Rumble, Telegram — and the working model of platform risk the survivors have already internalized.</span>
+        </span>
+        <span class="essay-arrow">↗</span>
+      </a>
+      <a href="/essays/why-the-bay-cant-help.html" class="essay-item">
+        <span class="essay-index">03</span>
+        <span class="essay-main">
+          <span class="essay-title">Why Bay Area consultancies can't help you with moderation</span>
+          <span class="essay-blurb">Moderation is downstream of a moral worldview. The Bay Area's worldview is incompatible with the work your platform needs done.</span>
+        </span>
+        <span class="essay-arrow">↗</span>
+      </a>
+    </div>
+  </section>
 
-  <a href="https://truthsocial.com" class="work-link" target="_blank" rel="noopener noreferrer">
-    <h3>Truth Social</h3>
-    <p class="role">Senior Software Engineer, trust &amp; safety infrastructure · 5 years</p>
-    <p class="desc">Built and operated the internal moderation systems behind a platform under regulatory and press scrutiny most platforms never face.</p>
-  </a>
+  <!-- ═══ CONTACT ═══ -->
+  <div class="contact">
+    <div class="contact-inner">
+      <span class="eyebrow">05 — Contact</span>
+      <h2>Start a conversation</h2>
+      <p>I take on a small number of clients at a time. The next step is a 30-minute call — we'll find the workflow worth automating.</p>
+      <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Book the 30-minute call</a>
+    </div>
+  </div>
 
-  <a href="https://pavlok.com" class="work-link" target="_blank" rel="noopener noreferrer">
-    <h3>Pavlok</h3>
-    <p class="role">Head of Software · designed the self-shock protocol</p>
-    <p class="desc">The habit-breaking wearable that zaps bad habits away. Scaled the engineering team to 30+; the device is still on the market today.</p>
-  </a>
-</section>
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <span class="meta">Eapen Technology · Aberdeen, Maryland</span>
+    <a href="mailto:justus@eapentechnology.com">justus@eapentechnology.com</a>
+    <span class="copy">© 2026</span>
+  </footer>
+</div>
 
-<section>
-  <p class="eyebrow">04 · Writing</p>
-  <h2>Selected Essays</h2>
-  <p>Three essays on the hardest version of the work — moderation at a platform under political and press scrutiny. The discipline is the same one I bring to any automation problem: encode the judgment, make it inspectable, defend it. If these arguments resonate, we will probably get along.</p>
+<script>
+// Conway's Game of Life ambient hero animation. Ported from the design source.
+// Gated on prefers-reduced-motion so it never animates for users who opt out.
+(function () {
+  var canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
 
-  <a href="/essays/moderation-without-the-lean.html" class="essay-link">
-    <h3>How to build moderation that doesn't lean left</h3>
-    <p>The biggest moderation risk at a heterodox platform is not a user posting something dangerous. It is Apple or Google pulling your app. How the lean enters the policy layer, and what to do instead.</p>
-  </a>
+  var cell = 15;
+  var ctx = canvas.getContext('2d');
+  var cols = 0, rows = 0, grid, next, raf = 0, last = 0, gen = 0;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-  <a href="/essays/platform-risk-is-political-risk.html" class="essay-link">
-    <h3>What the deplatforming of Parler actually taught us</h3>
-    <p>Four cases — Parler, Gab, Rumble, Telegram — and the working model of platform risk that the survivors have already internalized.</p>
-  </a>
-
-  <a href="/essays/why-the-bay-cant-help.html" class="essay-link">
-    <h3>Why Bay Area consultancies can't help you with moderation</h3>
-    <p>Moderation is downstream of a moral worldview. The Bay Area's worldview is incompatible with the work your platform needs done.</p>
-  </a>
-</section>
-
-<section>
-  <p class="eyebrow">05 · Contact</p>
-  <h2>Start a conversation</h2>
-  <p>I take on a small number of clients at a time. If you've read this far, the next step is a 30-minute call — no deck, no pitch. We'll figure out whether there's a workflow worth automating.</p>
-  <a href="https://calendly.com/eapentechnology/get-acquainted" class="btn" target="_blank" rel="noopener noreferrer">Book a 30-minute call</a>
-</section>
-
-<footer>
-  <p>Eapen Technology · Aberdeen, Maryland · justus@eapentechnology.com</p>
-</footer>
+  function resize() {
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) return;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cols = Math.ceil(w / cell); rows = Math.ceil(h / cell);
+    grid = new Uint8Array(cols * rows); next = new Uint8Array(cols * rows);
+    for (var i = 0; i < grid.length; i++) if (Math.random() < 0.10) grid[i] = 1;
+  }
+  function set(x, y) { x = (x + cols) % cols; y = (y + rows) % rows; grid[y * cols + x] = 1; }
+  function sprinkle() {
+    for (var n = 0; n < 5; n++) {
+      var cx = (Math.random() * cols) | 0, cy = (Math.random() * rows) | 0;
+      for (var dy = -1; dy <= 1; dy++) for (var dx = -1; dx <= 1; dx++)
+        if (Math.random() < 0.6) set(cx + dx, cy + dy);
+    }
+  }
+  function step() {
+    for (var y = 0; y < rows; y++) {
+      var yu = ((y - 1 + rows) % rows) * cols, ym = y * cols, yd = ((y + 1) % rows) * cols;
+      for (var x = 0; x < cols; x++) {
+        var xl = (x - 1 + cols) % cols, xr = (x + 1) % cols;
+        var nb = grid[yu + xl] + grid[yu + x] + grid[yu + xr] + grid[ym + xl] + grid[ym + xr] + grid[yd + xl] + grid[yd + x] + grid[yd + xr];
+        var a = grid[ym + x];
+        next[ym + x] = (a && (nb === 2 || nb === 3)) || (!a && nb === 3) ? 1 : 0;
+      }
+    }
+    var t = grid; grid = next; next = t;
+  }
+  function draw() {
+    ctx.fillStyle = 'rgba(11,12,14,0.18)';
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+    ctx.fillStyle = 'rgba(210,208,198,0.42)';
+    var s = cell - 3;
+    for (var y = 0; y < rows; y++) for (var x = 0; x < cols; x++)
+      if (grid[y * cols + x]) ctx.fillRect(x * cell + 1.5, y * cell + 1.5, s, s);
+  }
+  function loop(t) {
+    raf = requestAnimationFrame(loop);
+    if (!grid) return;               // zero-height canvas before first real resize; self-heals via ResizeObserver
+    if (t - last < 120) return;
+    last = t;
+    step();
+    if (++gen % 40 === 0) sprinkle();
+    draw();
+  }
+  function onMove(e) {
+    var r = canvas.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+    var cx = ((e.clientX - r.left) / cell) | 0, cy = ((e.clientY - r.top) / cell) | 0;
+    for (var dy = -1; dy <= 1; dy++) for (var dx = -1; dx <= 1; dx++)
+      if (Math.random() < 0.5) set(cx + dx, cy + dy);
+  }
+  var ro = new ResizeObserver(resize);
+  ro.observe(canvas);
+  window.addEventListener('mousemove', onMove);
+  // Pause the loop while the tab is hidden — no point burning cycles on an unseen background flourish.
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      cancelAnimationFrame(raf);
+      raf = 0;
+    } else if (!raf) {
+      last = 0;
+      raf = requestAnimationFrame(loop);
+    }
+  });
+  resize();
+  raf = requestAnimationFrame(loop);
+})();
+</script>
 
 </body>
 </html>
