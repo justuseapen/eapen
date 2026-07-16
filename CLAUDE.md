@@ -37,8 +37,14 @@ The **portrait** in the About section references `portrait.jpg` at the repo root
 
 Deployed via Coolify on Hetzner VPS (`172.252.211.242`). Pushes to `master` auto-deploy via GitHub webhook.
 
-- **Dockerfile**: `nginx:alpine` serving `index.html`
+- **Dockerfile**: `nginx:alpine` serving `index.html`, `portrait.jpg`, and `essays/`
 - **SSL**: Traefik with Let's Encrypt (managed by Coolify)
 - **Domain**: `eapentechnology.com`
 
 To deploy: just `git push origin master`.
+
+⚠️ **The Dockerfile copies files selectively — it does NOT copy the whole repo.** Any new asset (image, font, extra page) must get its own `COPY` line or it will 404 in production while working perfectly in local testing. `python3 -m http.server` serves the entire directory, so it will not catch this class of bug. To verify a new asset before pushing:
+
+```bash
+docker build -t eapen-verify . && docker run --rm eapen-verify ls /usr/share/nginx/html/
+```
