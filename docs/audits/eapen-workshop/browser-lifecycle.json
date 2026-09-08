@@ -1,0 +1,18 @@
+[
+  {
+    "check": "Pause/resume preserves the decision; natural completion restores focus and clears motion",
+    "passed": true
+  },
+  {
+    "check": "A new replay supersedes old animation callbacks; Reset cancels motion and clears the policy",
+    "passed": true
+  },
+  {
+    "check": "Active Escape, real offscreen observation, and anchor-click cancellation preserve the held policy",
+    "passed": true
+  },
+  {
+    "check": "Duplicate init is rejected; destruction cancels and detaches; reinitialization starts clean and works",
+    "passed": true
+  }
+]

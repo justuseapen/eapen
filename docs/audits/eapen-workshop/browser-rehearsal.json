@@ -1,0 +1,66 @@
+[
+  {
+    "action": "run",
+    "announcement": "AWAITING YOUR DECISION. “Visitors doubled” arrived without a source. Choose what the workflow should do with that claim. The submission stays here until you choose.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "What should happen next?",
+    "state": "needs-decision"
+  },
+  {
+    "action": "request-source",
+    "announcement": "HELD · SOURCE REQUESTED. The submission is held with its wording intact. The contributor needs to provide a source before it can reach the editor. Next action: contributor supplies a source.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "A useful pause.",
+    "state": "held"
+  },
+  {
+    "action": "replay",
+    "announcement": "HELD · SOURCE REQUESTED. The submission is held with its wording intact. The contributor needs to provide a source before it can reach the editor. Next action: contributor supplies a source.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "A useful pause.",
+    "state": "held"
+  },
+  {
+    "action": "other-sample",
+    "announcement": "PREPARED FOR EDITOR REVIEW. This sample includes a source note. The complete brief and its citation move together to the editor. Next action: the editor checks the brief and source.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "The source travels with the story.",
+    "state": "ready"
+  },
+  {
+    "action": "other-sample",
+    "announcement": "HELD · SOURCE REQUESTED. The submission is held with its wording intact. The contributor needs to provide a source before it can reach the editor. Next action: contributor supplies a source.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "A useful pause.",
+    "state": "held"
+  },
+  {
+    "action": "change-policy",
+    "announcement": "AWAITING YOUR DECISION. “Visitors doubled” arrived without a source. Choose what the workflow should do with that claim. The submission stays here until you choose.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "Request a sourceHold the submission↗",
+    "state": "needs-decision"
+  },
+  {
+    "action": "omit-claim",
+    "announcement": "PREPARED FOR EDITOR REVIEW. The unsupported sentence is removed. The rest of the brief moves to the editor with the change clearly marked. Next action: the editor reviews the revision.",
+    "carriedRule": "Omit the claim → editor review",
+    "claimRemoved": true,
+    "focus": "Less claim. More clarity.",
+    "state": "revised"
+  },
+  {
+    "action": "reset",
+    "announcement": "Rehearsal reset. Your rule has been cleared.",
+    "carriedRule": "Request a source → hold",
+    "claimRemoved": false,
+    "focus": "↗Run the sample",
+    "state": "idle"
+  }
+]

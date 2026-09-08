@@ -1,0 +1,1289 @@
+.workflow-demo {
+  --wd-paper: #eee9dc;
+  --wd-ink: #283227;
+  --wd-soft: #a3b39d;
+  --wd-lime: #dfef93;
+  --wd-line: rgba(165, 186, 150, 0.22);
+  color: var(--wd-paper);
+  background:
+    radial-gradient(ellipse at 18% 25%, #2b3426 0%, transparent 55%), #171d17;
+  border: 1px solid var(--wd-line);
+  border-radius: 4px;
+  box-shadow: 0 40px 90px -50px #000;
+  font-family: Archivo, sans-serif;
+  isolation: isolate;
+  overflow: clip;
+  text-align: left;
+}
+
+.workflow-demo *,
+.workflow-demo *::before,
+.workflow-demo *::after {
+  box-sizing: border-box;
+}
+.workflow-demo [hidden] {
+  display: none !important;
+}
+.workflow-demo button,
+.workflow-demo summary {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.workflow-demo button {
+  font: inherit;
+  cursor: pointer;
+}
+.workflow-demo button:focus-visible,
+.workflow-demo summary:focus-visible {
+  outline: 2px solid var(--wd-lime);
+  outline-offset: 5px;
+}
+.workflow-demo h3,
+.workflow-demo h4,
+.workflow-demo p {
+  margin: 0;
+}
+.workflow-demo h4:focus {
+  outline: none;
+}
+.workflow-demo h4:focus-visible {
+  outline: 1px dashed currentColor;
+  outline-offset: 5px;
+}
+
+.workflow-demo .workflow-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--wd-line);
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+}
+.workflow-demo .workflow-ident {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c1cbb7;
+}
+.workflow-demo .workflow-led {
+  width: 5px;
+  height: 5px;
+  background: var(--wd-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #dfef9326;
+}
+.workflow-demo .workflow-edition {
+  color: #9baa93;
+  margin-left: 8px;
+}
+.workflow-demo .workflow-fiction {
+  color: #9baa93;
+  letter-spacing: 0.025em;
+}
+.workflow-demo .workflow-intro {
+  padding: 25px 36px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.workflow-demo .workflow-invitation {
+  font:
+    400 clamp(30px, 2.8vw, 39px) / 1.04 Newsreader,
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+}
+.workflow-demo .workflow-invitation em {
+  color: var(--wd-lime);
+  font-weight: 400;
+}
+.workflow-demo .workflow-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+.workflow-demo .workflow-run {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 7px 22px 7px 8px;
+  color: #202820;
+  background: var(--wd-lime);
+  border: 1px solid var(--wd-lime);
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.workflow-demo .workflow-run:hover {
+  background: #edf6bd;
+  box-shadow: 0 5px 30px #d4e88f16;
+}
+.workflow-demo .workflow-play {
+  display: inline-grid;
+  place-items: center;
+  height: 34px;
+  width: 34px;
+  border: 1px solid #20282038;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 400;
+}
+.workflow-demo .workflow-start-note {
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: var(--wd-soft);
+}
+
+.workflow-demo .workflow-board {
+  display: grid;
+  grid-template-columns: 1.15fr 0.93fr 0.92fr;
+  gap: 27px;
+  padding: 0 35px 22px;
+  align-items: start;
+}
+.workflow-demo .workflow-column {
+  min-width: 0;
+}
+.workflow-demo .workflow-column-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 31px;
+  margin-bottom: 20px;
+  border-top: 1px solid #92a38235;
+  padding-top: 13px;
+  color: #c2cdb6;
+  font:
+    10px/1.4 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.035em;
+}
+.workflow-demo .workflow-column-label > span:first-child {
+  color: #8c9b80;
+  font-size: 10px;
+}
+.workflow-demo .workflow-column-dot {
+  height: 4px;
+  width: 4px;
+  border: 1px solid #8c9b80;
+  border-radius: 50%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.workflow-demo .workflow-paper {
+  position: relative;
+  padding: 24px 24px 18px;
+  color: var(--wd-ink);
+  background: linear-gradient(110deg, #f3eedf, #e8e3d5);
+  box-shadow:
+    0 2px 3px #0003,
+    4px 15px 30px -12px #000b,
+    1px 0 0 #fff5 inset;
+  transform: rotate(-0.7deg);
+  min-height: 400px;
+}
+.workflow-demo .workflow-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.27' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.workflow-demo .workflow-paper::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(
+    135deg,
+    #dbd6c8 0 49%,
+    #697460 50% 51%,
+    #20271e 52%
+  );
+  box-shadow: -2px -2px 4px #00000009;
+}
+.workflow-demo .workflow-paper-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.025em;
+}
+.workflow-demo .workflow-paper-rule {
+  border-top: 3px solid #303b2c;
+  border-bottom: 1px solid #303b2c;
+  height: 7px;
+  margin: 13px 0 26px;
+}
+.workflow-demo .workflow-paper-kicker {
+  font:
+    italic 14px/1.3 Newsreader,
+    Georgia,
+    serif;
+  color: #67705b;
+  margin-bottom: 10px;
+}
+.workflow-demo .workflow-paper h4 {
+  font:
+    400 clamp(27px, 2.6vw, 36px) / 0.99 Newsreader,
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
+  margin-bottom: 20px;
+  max-width: 370px;
+  text-wrap: balance;
+}
+.workflow-demo .workflow-story {
+  font:
+    400 14px/1.75 Archivo,
+    sans-serif;
+  margin: 0 0 13px;
+}
+.workflow-demo .workflow-claim-wrap {
+  position: relative;
+  margin: 16px 0;
+  font:
+    500 14px/1.8 Archivo,
+    sans-serif;
+}
+.workflow-demo .workflow-margin-number {
+  position: absolute;
+  left: -17px;
+  top: 2px;
+  font:
+    10px/1.8 "IBM Plex Mono",
+    monospace;
+  color: #858b77;
+}
+.workflow-demo .workflow-claim {
+  color: #333c26;
+  background: #d9dd9e;
+  padding: 3px 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-bottom: 1px solid #8f9557;
+}
+.workflow-demo .workflow-claim-ref {
+  font:
+    10px/1 "IBM Plex Mono",
+    monospace;
+  vertical-align: super;
+}
+.workflow-demo .workflow-source {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0 12px;
+  margin-top: 23px;
+  border-top: 1px dashed #87917d;
+}
+.workflow-demo .workflow-source-symbol {
+  color: #7c8459;
+  font:
+    18px/1 Newsreader,
+    Georgia,
+    serif;
+}
+.workflow-demo .workflow-source-label {
+  display: block;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: #515b43;
+}
+.workflow-demo .workflow-source p {
+  font:
+    italic 16px/1.35 Newsreader,
+    Georgia,
+    serif;
+  color: #647052;
+  margin-top: 4px;
+}
+.workflow-demo .workflow-source-detail {
+  margin: 0 0 15px;
+  font-size: 10px;
+  line-height: 1.65;
+}
+.workflow-demo .workflow-source-detail summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #394b2e;
+}
+.workflow-demo .workflow-source-detail summary:focus-visible {
+  outline-color: #394b2e;
+}
+.workflow-demo .workflow-source-detail p {
+  padding-bottom: 8px;
+}
+.workflow-demo .workflow-paper-footer {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #b7bdab;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: #5e6853;
+}
+.workflow-demo .workflow-caption,
+.workflow-demo .workflow-output-note {
+  font:
+    10px/1.6 "IBM Plex Mono",
+    monospace;
+  color: #a5b39b;
+  margin-top: 19px;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.workflow-demo .workflow-caption > span,
+.workflow-demo .workflow-output-note > span {
+  color: #dfef93;
+  font-size: 14px;
+}
+
+.workflow-demo .workflow-gate {
+  padding: 20px 20px 22px;
+  border: 1px solid #72806077;
+  border-radius: 2px;
+  background: linear-gradient(160deg, #2b3528, #202820);
+  box-shadow: 0 18px 30px -25px #000;
+  min-height: 351px;
+}
+.workflow-demo .workflow-gate-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.025em;
+  color: #c4cfb7;
+}
+.workflow-demo .workflow-gate-icon {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 1px solid #9daf856b;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #dce6c9;
+}
+.workflow-demo .workflow-gate-status {
+  margin-left: auto;
+  font-size: 10px;
+  color: #afbd9f;
+}
+.workflow-demo .workflow-rule-diagram {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 24px;
+}
+.workflow-demo .workflow-rule-diagram span {
+  height: 1px;
+  background: linear-gradient(90deg, #a6b49311, #b9c99aa3);
+  flex: 1;
+}
+.workflow-demo .workflow-rule-diagram span:last-child {
+  transform: rotate(180deg);
+}
+.workflow-demo .workflow-rule-diagram i {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #b7c891;
+  transform: rotate(45deg);
+  margin: 0 9px;
+}
+.workflow-demo .workflow-gate-eyebrow {
+  font:
+    10px/1.6 "IBM Plex Mono",
+    monospace;
+  color: var(--wd-lime);
+  letter-spacing: 0.025em;
+  margin-bottom: 10px;
+}
+.workflow-demo .workflow-gate-title {
+  font:
+    400 34px/1.05 Newsreader,
+    Georgia,
+    serif;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+.workflow-demo .workflow-gate-description {
+  font:
+    14px/1.7 Archivo,
+    sans-serif;
+  color: #bec9b2;
+}
+.workflow-demo .workflow-gate-awaiting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #91a47735;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: #abb99a;
+}
+.workflow-demo .workflow-gate-awaiting span {
+  color: var(--wd-lime);
+}
+.workflow-demo .workflow-policy-options {
+  display: grid;
+  gap: 9px;
+  margin-top: 23px;
+}
+.workflow-demo .workflow-policy {
+  width: 100%;
+  min-height: 67px;
+  padding: 12px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  background: #d4e2970c;
+  color: #e8edda;
+  border: 1px solid #aebf835e;
+  border-radius: 2px;
+  text-align: left;
+  transition:
+    background 0.18s,
+    border-color 0.18s;
+}
+.workflow-demo .workflow-policy:hover {
+  background: #d4e2971f;
+  border-color: #cbdc93;
+}
+.workflow-demo .workflow-policy strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.workflow-demo .workflow-policy small {
+  display: block;
+  font-size: 10px;
+  color: #afc19a;
+  margin-top: 4px;
+  line-height: 1.45;
+}
+.workflow-demo .workflow-policy > span:last-child {
+  color: var(--wd-lime);
+  font-size: 18px;
+}
+.workflow-demo .workflow-selected-rule {
+  margin-top: 25px;
+  padding: 15px 0 0 11px;
+  border-top: 1px solid #9daf6e55;
+  border-left: 2px solid var(--wd-lime);
+}
+.workflow-demo .workflow-selected-label {
+  display: block;
+  color: #afc585;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+  margin-bottom: 7px;
+}
+.workflow-demo .workflow-selected-rule strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e5efcf;
+  line-height: 1.6;
+}
+.workflow-demo .workflow-rule-scope {
+  display: block;
+  margin-top: 9px;
+  color: #aabd97;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.workflow-demo .workflow-connector {
+  margin: 22px 8px 0;
+}
+.workflow-demo .workflow-connector svg {
+  width: 100%;
+  height: 31px;
+  overflow: visible;
+}
+.workflow-demo .workflow-connector path {
+  stroke: #c8d792;
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+.workflow-demo .workflow-connector > span {
+  display: block;
+  max-width: 200px;
+  margin-top: 10px;
+  color: #b4c491;
+  font:
+    italic 17px/1.25 Newsreader,
+    Georgia,
+    serif;
+  transform: rotate(-3deg);
+}
+
+.workflow-demo .workflow-result {
+  position: relative;
+  min-height: 377px;
+  background: #b8c3a615;
+  border: 1px solid #71825c80;
+  padding: 16px 23px 20px;
+  color: #e1e8d3;
+  transform: rotate(0.6deg);
+  box-shadow: 5px 16px 26px -23px #000;
+}
+.workflow-demo .workflow-result-ticks {
+  display: flex;
+  justify-content: space-between;
+  font:
+    10px/1 "IBM Plex Mono",
+    monospace;
+  color: #9eaf83;
+  margin: 0 -10px 18px;
+}
+.workflow-demo .workflow-result-icon {
+  font:
+    400 35px/1 Newsreader,
+    Georgia,
+    serif;
+  color: var(--wd-lime);
+  margin: 10px 0 24px;
+}
+.workflow-demo .workflow-result-label {
+  font:
+    10px/1.8 "IBM Plex Mono",
+    monospace;
+  color: #bacba0;
+  letter-spacing: 0.055em;
+  margin-bottom: 12px;
+}
+.workflow-demo .workflow-result-title {
+  font:
+    400 clamp(28px, 2.75vw, 35px) / 1.03 Newsreader,
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  margin-bottom: 16px;
+}
+.workflow-demo .workflow-result-description {
+  font:
+    14px/1.8 Archivo,
+    sans-serif;
+  color: #c0cbb2;
+}
+.workflow-demo .workflow-result-bottom {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  margin-top: 26px;
+  padding-top: 19px;
+  border-top: 1px solid #b3c59038;
+}
+.workflow-demo .workflow-result-seal {
+  flex-shrink: 0;
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  color: #b9c9a2;
+  border: 1px solid #aebd9777;
+  border-radius: 50%;
+  font:
+    italic 12px/1 Newsreader,
+    Georgia,
+    serif;
+}
+.workflow-demo .workflow-result-bottom p {
+  font:
+    10px/1.7 "IBM Plex Mono",
+    monospace;
+  color: #b8c5a7;
+}
+.workflow-demo .workflow-revision {
+  margin-top: 21px;
+  border-top: 1px dashed #859170;
+  padding-top: 13px;
+}
+.workflow-demo .workflow-revision > span,
+.workflow-demo .workflow-attached-source > span {
+  display: block;
+  color: #55683c;
+  font:
+    10px/1.6 "IBM Plex Mono",
+    monospace;
+  margin-bottom: 8px;
+}
+.workflow-demo .workflow-revision del {
+  display: block;
+  color: #62573e;
+  text-decoration-color: #797042;
+  text-decoration-thickness: 1px;
+  font:
+    400 18px/1.5 Newsreader,
+    Georgia,
+    serif;
+}
+.workflow-demo .workflow-revision small {
+  display: block;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #566241;
+  margin-top: 7px;
+}
+.workflow-demo .workflow-attached-source {
+  margin-top: 19px;
+  padding-top: 14px;
+  border-top: 1px dashed #859170;
+}
+.workflow-demo .workflow-attached-source strong {
+  display: block;
+  font:
+    10px/1.6 "IBM Plex Mono",
+    monospace;
+  color: #425431;
+}
+.workflow-demo[data-state="needs-decision"] .workflow-gate {
+  border-color: #c8d98d;
+  box-shadow:
+    0 0 0 4px #d7e79605,
+    0 20px 40px -20px #0008;
+}
+.workflow-demo[data-state="needs-decision"] .workflow-gate-status {
+  color: var(--wd-lime);
+}
+.workflow-demo[data-state="held"] .workflow-result {
+  background: #c9bd93;
+  border-color: #d8cca6;
+  color: #373c27;
+}
+.workflow-demo[data-state="revised"] .workflow-result,
+.workflow-demo[data-state="ready"] .workflow-result {
+  background: #dce4c1;
+  border-color: #e7edce;
+  color: #2f3b26;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-icon {
+  color: #4b6034;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-label {
+  color: #39492c;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-description {
+  color: #455137;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-bottom {
+  border-top-color: #57694144;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-bottom
+  p {
+  color: #4b5b3c;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-seal {
+  color: #536541;
+  border-color: #61704c8f;
+}
+.workflow-demo:is(
+    [data-state="held"],
+    [data-state="revised"],
+    [data-state="ready"]
+  )
+  .workflow-result-ticks {
+  color: #74805e;
+}
+.workflow-demo[data-sample="complete"] .workflow-claim {
+  background: #d0dbbb;
+  border-color: #8c9c71;
+}
+.workflow-demo[data-state="revised"] .workflow-output .workflow-column-dot,
+.workflow-demo[data-state="ready"] .workflow-output .workflow-column-dot {
+  background: var(--wd-lime);
+  border-color: var(--wd-lime);
+}
+
+.workflow-demo .workflow-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 29px 22px;
+  min-height: 78px;
+}
+.workflow-demo .workflow-secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 18px;
+}
+.workflow-demo .workflow-text-button {
+  color: #d6e4b9;
+  background: none;
+  border: 0;
+  padding: 10px 0;
+  min-height: 44px;
+  font-size: 10px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: #c3d49955;
+  text-underline-offset: 5px;
+}
+.workflow-demo .workflow-text-button:hover {
+  color: #f2f7e2;
+  text-decoration-color: #e1eec3;
+}
+.workflow-demo .workflow-reset {
+  color: #a7b59a;
+}
+.workflow-demo .workflow-boundary {
+  font:
+    10px/1.7 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  color: #a4b294;
+  text-align: right;
+}
+.workflow-demo .workflow-rule-inspector {
+  background: #11171080;
+  border-top: 1px solid var(--wd-line);
+}
+.workflow-demo .workflow-rule-inspector > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 68px;
+  padding: 19px 30px;
+  color: #dbe5c9;
+  font-size: 14px;
+  list-style: none;
+  cursor: pointer;
+}
+.workflow-demo .workflow-rule-inspector > summary::-webkit-details-marker {
+  display: none;
+}
+.workflow-demo .workflow-rule-inspector > summary > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.workflow-demo .workflow-inspect-symbol {
+  font:
+    12px/1 "IBM Plex Mono",
+    monospace;
+  color: #9db57a;
+}
+.workflow-demo .workflow-inspect-plus {
+  font-size: 20px;
+  font-weight: 300;
+}
+.workflow-demo .workflow-rule-inspector[open] .workflow-inspect-plus {
+  transform: rotate(45deg);
+}
+.workflow-demo .workflow-rule-inspector > summary:hover {
+  background: #d8e89e06;
+}
+.workflow-demo .workflow-rule-content {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 50px;
+  padding: 15px 30px 35px;
+}
+.workflow-demo .workflow-inspector-kicker {
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: #a2ba7a;
+  letter-spacing: 0.05em;
+  margin-bottom: 13px;
+}
+.workflow-demo .workflow-rule-content h4 {
+  font:
+    400 29px/1.05 Newsreader,
+    Georgia,
+    serif;
+  letter-spacing: -0.02em;
+  margin-bottom: 13px;
+}
+.workflow-demo
+  .workflow-rule-content
+  > div
+  > p:not(.workflow-inspector-kicker) {
+  color: #b7c5a8;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.workflow-demo .workflow-rule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.workflow-demo .workflow-rule-list li {
+  display: flex;
+  gap: 12px;
+  padding: 11px 12px;
+  border-top: 1px solid #aac08c2e;
+}
+.workflow-demo .workflow-rule-list li > span {
+  font:
+    10px/1.7 "IBM Plex Mono",
+    monospace;
+  color: #b3c392;
+}
+.workflow-demo .workflow-rule-list li p {
+  color: #abbc97;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.workflow-demo .workflow-rule-list strong {
+  display: block;
+  color: #d9e5c7;
+  font-size: 13px;
+  font-weight: 500;
+}
+.workflow-demo .workflow-rule-list [data-selected] {
+  background: #d8ed9212;
+  border-left: 2px solid var(--wd-lime);
+}
+.workflow-demo .workflow-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 1200px) {
+  .workflow-demo .workflow-board {
+    gap: 34px;
+    padding: 0 42px 24px;
+  }
+  .workflow-demo .workflow-paper {
+    padding: 27px 27px 20px;
+  }
+  .workflow-demo .workflow-gate {
+    padding: 22px 23px 25px;
+  }
+  .workflow-demo .workflow-story,
+  .workflow-demo .workflow-claim-wrap {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-column-label {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-result {
+    padding: 17px 25px 22px;
+  }
+}
+
+@media (max-width: 1040px) and (min-width: 901px) {
+  .workflow-demo .workflow-board {
+    gap: 18px;
+    padding-right: 24px;
+    padding-left: 24px;
+    grid-template-columns: 1.05fr 1fr 0.95fr;
+  }
+  .workflow-demo .workflow-paper {
+    padding: 21px 17px 16px;
+  }
+  .workflow-demo .workflow-paper-top {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-paper-footer {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate {
+    padding: 17px 15px 19px;
+  }
+  .workflow-demo .workflow-gate-top {
+    gap: 6px;
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate-icon {
+    width: 21px;
+    height: 21px;
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-gate-title {
+    font-size: 27px;
+  }
+  .workflow-demo .workflow-column-label {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .workflow-demo .workflow-result {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .workflow-demo .workflow-result-title {
+    font-size: 27px;
+  }
+  .workflow-demo .workflow-boundary {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .workflow-demo .workflow-topline {
+    align-items: flex-start;
+    padding: 17px 22px;
+    font-size: 10px;
+    gap: 12px;
+  }
+  .workflow-demo .workflow-ident {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .workflow-demo .workflow-edition {
+    display: none;
+  }
+  .workflow-demo .workflow-fiction {
+    font-size: 10px;
+    max-width: 118px;
+    text-align: right;
+  }
+  .workflow-demo .workflow-intro {
+    display: block;
+    padding: 25px;
+  }
+  .workflow-demo .workflow-invitation {
+    font-size: 36px;
+  }
+  .workflow-demo .workflow-start {
+    align-items: flex-start;
+    margin-top: 25px;
+    gap: 11px;
+  }
+  .workflow-demo .workflow-start-note {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-board {
+    grid-template-columns: 1fr;
+    gap: 29px;
+    padding: 0 25px 20px;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .workflow-demo .workflow-column-label {
+    font-size: 10px;
+    margin-bottom: 20px;
+    padding-top: 13px;
+    gap: 10px;
+  }
+  .workflow-demo .workflow-paper {
+    padding: 28px 27px 21px;
+    min-height: 0;
+  }
+  .workflow-demo .workflow-paper-top {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-paper-rule {
+    margin: 14px 0 25px;
+  }
+  .workflow-demo .workflow-paper h4 {
+    font-size: clamp(34px, 7vw, 46px);
+    max-width: 300px;
+  }
+  .workflow-demo .workflow-story,
+  .workflow-demo .workflow-claim-wrap {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-source-label {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-paper-footer {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-caption,
+  .workflow-demo .workflow-output-note {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate {
+    padding: 23px;
+    min-height: 0;
+  }
+  .workflow-demo .workflow-gate-top {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate-status {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-rule-diagram {
+    margin: 21px 0 25px;
+  }
+  .workflow-demo .workflow-gate-eyebrow {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate-title {
+    font-size: 35px;
+    max-width: 270px;
+  }
+  .workflow-demo .workflow-gate-description {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-policy strong {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-policy small {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-policy {
+    padding: 13px 15px;
+    min-height: 72px;
+  }
+  .workflow-demo .workflow-gate-awaiting {
+    margin-top: 23px;
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-connector {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 15px 20px 0;
+  }
+  .workflow-demo .workflow-connector svg {
+    width: 70px;
+    flex-shrink: 0;
+    height: 35px;
+    transform: rotate(8deg);
+  }
+  .workflow-demo .workflow-connector > span {
+    margin: 0;
+    font-size: 17px;
+    transform: none;
+  }
+  .workflow-demo .workflow-result {
+    min-height: 0;
+    padding: 20px 25px 25px;
+  }
+  .workflow-demo .workflow-result-ticks {
+    margin-bottom: 13px;
+  }
+  .workflow-demo .workflow-result-icon {
+    margin: 0 0 21px;
+    font-size: 34px;
+  }
+  .workflow-demo .workflow-result-label {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-result-title {
+    font-size: 38px;
+    max-width: 300px;
+  }
+  .workflow-demo .workflow-result-description {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-result-bottom p {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-revision > span,
+  .workflow-demo .workflow-attached-source > span {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-revision del {
+    font-size: 18px;
+  }
+  .workflow-demo .workflow-revision small {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-bottom {
+    display: block;
+    padding: 4px 25px 21px;
+    min-height: 0;
+  }
+  .workflow-demo .workflow-text-button {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-boundary {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-rule-inspector > summary {
+    padding: 18px 25px;
+  }
+  .workflow-demo .workflow-rule-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 12px 25px 25px;
+  }
+  .workflow-demo
+    .workflow-rule-content
+    > div
+    > p:not(.workflow-inspector-kicker) {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-rule-list li p {
+    font-size: 14px;
+  }
+  .workflow-demo .workflow-rule-list strong {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .workflow-demo .workflow-topline {
+    padding-right: 17px;
+    padding-left: 17px;
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-intro {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .workflow-demo .workflow-board {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .workflow-demo .workflow-paper {
+    padding: 23px 20px 18px;
+  }
+  .workflow-demo .workflow-paper h4 {
+    font-size: 33px;
+  }
+  .workflow-demo .workflow-paper-top {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-paper-footer {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-gate,
+  .workflow-demo .workflow-result {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+  .workflow-demo .workflow-result-title {
+    font-size: 33px;
+  }
+  .workflow-demo .workflow-column-label {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-source-label {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-invitation {
+    font-size: 32px;
+  }
+  .workflow-demo .workflow-start-note {
+    font-size: 10px;
+  }
+  .workflow-demo .workflow-rule-inspector > summary {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-demo *,
+  .workflow-demo *::before,
+  .workflow-demo *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* The chosen policy stays visible with its outcome, including on a stacked desk. */
+.workflow-demo .workflow-rule-mark {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0 3px;
+  background: linear-gradient(90deg, #dfef93, #dfef9399 80%, transparent);
+  transform-origin: left;
+  rotate: -0.6deg;
+}
+.workflow-demo .workflow-carried-rule {
+  padding: 12px 0 14px;
+  margin: 4px 0 18px;
+  border-block: 1px solid #53623e44;
+}
+.workflow-demo .workflow-carried-rule > span {
+  display: block;
+  font:
+    10px/1.5 "IBM Plex Mono",
+    monospace;
+  color: #485734;
+  margin-bottom: 6px;
+}
+.workflow-demo .workflow-carried-rule strong {
+  font:
+    500 13px/1.6 Archivo,
+    sans-serif;
+  color: #334626;
+}
+.workflow-demo .workflow-training-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 0 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e0ecba;
+  border-bottom: 1px solid #d4e29755;
+}
+.workflow-demo .workflow-training-link > span {
+  font-size: 20px;
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "step": "initial",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 102
+      }
+    ],
+    "passes": 26,
+    "state": "idle",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  },
+  {
+    "step": "run",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 108
+      }
+    ],
+    "passes": 26,
+    "state": "needs-decision",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  },
+  {
+    "step": "request-source",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 109
+      }
+    ],
+    "passes": 26,
+    "state": "held",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  },
+  {
+    "step": "change-policy",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 108
+      }
+    ],
+    "passes": 26,
+    "state": "needs-decision",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  },
+  {
+    "step": "omit-claim",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 108
+      }
+    ],
+    "passes": 26,
+    "state": "revised",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  },
+  {
+    "step": "other-sample",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 103
+      }
+    ],
+    "passes": 26,
+    "state": "ready",
+    "url": "http://127.0.0.1:8003/",
+    "violations": []
+  }
+]

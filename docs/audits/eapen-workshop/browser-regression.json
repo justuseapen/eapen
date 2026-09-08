@@ -1,0 +1,32 @@
+[
+  {
+    "check": "Run waits for a human policy and focuses the decision",
+    "passed": true
+  },
+  {
+    "check": "Request source holds intact text, carries the rule, and survives replay",
+    "passed": true
+  },
+  {
+    "check": "Complete source reaches editor review without clearing the policy",
+    "passed": true
+  },
+  {
+    "check": "Omit claim marks the revision and preserves the newly chosen policy",
+    "passed": true
+  },
+  {
+    "check": "Keyboard inspector works; Reset clears both the policy and its presentation",
+    "passed": true
+  },
+  {
+    "check": "Runtime reduced motion cancels choreography without changing the decision",
+    "passed": true,
+    "active": 0,
+    "moving": null
+  },
+  {
+    "check": "Native Escape, Forward, and Back preserve the project path and invoking focus",
+    "passed": true
+  }
+]
