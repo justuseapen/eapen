@@ -1,8 +1,8 @@
 /* Canonical case articles share this sheet with the homepage dialog. */
 body.case-page {
   margin: 0;
-  background: #111412;
-  color: #efe9dc;
+  background: #1c1514;
+  color: #f1e8d8;
   font-family: "Archivo", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -13,12 +13,12 @@ body.case-page {
 }
 .case-page ::selection,
 .case-story ::selection {
-  background: #dfef93;
-  color: #111412;
+  background: #d6b36a;
+  color: #1c1514;
 }
 .case-page a:focus-visible,
 .case-story a:focus-visible {
-  outline: 2px solid #dfef93;
+  outline: 2px solid #d6b36a;
   outline-offset: 5px;
 }
 .case-page .case-skip {
@@ -27,8 +27,8 @@ body.case-page {
   left: 20px;
   z-index: 30;
   padding: 14px 18px;
-  background: #dfef93;
-  color: #111412;
+  background: #d6b36a;
+  color: #1c1514;
 }
 .case-page .case-skip:focus {
   top: 16px;
@@ -44,11 +44,11 @@ body.case-page {
   padding: 25px 0;
 }
 .case-page .case-nav {
-  border-bottom: 1px solid #343b31;
+  border-bottom: 1px solid #493234;
 }
 .case-page .case-nav a,
 .case-page .case-footer a {
-  color: #efe9dc;
+  color: #f1e8d8;
   text-decoration: none;
 }
 .case-page .case-brand {
@@ -62,7 +62,7 @@ body.case-page {
     monospace;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #aeb4a5;
+  color: #bdaca0;
 }
 .case-page .case-nav-links {
   display: flex;
@@ -81,23 +81,23 @@ body.case-page {
   min-height: 44px;
 }
 .case-page .case-nav-links a:last-child {
-  color: #dfef93;
+  color: #d6b36a;
 }
 .case-page .case-nav a:hover,
 .case-page .case-footer a:hover {
-  color: #dfef93;
+  color: #d6b36a;
 }
 .case-page .case-footer {
-  border-top: 1px solid #343b31;
-  color: #aeb4a5;
+  border-top: 1px solid #493234;
+  color: #bdaca0;
 }
 .case-story {
-  --case-ink: #111412;
-  --case-paper: #efe9dc;
-  --case-sage: #8c9d83;
-  --case-gold: #dfef93;
-  --case-muted: #b0b6a8;
-  --case-line: #343b31;
+  --case-ink: #1c1514;
+  --case-paper: #f1e8d8;
+  --case-red: #d18f88;
+  --case-gold: #d6b36a;
+  --case-muted: #bdaca0;
+  --case-line: #493234;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -187,12 +187,12 @@ body.case-page {
 .case-story .case-art {
   position: relative;
   overflow: hidden;
-  border: 1px solid #424c3c;
+  border: 1px solid #654247;
   background: radial-gradient(
     ellipse at 50% 25%,
-    #3c4631,
-    #20271d 55%,
-    #151b15
+    #6b252e,
+    #281b1b 55%,
+    #140f0f
   );
 }
 .case-story .case-art svg {
@@ -214,7 +214,7 @@ body.case-page {
   line-height: 1.6;
 }
 .case-story .case-art-note {
-  color: var(--case-sage);
+  color: var(--case-red);
   white-space: nowrap;
   font-size: 9px;
 }
@@ -229,7 +229,7 @@ body.case-page {
 }
 .case-story .case-facts dt {
   margin-bottom: 6px;
-  color: var(--case-sage);
+  color: var(--case-red);
 }
 .case-story .case-facts dd {
   color: var(--case-paper);
@@ -244,7 +244,7 @@ body.case-page {
 .case-story .case-section-index {
   display: block;
   margin-bottom: 10px;
-  color: var(--case-sage);
+  color: var(--case-red);
 }
 .case-story .case-section h2 {
   max-width: 12ch;
@@ -278,13 +278,13 @@ body.case-page {
 .case-story .case-method {
   margin-top: 25px;
   padding: 28px;
-  background: #1c231c;
+  background: #281b1b;
   border: 1px solid var(--case-line);
 }
 .case-story .case-method > .case-label {
   display: block;
   margin-bottom: 22px;
-  color: var(--case-sage);
+  color: var(--case-red);
 }
 .case-story .case-chain {
   display: grid;
@@ -293,7 +293,7 @@ body.case-page {
 }
 .case-story .case-chain > div {
   min-width: 0;
-  border-top: 1px solid #56634c;
+  border-top: 1px solid #8b5555;
   padding-top: 12px;
 }
 .case-story .case-chain h3 {
@@ -311,13 +311,13 @@ body.case-page {
 .case-story .case-consideration {
   margin-top: 24px;
   padding-left: 18px;
-  border-left: 2px solid var(--case-sage);
+  border-left: 2px solid var(--case-red);
   font-size: 14px;
 }
 .case-story .case-consideration .case-label {
   display: block;
   margin-bottom: 8px;
-  color: var(--case-sage);
+  color: var(--case-red);
 }
 .case-story .case-lesson {
   position: relative;
@@ -329,7 +329,7 @@ body.case-page {
 .case-story .case-lesson .case-label {
   display: block;
   margin-bottom: 20px;
-  color: #536149;
+  color: #684238;
 }
 .case-story .case-lesson h2 {
   max-width: 29ch;
@@ -344,7 +344,7 @@ body.case-page {
 .case-story .case-lesson p {
   max-width: 66ch;
   margin-top: 20px;
-  color: #50564a;
+  color: #5d4840;
   font-size: 15px;
 }
 .case-story .case-product-links {
@@ -373,7 +373,7 @@ body.case-page {
 }
 .case-story .case-source-note {
   margin-top: 20px;
-  color: var(--case-sage);
+  color: var(--case-red);
   letter-spacing: 0.04em;
   text-transform: none;
 }
@@ -387,7 +387,7 @@ body.case-page {
   border-top: 1px solid var(--case-line);
 }
 .case-story .case-next .case-label {
-  color: var(--case-sage);
+  color: var(--case-red);
 }
 .case-story .case-next p {
   margin-top: 8px;

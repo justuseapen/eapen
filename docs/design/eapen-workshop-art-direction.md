@@ -1,6 +1,6 @@
 # Eapen Workshop art direction
 
-An inhabited engineering studio: olive charcoal, warm ivory paper, precise diagrams, acid-gold annotations, and a quiet photographic surface. Large Newsreader typography provides the editorial voice; Archivo and IBM Plex Mono handle explanation and metadata.
+An inhabited engineering studio: warm charcoal, oxblood red, ivory paper, precise diagrams, brass-gold annotations, and a quiet photographic surface. Large Newsreader typography provides the editorial voice; Archivo and IBM Plex Mono handle explanation and metadata.
 
 The hero uses tactile, interactive paper artifacts to invite visitors into one publishing rehearsal. A source check becomes a human decision, then a visible reusable rule. Project stories provide separate factual evidence. Mobile receives a composed vertical version of the same material.
 
@@ -12,6 +12,7 @@ The studio background is illustrative AI-generated scenery. It is not a photogra
 - Source: `design/workshop/studio-surface-source.png` (excluded from production).
 - Runtime: `assets/workshop/studio-surface.webp` and `assets/workshop/studio-surface-small.webp`.
 - Compressed/resized with cwebp; composition unmodified.
+- September 8 palette polish: the user selected gold and red. CSS grades the original scenery to warm charcoal; oxblood notebook/rule surfaces and brass-gold controls replace the olive/lime palette. The original generation prompt below remains the provenance record.
 
 ### Exact generation prompt
 

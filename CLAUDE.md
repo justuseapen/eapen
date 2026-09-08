@@ -48,7 +48,7 @@ The **portrait** uses `assets/justus-headshot-400.webp` in the hero identity row
 ## Design Conventions
 
 - **Fonts (external, Google Fonts):** Newsreader (serif headings + pull quotes), Archivo (body/buttons), IBM Plex Mono (eyebrows, labels, stats). Loaded via `<link>` in `<head>` — this is the one place the site depends on an external host.
-- **Palette:** Deep green ink `#151a16`/`#111612`, surface `#1d251f`, paper `#efeade`/`#e5decd`, text `#efede3`, muted `#a7b0a2`, sage `#74876d`, and pale lime accent `#dfed9f`. Hairline rules use `rgba(228,235,215,.18)`. The rehearsal and case sheets retain their scoped palette tokens.
+- **Palette:** Warm charcoal `#1c1514` / `#140f0f`, burgundy surface `#281b1b`, oxblood red `#6b252e`, paper `#f1e8d8`, muted `#bdaca0`, and gold `#d6b36a` / `#e7c986`. The user selected gold and red during the September Workshop polish. Workflow holds use rose paper; revised/ready outcomes use warm parchment.
 - **Eyebrows** use uppercase mono labels and section numbers `01 / …` through `05 / …`. Keep numbering contiguous when adding/removing sections.
 - Keep readable text in HTML. CSS supplies shallow object depth and optional entrance motion; SVG supplies drawings and annotations. Preserve reduced-motion behavior and ordinary scrolling.
 - Styles and scripts are separate public files. External font CSS/files are the only runtime third-party assets. Initial mobile transfer targets at most 1 MB including fonts; compressed first-party JavaScript targets at most 40 KB. Transfer accounting alone does not establish browser performance.
