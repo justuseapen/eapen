@@ -1,0 +1,42 @@
+{
+  "result": "pass",
+  "base_url": "http://127.0.0.1:8003",
+  "container": "eapen-workshop-preview",
+  "canonical_routes": [
+    "/",
+    "/work/1t-home.html",
+    "/work/tradecraft.html",
+    "/work/pavlok.html",
+    "/essays/moderation-without-the-lean.html",
+    "/essays/platform-risk-is-political-risk.html",
+    "/essays/why-the-bay-cant-help.html"
+  ],
+  "public_file_count": 23,
+  "public_files_uncompressed_bytes": 1326283,
+  "checked_local_routes_and_resources": 21,
+  "checked_fragment_links": 26,
+  "private_or_missing_routes_rejected": 17,
+  "gzip_javascript_bytes": 11303,
+  "javascript_budget_bytes": 40000,
+  "homepage_first_party_upper_bound_bytes": 203743,
+  "homepage_first_party_resources": {
+    "/": 7831,
+    "/assets/favicon.svg": 234,
+    "/assets/justus-headshot-400.webp": 14130,
+    "/assets/justus-headshot-800.webp": 53814,
+    "/assets/workshop/studio-surface-small.webp": 14888,
+    "/assets/workshop/studio-surface.webp": 82780,
+    "/scripts/site.js": 815,
+    "/scripts/workshop-demo.js": 6574,
+    "/scripts/workshop-navigation.js": 2781,
+    "/scripts/workshop-policy.js": 1133,
+    "/styles/cases.css": 2411,
+    "/styles/site.css": 10937,
+    "/styles/workshop-demo.css": 5415
+  },
+  "external_font_css_and_all_font_files_bytes": 370024,
+  "external_font_resource_count": 20,
+  "homepage_transfer_upper_bound_bytes": 573767,
+  "mobile_transfer_budget_bytes": 1000000,
+  "limitation": "HTTP payload accounting, not browser performance. Upper bound includes both hero variants, lazy images, and every returned font subset/weight. Headers, TLS overhead, LCP, INP and CLS are not measured."
+}

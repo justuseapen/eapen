@@ -1,0 +1,92 @@
+{
+  "environment": {
+    "browser": "Codex Chromium browser",
+    "width": 390,
+    "height": 844,
+    "cpuSlowdown": 4,
+    "latencyMs": 150,
+    "downloadBytesPerSecond": 200000,
+    "uploadBytesPerSecond": 93750,
+    "cacheDisabled": true,
+    "fonts": "same-session font cache may remain"
+  },
+  "runs": [
+    {
+      "cls": 0.04650532350701317,
+      "domReady": 925.1999999284744,
+      "firstPartyBytes": 70441,
+      "largestElement": "desk-object editorial-paper",
+      "lcp": 1060,
+      "load": 1664.5,
+      "resources": 11
+    },
+    {
+      "cls": 0.04650532350701317,
+      "domReady": 914.600000023842,
+      "largestElement": "EM",
+      "lcp": 1088,
+      "load": 1668.2999999523165,
+      "resources": 10
+    },
+    {
+      "cls": 0.046508936470318896,
+      "domReady": 899,
+      "largestElement": "EM",
+      "lcp": 1052,
+      "load": 1647.2000000476835,
+      "resources": 10
+    }
+  ],
+  "excludedReloadRuns": [
+    {
+      "cls": 0.06965958655746726,
+      "domReady": 904.1999999284744,
+      "largestElement": null,
+      "lcp": 0,
+      "load": 1644.100000023842,
+      "resources": 10
+    },
+    {
+      "cls": 0.06965958655746726,
+      "domReady": 896.1999999284744,
+      "largestElement": null,
+      "lcp": 0,
+      "load": 1640.100000023842,
+      "resources": 10
+    }
+  ],
+  "exclusionReason": "Reload restored a scrolled position, yielding no LCP candidate. Replaced with fresh top-of-page navigations.",
+  "interactions": [
+    {
+      "duration": 64,
+      "inputDelay": 0.5,
+      "name": "pointerdown"
+    },
+    {
+      "duration": 64,
+      "inputDelay": 0.5,
+      "name": "pointerup"
+    },
+    {
+      "duration": 64,
+      "inputDelay": 0.8999999761581421,
+      "name": "click"
+    },
+    {
+      "duration": 56,
+      "inputDelay": 0.3999999761581421,
+      "name": "pointerdown"
+    },
+    {
+      "duration": 48,
+      "inputDelay": 0.09999990463256836,
+      "name": "pointerup"
+    },
+    {
+      "duration": 48,
+      "inputDelay": 0.19999992847442627,
+      "name": "click"
+    }
+  ],
+  "limitation": "Lab observations on this Mac, not field Core Web Vitals or real phone testing."
+}

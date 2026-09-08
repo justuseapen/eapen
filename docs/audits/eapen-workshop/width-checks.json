@@ -1,0 +1,65 @@
+[
+  {
+    "brokenImages": [],
+    "client": 305,
+    "h1": 271,
+    "hero": 1376.171875,
+    "overflow": [],
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "brokenImages": [],
+    "client": 375,
+    "h1": 333,
+    "hero": 1339.7421875,
+    "overflow": [],
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 605,
+    "h1": 563,
+    "hero": 1422.5703125,
+    "overflow": [],
+    "scroll": 605,
+    "width": 620
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "h1": 356.7109375,
+    "hero": 884,
+    "overflow": [],
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 885,
+    "h1": 425.8515625,
+    "hero": 884,
+    "overflow": [],
+    "scroll": 885,
+    "width": 900
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "h1": 490.8046875,
+    "hero": 921,
+    "overflow": [],
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "h1": 669.3671875,
+    "hero": 935,
+    "overflow": [],
+    "scroll": 1425,
+    "width": 1440
+  }
+]
