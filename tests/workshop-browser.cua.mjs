@@ -39,6 +39,10 @@ export async function verifyWorkshop(tab, cdp, baseUrl) {
     await media('reduce');
     await tab.goto(base.href);
     assert.equal((await inspect()).state, 'idle');
+    assert.equal(await tab.playwright.locator('#workflow-example').getAttribute('open'), null);
+    await tab.playwright.locator('#workflow-example > summary').press('Enter');
+    assert.equal(await tab.playwright.locator('#workflow-example').getAttribute('open'), '');
+    record('The optional example starts collapsed and opens from the keyboard');
     await act('run');
     let state = await inspect();
     assert.equal(state.state, 'needs-decision');
@@ -56,7 +60,11 @@ export async function verifyWorkshop(tab, cdp, baseUrl) {
     assert.match(state.announcement, /HELD/);
     await act('replay');
     assert.equal((await inspect()).state, 'held');
-    record('Request source holds intact text, carries the rule, and survives replay');
+    await tab.playwright.locator('#workflow-example > summary').press('Enter');
+    assert.equal(await tab.playwright.locator('#workflow-example').getAttribute('open'), null);
+    await tab.playwright.locator('#workflow-example > summary').press('Enter');
+    assert.equal((await inspect()).state, 'held');
+    record('Request source holds intact text, carries the rule, and survives replay and collapsing the example');
 
     await act('other-sample');
     state = await inspect();

@@ -147,12 +147,11 @@ export function initWorkshopDemo(stage) {
           <div class="workflow-selected-rule" data-part="selected-rule" hidden><span class="workflow-selected-label">YOUR RULE</span><strong data-copy="selected-rule"></strong><span class="workflow-rule-mark" data-motion="rule-mark" aria-hidden="true"></span><span class="workflow-rule-scope">Used again in this rehearsal until reset.</span></div>
           <p class="workflow-gate-awaiting" data-part="gate-awaiting"><span aria-hidden="true">—</span> Waiting for the sample</p>
         </div>
-        <div class="workflow-connector" aria-hidden="true"><svg viewBox="0 0 220 40" fill="none"><path d="M1 9H70C90 9 91 30 110 30H217M208 22l9 8-9 8"/></svg><span data-copy="route-label">A human decision becomes a rule.</span></div>
+        <div class="workflow-connector" aria-hidden="true"><svg viewBox="0 0 220 40" fill="none"><path d="M1 20H217M209 12l8 8-8 8"/></svg><span data-copy="route-label">A human decision becomes a rule.</span></div>
       </section>
       <section class="workflow-column workflow-output" aria-labelledby="${prefix}-output-label">
         <h3 class="workflow-column-label" id="${prefix}-output-label"><span>03</span> THE NEXT RIGHT STEP <span class="workflow-column-dot" aria-hidden="true"></span></h3>
         <article class="workflow-result" data-motion="result">
-          <div class="workflow-result-ticks" aria-hidden="true"><span>+</span><span>+</span></div>
           <div class="workflow-result-icon" aria-hidden="true" data-copy="result-icon">↗</div>
           <p class="workflow-result-label" data-copy="result-label">${outcomeCopy.idle.label}</p>
           <h4 class="workflow-result-title" data-copy="result-title" tabindex="-1">${outcomeCopy.idle.title}</h4>
@@ -238,8 +237,8 @@ export function initWorkshopDemo(stage) {
     animate(
       "paper",
       [
-        { transform: "translateY(14px) rotate(-1.6deg)", opacity: 0.65 },
-        { transform: "translateY(0) rotate(-0.7deg)", opacity: 1 },
+        { transform: "translateY(14px)", opacity: 0.65 },
+        { transform: "translateY(0)", opacity: 1 },
       ],
       { duration: 850 },
     );
@@ -262,8 +261,8 @@ export function initWorkshopDemo(stage) {
     animate(
       "result",
       [
-        { transform: "translateY(18px) rotate(1.5deg)", opacity: 0.4 },
-        { transform: "translateY(0) rotate(0.6deg)", opacity: 1 },
+        { transform: "translateY(18px)", opacity: 0.4 },
+        { transform: "translateY(0)", opacity: 1 },
       ],
       { delay: 1100, duration: 1000 },
     );
@@ -442,8 +441,8 @@ export function initWorkshopDemo(stage) {
         );
         const handoff = motionTarget("result").animate(
           [
-            { opacity: 0.45, transform: "translateY(12px) rotate(.6deg)" },
-            { opacity: 1, transform: "translateY(0) rotate(.6deg)" },
+            { opacity: 0.45, transform: "translateY(12px)" },
+            { opacity: 1, transform: "translateY(0)" },
           ],
           { duration: 650, easing: "cubic-bezier(.2,.75,.25,1)" },
         );

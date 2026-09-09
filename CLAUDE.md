@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static website for Eapen Technology, Justus Eapen's AI automation and training practice. The homepage presents the Eapen Workshop: a tactile editorial desk, an illustrative workflow, project case pages, and direct training/build/contact paths. Production uses HTML, CSS, native JavaScript modules, and nginx; there is no bundler or framework.
+Static website for Eapen Technology, Justus Eapen's AI automation and training practice. The homepage leads with on-site AI training for leaders at established companies, using their real work. The upright gold/red layout includes one portrait, an immediate workshop explanation, supported professional contributions, an optional illustrative workflow, FAQ, and a clear introductory-call path. The site uses HTML, CSS, native JavaScript modules, and nginx; there is no bundler or framework.
 
 ## Development
 
@@ -34,23 +34,23 @@ There is no package manifest, configured linter, or typecheck. See `docs/audits/
 
 ## Architecture
 
-- **`index.html`:** Semantic homepage content, live-text desk objects, static workflow explanation, three ordinary case links, offers, biography, essays, contact, and a native case dialog. Section destinations are `#method`, `#work`, `#offers`, `#about`, `#essays`, and `#contact`; `#workflow-stage` reaches the rehearsal directly. Substantive content and engagement links remain accessible without JavaScript.
+- **`index.html`:** Semantic homepage content, responsive hero portrait, on-site training offer, biography and three ordinary case links, a native details disclosure containing the workflow, FAQ, secondary custom build, contact, optional essays, and a native case dialog. Section destinations are `#offers`, `#work`, `#about`, `#method`, `#faq`, `#build`, `#essays`, and `#contact`; `#workflow-stage` reaches the rehearsal directly. Substantive content and engagement links remain accessible without JavaScript.
 - **Styles:** `styles/site.css` owns homepage composition and shared utilities; `styles/workshop-demo.css` scopes the rehearsal; `styles/cases.css` serves both standalone case pages and their dialog articles. Homepage mobile composition changes at 760px, the rehearsal stacks at 900px, and case pages adapt at 900px/640px, with additional intermediate and narrow-screen rules.
-- **`scripts/site.js`:** Initializes both enhancements and coalesces the hero's mouse-driven movement through `requestAnimationFrame`. Hidden/offscreen state and reduced-motion preferences settle or pause optional motion. The fallback explanation is hidden only after successful rehearsal initialization.
+- **`scripts/site.js`:** Initializes the rehearsal and case navigation only. The fallback explanation is hidden only after successful rehearsal initialization. There is no decorative hero parallax or paper-prop motion.
 - **`scripts/workshop-policy.js`:** Pure, deterministic state transitions for two fictional samples and two missing-source policies. Requesting a source holds the submission; omitting the claim prepares a marked revision for editor review. Replay preserves policy; Reset clears it. No model calls, personal inputs, storage, or publishing occur.
 - **`scripts/workshop-demo.js`:** Renders the rehearsal, announces results, manages focus, and controls cancelable Web Animations API choreography. State and navigation work independently of animation completion. Keep the static HTML explanation alongside this enhancement.
 - **`scripts/workshop-navigation.js`:** Fetches approved same-origin case paths into a native dialog, with ordinary-page fallback, a three-second timeout, cancellation of stale requests, loading/direct links, and Back/Forward/focus restoration. Modified clicks retain native behavior.
 - **Canonical pages:** `work/1t-home.html`, `work/tradecraft.html`, and `work/pavlok.html` contain the actual case articles. The dialog imports those articles; do not maintain a second case-prose copy in JavaScript. Original essay URLs remain under `essays/`.
-- **Assets and evidence:** Finished scenic images live in `assets/workshop/`. Source art and provenance remain under `design/workshop/` and `docs/design/`. Generated scenery and conceptual drawings must remain distinguishable from actual project evidence. `assets/social-card.png` is a genuine 1200 × 630 PNG; the integrity test verifies its signature and dimensions.
+- **Assets and evidence:** `assets/workshop/1t-product.webp` and `tradecraft-product.webp` are actual product screenshots captured through CUA on September 8, 2026 from `https://1thome.com/` and `https://rooferrate.com/`. They were resized to 1200px with cwebp quality 82, without compositional edits. Retired generated scenery and its source/provenance remain under `assets/workshop/`, `design/workshop/`, and `docs/design/`; it is not used by the current hero. Those product screenshots are now retired from the homepage and case pages; current project content uses concise supported role and product details. Keep generated scenery and conceptual drawings distinct from actual project evidence. `assets/social-card.png` is a genuine 1200 × 630 PNG; the integrity test verifies its signature and dimensions.
 
-The **portrait** uses `assets/justus-headshot-400.webp` in the hero identity row and responsive `assets/justus-headshot-{400,800}.webp` files in the biography. The September revision uses an approved AI-generated portrait; source, exact prompt, and approval are documented in `docs/audits/2026-09-08-portrait.md`. `portrait.jpg` is the preserved original. The full-resolution generated PNG is kept in the repo but is not copied into the production image.
+The **portrait** appears only in the hero and uses responsive `assets/justus-headshot-{400,800}.webp` files. The September revision uses an approved AI-generated portrait; source, exact prompt, and approval are documented in `docs/audits/2026-09-08-portrait.md`. `portrait.jpg` is the preserved original. The full-resolution generated PNG is kept in the repo but is not copied into the production image.
 
 ## Design Conventions
 
 - **Fonts (external, Google Fonts):** Newsreader (serif headings + pull quotes), Archivo (body/buttons), IBM Plex Mono (eyebrows, labels, stats). Loaded via `<link>` in `<head>` — this is the one place the site depends on an external host.
-- **Palette:** Warm charcoal `#1c1514` / `#140f0f`, burgundy surface `#281b1b`, oxblood red `#6b252e`, paper `#f1e8d8`, muted `#bdaca0`, and gold `#d6b36a` / `#e7c986`. The user selected gold and red during the September Workshop polish. Workflow holds use rose paper; revised/ready outcomes use warm parchment.
-- **Eyebrows** use uppercase mono labels and section numbers `01 / …` through `05 / …`. Keep numbering contiguous when adding/removing sections.
-- Keep readable text in HTML. CSS supplies shallow object depth and optional entrance motion; SVG supplies drawings and annotations. Preserve reduced-motion behavior and ordinary scrolling.
+- **Homepage palette:** Warm charcoal `#191616` / `#131111`, surface `#211c1c`, oxblood red `#762a33`, paper `#f1ece2` / `#e6ded1`, muted `#b9aea3`, and gold `#d6b36a`, as defined in `styles/site.css`. The user selected gold and red during the September Workshop polish. Workflow holds use rose paper; revised/ready outcomes use warm parchment.
+- **Eyebrows** use uppercase mono labels and section numbers `01 / …` through `04 / …`. Keep numbering contiguous when adding/removing sections.
+- Keep readable text in HTML. Use upright aligned panels, restrained borders, and real product imagery; do not restore decorative paper props, folded corners, tilted content, or hero parallax. Workflow motion uses translation and opacity while preserving reduced-motion behavior, cancellation, and ordinary scrolling. Functional icon rotations are acceptable.
 - Styles and scripts are separate public files. External font CSS/files are the only runtime third-party assets. Initial mobile transfer targets at most 1 MB including fonts; compressed first-party JavaScript targets at most 40 KB. Transfer accounting alone does not establish browser performance.
 
 ## Deployment
@@ -68,3 +68,9 @@ To deploy: just `git push origin master`.
 ```bash
 docker build -t eapen-verify . && docker run --rm eapen-verify ls /usr/share/nginx/html/
 ```
+
+## Current offer
+
+The operator confirmed on September 9, 2026: training is for leaders at established companies; Justus travels to their office, observes actual work, identifies automation opportunities, and demonstrates implementation alongside the team. Building the automation during the visit is conditional on scope. Retain 1–2 days and $2,500 per participant. Do not claim travel-inclusive pricing, guaranteed production delivery, no-coding prerequisites, or ongoing support without confirmation. See `docs/strategy/2026-09-09-onsite-ai-leadership-training.md`.
+
+Booking links use the existing “Get Acquainted!” Calendly event and promise a 30-minute introduction. Workshop CTAs go to `#contact`; they do not imply an instant paid booking or completed workflow audit.
