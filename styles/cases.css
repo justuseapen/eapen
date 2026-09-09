@@ -131,7 +131,6 @@ body.case-page {
 .case-story .case-label,
 .case-story .case-facts dt,
 .case-story .case-section-index,
-.case-story .case-art-note,
 .case-story .case-source-note {
   font:
     10px/1.6 "IBM Plex Mono",
@@ -174,6 +173,7 @@ body.case-page {
   text-wrap: balance;
 }
 .case-story .case-title em {
+  font-style: normal;
   font-weight: 400;
   color: var(--case-gold);
 }
@@ -184,39 +184,17 @@ body.case-page {
   line-height: 1.65;
   color: var(--case-muted);
 }
-.case-story .case-art {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #654247;
-  background: radial-gradient(
-    ellipse at 50% 25%,
-    #6b252e,
-    #281b1b 55%,
-    #140f0f
-  );
-}
-.case-story .case-art svg {
+.case-story .case-screenshot {
   display: block;
   width: 100%;
   height: auto;
+  border: 1px solid var(--case-line);
 }
-.case-story .case-art text {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-}
-.case-story .case-art-caption {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 24px;
+.case-story .case-image-caption {
   padding-top: 12px;
   color: var(--case-muted);
   font-size: 11px;
   line-height: 1.6;
-}
-.case-story .case-art-note {
-  color: var(--case-red);
-  white-space: nowrap;
-  font-size: 9px;
 }
 .case-story .case-facts {
   display: grid;
@@ -461,17 +439,7 @@ body.case-page {
     font-size: 15px;
     max-width: 44ch;
   }
-  .case-story .case-art svg {
-    width: 160%;
-    max-width: none;
-    margin-left: -30%;
-  }
-  .case-story .case-art .case-svg-annotation {
-    display: none;
-  }
-  .case-story .case-art-caption {
-    flex-direction: column;
-    gap: 4px;
+  .case-story .case-image-caption {
     font-size: 10px;
   }
   .case-story .case-facts {

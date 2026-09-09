@@ -5,11 +5,9 @@
   --wd-gold: #d6b36a;
   --wd-line: rgba(214, 179, 106, 0.22);
   color: var(--wd-paper);
-  background:
-    radial-gradient(ellipse at 18% 25%, #281b1b 0%, transparent 55%), #1c1514;
+  background: #1c1514;
   border: 1px solid var(--wd-line);
   border-radius: 4px;
-  box-shadow: 0 40px 90px -50px #000;
   font-family: Archivo, sans-serif;
   isolation: isolate;
   overflow: clip;
@@ -74,7 +72,6 @@
   height: 5px;
   background: var(--wd-gold);
   border-radius: 50%;
-  box-shadow: 0 0 10px #d6b36a26;
 }
 .workflow-demo .workflow-edition {
   color: #bdaca0;
@@ -121,13 +118,10 @@
   border-radius: 2px;
   font-size: 13px;
   font-weight: 600;
-  transition:
-    background 0.2s,
-    box-shadow 0.2s;
+  transition: background 0.2s;
 }
 .workflow-demo .workflow-run:hover {
   background: #e7c986;
-  box-shadow: 0 5px 30px #d6b36a16;
 }
 .workflow-demo .workflow-play {
   display: inline-grid;
@@ -148,7 +142,7 @@
 
 .workflow-demo .workflow-board {
   display: grid;
-  grid-template-columns: 1.15fr 0.93fr 0.92fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 27px;
   padding: 0 35px 22px;
   align-items: start;
@@ -186,36 +180,10 @@
   position: relative;
   padding: 24px 24px 18px;
   color: var(--wd-ink);
-  background: linear-gradient(110deg, #f1e8d8, #e7dcc8);
-  box-shadow:
-    0 2px 3px #0003,
-    4px 15px 30px -12px #000b,
-    1px 0 0 #fff5 inset;
-  transform: rotate(-0.7deg);
+  background: var(--wd-paper);
+  border: 1px solid #d8c8b2;
+  border-radius: 2px;
   min-height: 400px;
-}
-.workflow-demo .workflow-paper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.14;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.27' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
-}
-.workflow-demo .workflow-paper::after {
-  position: absolute;
-  content: "";
-  right: 0;
-  bottom: 0;
-  width: 16px;
-  height: 16px;
-  background: linear-gradient(
-    135deg,
-    #d8c8b2 0 49%,
-    #8b685a 50% 51%,
-    #281b1b 52%
-  );
-  box-shadow: -2px -2px 4px #00000009;
 }
 .workflow-demo .workflow-paper-top {
   display: flex;
@@ -367,9 +335,8 @@
   padding: 20px 20px 22px;
   border: 1px solid #b7616577;
   border-radius: 2px;
-  background: linear-gradient(160deg, #52262b, #281b1b);
-  box-shadow: 0 18px 30px -25px #000;
-  min-height: 351px;
+  background: #382023;
+  min-height: 400px;
 }
 .workflow-demo .workflow-gate-top {
   display: flex;
@@ -407,7 +374,7 @@
   flex: 1;
 }
 .workflow-demo .workflow-rule-diagram span:last-child {
-  transform: rotate(180deg);
+  background: linear-gradient(270deg, #d6b36a11, #d6b36aa3);
 }
 .workflow-demo .workflow-rule-diagram i {
   width: 11px;
@@ -526,7 +493,7 @@
   line-height: 1.6;
 }
 .workflow-demo .workflow-connector {
-  margin: 22px 8px 0;
+  margin: 22px 0 0;
 }
 .workflow-demo .workflow-connector svg {
   width: 100%;
@@ -536,38 +503,24 @@
 .workflow-demo .workflow-connector path {
   stroke: #d6b36a;
   stroke-width: 1;
-  stroke-dasharray: 3 4;
 }
 .workflow-demo .workflow-connector > span {
   display: block;
-  max-width: 200px;
   margin-top: 10px;
   color: #d6b36a;
   font:
-    italic 17px/1.25 Newsreader,
-    Georgia,
-    serif;
-  transform: rotate(-3deg);
+    12px/1.6 Archivo,
+    sans-serif;
 }
 
 .workflow-demo .workflow-result {
   position: relative;
-  min-height: 377px;
+  min-height: 400px;
   background: #281b1b;
-  border: 1px solid #d6b36a80;
+  border: 1px solid var(--wd-line);
+  border-radius: 2px;
   padding: 16px 23px 20px;
   color: #f1e8d8;
-  transform: rotate(0.6deg);
-  box-shadow: 5px 16px 26px -23px #000;
-}
-.workflow-demo .workflow-result-ticks {
-  display: flex;
-  justify-content: space-between;
-  font:
-    10px/1 "IBM Plex Mono",
-    monospace;
-  color: #d6b36a;
-  margin: 0 -10px 18px;
 }
 .workflow-demo .workflow-result-icon {
   font:
@@ -672,9 +625,6 @@
 }
 .workflow-demo[data-state="needs-decision"] .workflow-gate {
   border-color: #d6b36a;
-  box-shadow:
-    0 0 0 4px #d6b36a05,
-    0 20px 40px -20px #0008;
 }
 .workflow-demo[data-state="needs-decision"] .workflow-gate-status {
   color: var(--wd-gold);
@@ -739,14 +689,6 @@
   .workflow-result-seal {
   color: #655044;
   border-color: #784d418f;
-}
-.workflow-demo:is(
-    [data-state="held"],
-    [data-state="revised"],
-    [data-state="ready"]
-  )
-  .workflow-result-ticks {
-  color: #655044;
 }
 .workflow-demo[data-sample="complete"] .workflow-claim {
   background: #eadbb5;
@@ -942,7 +884,7 @@
     gap: 18px;
     padding-right: 24px;
     padding-left: 24px;
-    grid-template-columns: 1.05fr 1fr 0.95fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .workflow-demo .workflow-paper {
     padding: 21px 17px 16px;
@@ -1106,19 +1048,14 @@
     width: 70px;
     flex-shrink: 0;
     height: 35px;
-    transform: rotate(8deg);
   }
   .workflow-demo .workflow-connector > span {
     margin: 0;
-    font-size: 17px;
-    transform: none;
+    font-size: 12px;
   }
   .workflow-demo .workflow-result {
     min-height: 0;
     padding: 20px 25px 25px;
-  }
-  .workflow-demo .workflow-result-ticks {
-    margin-bottom: 13px;
   }
   .workflow-demo .workflow-result-icon {
     margin: 0 0 21px;
@@ -1252,7 +1189,6 @@
   margin: 10px 0 3px;
   background: linear-gradient(90deg, #d6b36a, #d6b36a99 80%, transparent);
   transform-origin: left;
-  rotate: -0.6deg;
 }
 .workflow-demo .workflow-carried-rule {
   padding: 12px 0 14px;
